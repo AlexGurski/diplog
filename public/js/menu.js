@@ -5,51 +5,76 @@ async function getElementMenu(){
     await   console.log(products)
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     items = products
-    create(items);
+    await   create(items);
+
+    for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
+      document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
+        filter(document.getElementsByClassName('headerItemMenu')[i].id);
+      }
+    }
     return items;
 }
 
+function filter (name){
+  for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
+    document.getElementsByClassName('ItemsCenter')[i].style.display='none'
+  }
+  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+    document.getElementsByClassName(name)[i].style.display='block';
+  }
+}
 async function getMenuWith(){
     let responseMenu = await fetch('/menuWith')
     let products = await responseMenu.json();
-    await   console.log(products)
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
+    await   createMenuPretty(products);
     items = products
-    createMenuPretty(items);
     return items;
 }
+
+
 window.onload = () => {
+
   let items = getElementMenu();
   let menuWith = getMenuWith();
-  console.log(items);
-  console.log(menuWith);
+
+  for (let i = 0;i < document.getElementsByClassName('headerItemMenu').length;i++){
+  /*
+      document.getElementsByClassName('headerItemMenu')[i].onclick = {
+        console.log('dfgdg')
+     }
+*/
+  }
+
 }
 
 function create(items){
     for (var i=0; i<items.length; i++){
             const  div = document.createElement("div");
-             div.className = 'headeritemMenu';
+             div.className = 'headerItemMenu';
              div.id = items[i].id;
              document.getElementById('centerMainHeader').appendChild(div);
 
              const  img = document.createElement("img");
-             img.className = 'headeritemMenuImage';
+             img.className = 'headerItemMenuImage';
              img.src = "../public/image/allMenu/"+items[i].id+'.jpg';
              document.getElementById(div.id).appendChild(img);
 
              const  text = document.createElement("div");
-             text.className = 'headeritemMenuDiscription';
+             text.className = 'headerItemMenuDiscription';
              text.innerHTML = items[i].name;
              document.getElementById(div.id).appendChild(text );
     }
+  console.log('createheader')
 }
 function createMenuPretty(items){
 
   for (var i=0; i<items.length; i++){
 
       const  div = document.createElement("div");
-       div.className = 'ItemsCenter';
+       div.className = 'ItemsCenter '+items[i].kind;
        div.id = '00'+items[i].id;
+
        document.getElementById('centerMain').appendChild(div);
 
 //ТУТ БУДЕТ ТРЕШАК!!!!

@@ -6,6 +6,8 @@ app.use( bodyParser.urlencoded( {extended:true} ) );
 app.use( bodyParser.json() )
 app.use('/public', express.static('public'));
 const assert = require('assert');
+let menuPizza = require("./public/json/menuPizza.js");
+let menuHot = require("./public/json/menuHot.js");
 app.get('/',(req, res) => {
   res.render('index.ejs');
 })
@@ -20,7 +22,7 @@ app.get('/allMenu', (req,res) =>{
 })
 
 app.get('/menuWith', (req,res) =>{
-  res.send(require("./public/json/menuWith.js"));
+  res.send(menuPizza.concat(menuHot));
 })
 
  app.listen(process.env.PORT || 3000, () => {

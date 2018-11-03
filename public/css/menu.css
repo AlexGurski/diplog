@@ -27,7 +27,7 @@
 
 
 
-.headeritemMenu{
+.headerItemMenu{
 height: 100px;
 width: 100px;
 margin-left:  15px;
@@ -37,13 +37,13 @@ border: 1px dotted black;
 cursor: pointer;
 }
 
-.headeritemMenuImage{
+.headerItemMenuImage{
   height: 98px;
   width:  98px;
   border-radius: 50%;
 }
 
-.headeritemMenuDiscription{
+.headerItemMenuDiscription{
   color:white;
   opacity: 0;
   width: 100%;
@@ -55,14 +55,14 @@ cursor: pointer;
   text-align: center;
 }
 
-.headeritemMenu:hover .headeritemMenuImage{
+.headerItemMenu:hover .headerItemMenuImage{
 
   opacity: 0.4;
 }
-.headeritemMenu:hover .headeritemMenuDiscription{
+.headerItemMenu:hover .headerItemMenuDiscription{
   opacity: 1;
 }
-.headeritemMenu:hover{
+.headerItemMenu:hover{
 background-color: black;
     border: 3px dashed white;
 }

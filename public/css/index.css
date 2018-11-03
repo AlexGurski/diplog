@@ -22,9 +22,13 @@
   margin:0 auto;
   margin-top: 50px;
   border-radius: 25px;
-
 }
 
+@media screen and (max-width: 1060px) {
+  .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
+    width: 90%;
+  }
+}
 @keyframes fade {
 0%{ opacity: 0; }
 10%{ opacity: 1; }
@@ -65,12 +69,12 @@ align-items: flex-end;
 
   animation-delay: 0s; }
 .mainMenuAtmosphere div:nth-child(2) {
-background-image: url("../image/1.jpg");
+background-image: url("../image/atmosphere.jpg");
   position: relative;
   top:-100% ;
   animation-delay: 5s; }
 .mainMenuAtmosphere div:nth-child(3) {
-  background-image: url("../image/2.jpg");
+  background-image: url("../image/atmosphere1.jpg");
   position: relative;
   top:-200% ;
   animation-delay: 10s; }
@@ -82,10 +86,10 @@ background-image: url("../image/1.jpg");
 }
 
 .mainMenuBluda{
-  background-image: url("../image/bluda.jpg");
+  background-image: url("../image/atmosphere1.jpg");
 }
 .mainMenuUslugam{
-  background-image: url("../image/uslugam.jpg");
+  background-image: url("../image/atmosphere.jpg");
 }
 .mainScroll{
   height: 100%;
