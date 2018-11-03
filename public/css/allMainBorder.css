@@ -6,10 +6,12 @@
  font-family: tolstyak; /* Гарнитура шрифта */
  src: url("../fonts/tolstyak.ttf"); /* Путь к файлу со шрифтом */
 }
+
+
+
 .centerMain{
  /  border:2px solid green;
   flex-basis:70vw;
-
 }
 .centerMain::-webkit-scrollbar {width:0px;}
 *{
@@ -77,18 +79,31 @@ flex-basis:15vw;
 }
 
 .allCenter{
- /    border:2px solid yellow;
     height: 90vh;
     display: flex;
     background-repeat: repeat;
     background-image: url('../image/background.jpg');
-/    background-color: #442d25;
 }
 .centerLeft {
 flex-basis:15vw;
 }
 .centerRight{
 flex-basis:15vw;
+}
+
+@media screen and (max-width: 1060px) {
+.centerMain{
+   flex-basis:90vw;
+  }
+  .centerLeft {
+  flex-basis:5vw;
+  }
+  .centerRight{
+  flex-basis:5vw;
+  }
+  .headerContacts{
+    display: none;
+  }
 }
 
 
