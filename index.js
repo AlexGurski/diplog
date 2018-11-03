@@ -22,6 +22,6 @@ app.get('/allMenu', (req,res) =>{
 app.get('/menuWith', (req,res) =>{
   res.send(require("./public/json/menuWith.js"));
 })
-  app.listen(3000, () => {
+ app.listen(process.env.PORT || 3000, () => {
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;
