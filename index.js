@@ -5,7 +5,7 @@ const app = express();
 app.use( bodyParser.urlencoded( {extended:true} ) );
 app.use( bodyParser.json() )
 app.use('/public', express.static('public'));
-
+const assert = require('assert');
 app.get('/',(req, res) => {
   res.render('index.ejs');
 })
@@ -22,6 +22,7 @@ app.get('/allMenu', (req,res) =>{
 app.get('/menuWith', (req,res) =>{
   res.send(require("./public/json/menuWith.js"));
 })
+
  app.listen(process.env.PORT || 3000, () => {
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;
