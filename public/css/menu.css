@@ -1,0 +1,68 @@
+.centerMain{
+  border-left:  5px dashed #f2f291;
+  border-right:  5px dashed #f2f291;
+  /background-color: white;
+  border-radius: 50px 50px 0px 0px;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  flex-wrap: wrap;
+    overflow: auto;
+}
+.centerMainHeader{
+  background-color: black;
+  border-radius: 30px;
+  border: 4px dotted #f5f5dc;;
+  border-style: double;
+  height: 130px;;
+  width: 100%;
+  display: flex;
+/  overflow-x: scroll;
+  overflow-y: hidden;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+
+.headeritemMenu{
+height: 100px;
+width: 100px;
+margin-left:  15px;
+border-radius: 50%;
+position: relative;
+border: 1px dotted black;
+cursor: pointer;
+}
+
+.headeritemMenuImage{
+  height: 98px;
+  width:  98px;
+  border-radius: 50%;
+}
+
+.headeritemMenuDiscription{
+  color:white;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top:calc(50% - 1em);
+  font-size: 20px;
+  text-align: center;
+}
+
+.headeritemMenu:hover .headeritemMenuImage{
+
+  opacity: 0.4;
+}
+.headeritemMenu:hover .headeritemMenuDiscription{
+  opacity: 1;
+}
+.headeritemMenu:hover{
+background-color: black;
+    border: 3px dashed white;
+}
