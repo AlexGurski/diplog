@@ -123,7 +123,7 @@ function createMenuPretty(items){
          weight.innerHTML =  items[i].gram + ' гр.';
        document.getElementById(addCart.id).appendChild(weight);
 
-     const pPrice = document.createElement("p");
+     const pPrice = document.createElement("div");
        pPrice.className = 'pPrice';
        pPrice.innerHTML =  items[i].price
      document.getElementById(addCart.id).appendChild(pPrice);
@@ -141,7 +141,7 @@ if (items[i].gram1!==undefined){
        weight.innerHTML =  items[i].gram1 + ' гр.';
      document.getElementById(addCart.id).appendChild(weight);
 
-   const pPrice = document.createElement("p");
+   const pPrice = document.createElement("div");
      pPrice.className = 'pPrice';
      pPrice.innerHTML =  items[i].price1
    document.getElementById(addCart.id).appendChild(pPrice);

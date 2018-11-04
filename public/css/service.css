@@ -1,0 +1,9 @@
+.centerMain{
+  text-align: center;
+
+  color:#f5f5dc;
+  border-left:  5px dashed #f2f291;
+  border-right:  5px dashed #f2f291;
+  border-radius: 50px 50px 0px 0px;
+  overflow: auto;
+}

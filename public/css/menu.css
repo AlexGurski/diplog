@@ -1,17 +1,18 @@
+
 .centerMain{
+  margin: 50px;
   border-left:  5px dashed #f2f291;
   border-right:  5px dashed #f2f291;
   /background-color: white;
   border-radius: 50px 50px 0px 0px;
   display: flex;
   justify-content: space-around;
-  padding: 30px;
-  margin-left: 5px;
-  margin-right: 5px;
   flex-wrap: wrap;
-    overflow: auto;
+  overflow: auto;
+
 }
 .centerMainHeader{
+  margin: 30px;
   background-color: black;
   border-radius: 30px;
   border: 4px dotted #f5f5dc;;
@@ -24,7 +25,6 @@
   align-items: center;
   justify-content: flex-start;
 }
-
 
 
 .headerItemMenu{

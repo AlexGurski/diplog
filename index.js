@@ -26,6 +26,10 @@ app.get('/about',(req, res) => {
   res.render('about.ejs');
 })
 
+app.get('/service',(req, res) => {
+  res.render('service.ejs');
+})
+
 app.get('/allMenu', (req,res) =>{
   res.send(require("./public/json/allMenu.js"));
 })

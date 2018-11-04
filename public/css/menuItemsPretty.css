@@ -9,7 +9,6 @@
 	 border: 5px dotted #f5f5dc;
 }
 
-
 .knopka {
 	opacity: 0;
   background-color: #eee;
@@ -43,20 +42,21 @@ overflow: hidden;
 .addCart{
 	cursor: pointer;
 	border-radius: 8px;
-	padding: 5px;
 	display: flex;
 	border:2px solid   #f5f5dc;
 	justify-content: space-around;
-	vertical-align: middle;
+	align-items: flex-start;
 	margin: 5px;
+	padding: 5px;
+	margin-bottom: 5px;
 }
 
 .pPrice, .weight{
 	cursor: pointer;
-	vertical-align: middle;
 	color:  #f5f5dc;
 	font-size: 24px;
-	 letter-spacing: 1.3px;
+	letter-spacing: 1.3px;
+
 }
 
 .centerMenu {

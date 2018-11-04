@@ -70,6 +70,7 @@ flex-basis:15vw;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
 .headerMenu{
  /  border:2px dotted red;
   display: flex;
@@ -82,7 +83,8 @@ flex-basis:15vw;
     height: 90vh;
     display: flex;
     background-repeat: repeat;
-    background-image: url('../image/background.jpg');
+  /  background-image: url('../image/background.jpg');
+  background-color: #333
 }
 .centerLeft {
 flex-basis:15vw;
