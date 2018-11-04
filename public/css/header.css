@@ -39,7 +39,6 @@ body{
   font-family: classic;
 }
 .headerName{
-
 font-size: 50px;
 color:#f2f291;
 font-family: elzevir;
@@ -134,8 +133,9 @@ ul li a:hover::before {
     z-index: -1;
   }
 }
+
 .centerMain{
-  border:3px solid red;
+/  border:3px solid red;
   display: flex;
     width: 75%;
   justify-content: space-around;
@@ -147,5 +147,14 @@ ul li a:hover::before {
   flex-direction: column;
   align-items:center;
   margin: 10px 40px 10px 40px;
-  border: 1px solid red;
+/  border: 1px solid red;
+}
+
+@media screen and (max-width: 1060px) {
+.centerMain{
+  width: 100%;
+}
+.centerMainHeader{
+  margin: 0px;
+}
 }
