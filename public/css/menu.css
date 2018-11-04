@@ -1,16 +1,5 @@
 
-.centerMain{
-  margin: 50px;
-  border-left:  5px dashed #f2f291;
-  border-right:  5px dashed #f2f291;
-  /background-color: white;
-  border-radius: 50px 50px 0px 0px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  overflow: auto;
 
-}
 .centerMainHeader{
   margin: 30px;
   background-color: black;
