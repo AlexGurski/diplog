@@ -1,12 +1,10 @@
-
-
 .centerMainHeader{
   margin-bottom: 20px;
   background-color: black;
   border-radius: 30px;
-  border: 4px dotted #f5f5dc;;
+  border: 4px dotted #f5f5dc;
   border-style: double;
-  height: 130px;;
+  height: 130px;
   width: 100%;
   display: flex;
 /  overflow-x: scroll;
@@ -15,6 +13,14 @@
   justify-content: flex-start;
 }
 
+#enterKind{
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+  color:#f5f5dc;
+  font-size: 30px;
+    font-family: tolstyak;
+}
 
 .headerItemMenu{
 height: 100px;

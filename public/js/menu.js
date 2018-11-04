@@ -4,24 +4,33 @@ async function getElementMenu(){
     let products = await responseMenu.json();
     await   console.log(products)
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
-    items = products
-    await   create(items);
+    await   create(products);
 
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
       document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
+    let idClassName = document.getElementsByClassName('headerItemMenu')[i].id
+
+//так же реализовать отоброжение с with!!!
+    for (let i=0;i < products.length;i++){
+      if (products[i].id === idClassName){
+        document.getElementById('enterKind').innerHTML = products[i].name.toUpperCase()
+      }
+    }
         filter(document.getElementsByClassName('headerItemMenu')[i].id);
       }
     }
-    return items;
+    return products;
 }
-
 function filter (name){
+  //вот тут искать with если с ним то так, иначе что-то придумать
   for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
     document.getElementsByClassName('ItemsCenter')[i].style.display='none'
   }
   for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
     document.getElementsByClassName(name)[i].style.display='block';
+
   }
+
 }
 async function getMenuWith(){
     let responseMenu = await fetch('/menuWith')
@@ -39,11 +48,7 @@ window.onload = () => {
   let menuWith = getMenuWith();
 
   for (let i = 0;i < document.getElementsByClassName('headerItemMenu').length;i++){
-  /*
-      document.getElementsByClassName('headerItemMenu')[i].onclick = {
-        console.log('dfgdg')
-     }
-*/
+
   }
 
 }
