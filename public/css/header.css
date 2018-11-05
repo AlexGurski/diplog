@@ -130,7 +130,7 @@ ul li a:hover {
   color: black;
 }
 ul li a:hover::before {
-  animation: animate .5s linear forwards;
+  animation: animate .3s linear forwards;
 }
 
 @keyframes animate {
