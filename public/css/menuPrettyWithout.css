@@ -1,0 +1,22 @@
+.menuItemWith{
+  width: 100%;
+  border: 2px solid blue;
+}
+
+.menuItemWithPhoto{
+  height: 100px;
+  width: 25%;
+  border: 2px solid red;
+  background-size: 100% 100%;
+}
+
+.menuItemWithDiscription{
+  width: 100%;
+  border: 2px solid gold;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItemWithDiscriptionText{
+  border:1px solid red;
+}

@@ -13,7 +13,8 @@ let menuGarnirs= require("./public/json/garnirs.js");
 let milk= require("./public/json/milk.js");
 let pivo= require("./public/json/pivo.js");
 
-let allMenuWith = menuPizza.concat(menuHot,menuCold, menuGarnirs,milk)
+let allMenuWith = menuPizza.concat(menuHot,menuCold, menuGarnirs,milk);
+let allMenuWithout = pivo
 app.get('/',(req, res) => {
   res.render('index.ejs');
 })
@@ -30,6 +31,10 @@ app.get('/service',(req, res) => {
   res.render('service.ejs');
 })
 
+app.get('/galery',(req, res) => {
+  res.render('galery.ejs');
+})
+
 app.get('/allMenu', (req,res) =>{
   res.send(require("./public/json/allMenu.js"));
 })
@@ -38,6 +43,9 @@ app.get('/menuWith', (req,res) =>{
   res.send(allMenuWith);
 })
 
+app.get('/menuWithout', (req,res) =>{
+  res.send(allMenuWithout);
+})
  app.listen(process.env.PORT || 3000, () => {
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;

@@ -1,0 +1,15 @@
+.menuItemWith{
+  width: 100%;
+  display: flex;
+}
+
+.menuItemWithPhoto{
+  width: 30%;
+  border: 2px solid red;
+  background-image: url('../image/pivasik.jpg');
+  background-size: 100% 100%;
+}
+.menuItemWithDiscription{
+  width: 70%;
+  border: 2px solid gold;
+}

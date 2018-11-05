@@ -1,56 +1,61 @@
-
 async function getElementMenu(){
     let responseMenu = await fetch('/allMenu')
     let products = await responseMenu.json();
     await   console.log(products)
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   create(products);
-
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
       document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
     let idClassName = document.getElementsByClassName('headerItemMenu')[i].id
 
-//так же реализовать отоброжение с with!!!
     for (let i=0;i < products.length;i++){
       if (products[i].id === idClassName){
         document.getElementById('enterKind').innerHTML = products[i].name.toUpperCase()
       }
     }
-        filter(document.getElementsByClassName('headerItemMenu')[i].id);
+        filter(document.getElementsByClassName('headerItemMenu')[i].id , products[i].type);
       }
     }
     return products;
 }
-function filter (name){
+function filter (name,kind){
   //вот тут искать with если с ним то так, иначе что-то придумать
+  console.log(name, kind);
   for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
-    document.getElementsByClassName('ItemsCenter')[i].style.display='none'
+    document.getElementsByClassName('ItemsCenter')[i].style.display='none';
   }
-  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+  for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
+  document.getElementsByClassName('menuItemWith')[i].style.display='none';
+}
+if (kind !=='undefined'){  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
     document.getElementsByClassName(name)[i].style.display='block';
-
   }
+} else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+  document.getElementsByClassName('menuItemWith')[i].style.display='block';
+}}
+
+
 
 }
+
 async function getMenuWith(){
-    let responseMenu = await fetch('/menuWith')
+    let responseMenu = await fetch('/menuWith');
+    let responseMenuWithout = await fetch('/menuWithout');
+    let productsWithout = await responseMenuWithout.json();
     let products = await responseMenu.json();
+    console.log(products);
+    console.log(productsWithout);
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   createMenuPretty(products);
-    items = products
+    await   createMenuPrettyWithout(productsWithout);
+    let items = products.concat(productsWithout)
+    await   console.log(items);
     return items;
 }
 
-
 window.onload = () => {
-
   let items = getElementMenu();
   let menuWith = getMenuWith();
-
-  for (let i = 0;i < document.getElementsByClassName('headerItemMenu').length;i++){
-
-  }
-
 }
 
 function create(items){
@@ -72,14 +77,72 @@ function create(items){
     }
   console.log('createheader')
 }
+function arrayUnique(massivKind){
+    return massivKind.filter((e,i,a)=>a.indexOf(e)==i)
+};
+
+function createMenuPrettyWithout(items){
+  console.log(items);
+
+let massivKind = [];
+for (let i=0;i<items.length;i++){
+  massivKind[i] =  items[i].kind;
+}
+console.log(massivKind);
+massivKind = arrayUnique(massivKind);
+console.log(massivKind);
+
+for (let i=0;i<massivKind.length;i++){
+  const  div = document.createElement("div");
+  div.className = 'menuItemWith '+massivKind[i];
+  div.id = '00'+massivKind[i];
+  div.style.display = 'none'
+  document.getElementById('centerMain').appendChild(div);
+
+  const  img = document.createElement("div");
+  img.className = 'menuItemWithPhoto ';
+  //img.src  = "public/image/"+massivKind[i]+".jpg";
+  img.style.backgroundImage = "url(public/image/"+massivKind[i]+".jpg)";
+  document.getElementById(div.id).appendChild(img);
+
+
+  var  discription = document.createElement("div");
+  discription.className = 'menuItemWithDiscription ';
+  discription.id = 'discription'+massivKind[i];
+  document.getElementById(div.id).appendChild(discription);
+}
+
+
+        for (var i=0; i<items.length; i++){
+          const  text = document.createElement("div");
+          text.className = 'menuItemWithDiscriptionText';
+          text.id = 'discriptionText'+items[i].kind;
+          document.getElementById('discription'+items[i].kind).appendChild(text);
+
+            const  name = document.createElement("div");
+            name.className = 'menuItemWithDiscriptionTextGram';
+            name.innerHTML = items[i].name;
+            document.getElementById('discription'+items[i].kind).appendChild(name);
+
+            const  gram = document.createElement("div");
+            gram.className = 'menuItemWithDiscriptionTextGram';
+            gram.innerHTML = items[i].gram;
+            document.getElementById('discription'+items[i].kind).appendChild(gram);
+
+            const  price = document.createElement("div");
+            price.className = 'menuItemWithDiscriptionTextGram';
+            price.innerHTML = items[i].price;
+            document.getElementById('discription'+items[i].kind).appendChild(price);
+        }
+
+}
+
 function createMenuPretty(items){
 
   for (var i=0; i<items.length; i++){
-
       const  div = document.createElement("div");
        div.className = 'ItemsCenter '+items[i].kind;
        div.id = '00'+items[i].id;
-
        document.getElementById('centerMain').appendChild(div);
 
 //ТУТ БУДЕТ ТРЕШАК!!!!
@@ -134,7 +197,6 @@ function createMenuPretty(items){
      document.getElementById(addCart.id).appendChild(pPrice);
 
 if (items[i].gram1!==undefined){
-
 
    const addCart = document.createElement("div");
    addCart.className = 'addCart';
