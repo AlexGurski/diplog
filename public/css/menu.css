@@ -51,13 +51,14 @@ cursor: pointer;
 }
 
 .headerItemMenu:hover .headerItemMenuImage{
-
   opacity: 0.4;
 }
 .headerItemMenu:hover .headerItemMenuDiscription{
   opacity: 1;
 }
 .headerItemMenu:hover{
-background-color: black;
+    background-color: black;
     border: 3px dashed white;
+    height: 94px;
+    width: 94px;
 }

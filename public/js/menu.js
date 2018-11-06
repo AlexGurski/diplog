@@ -27,11 +27,12 @@ function filter (name,kind){
   for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
   document.getElementsByClassName('menuItemWith')[i].style.display='none';
 }
-if (kind !=='undefined'){  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
-    document.getElementsByClassName(name)[i].style.display='block';
+if (kind !==undefined){
+      for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+      document.getElementsByClassName(name)[i].style.display='block';
   }
 } else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
-  document.getElementsByClassName('menuItemWith')[i].style.display='block';
+ document.getElementsByClassName(name)[i].style.display='flex';
 }}
 
 
@@ -88,6 +89,7 @@ let massivKind = [];
 for (let i=0;i<items.length;i++){
   massivKind[i] =  items[i].kind;
 }
+
 console.log(massivKind);
 massivKind = arrayUnique(massivKind);
 console.log(massivKind);
@@ -111,8 +113,6 @@ for (let i=0;i<massivKind.length;i++){
   discription.id = 'discription'+massivKind[i];
   document.getElementById(div.id).appendChild(discription);
 }
-
-
         for (var i=0; i<items.length; i++){
           const  text = document.createElement("div");
           text.className = 'menuItemWithDiscriptionText';
@@ -188,14 +188,14 @@ function createMenuPretty(items){
 
      const weight = document.createElement("div");
        weight.className = 'weight';
-         weight.innerHTML =  items[i].gram + ' гр.';
+         weight.innerHTML =  items[i].gram;
        document.getElementById(addCart.id).appendChild(weight);
 
      const pPrice = document.createElement("div");
        pPrice.className = 'pPrice';
        pPrice.innerHTML =  items[i].price
      document.getElementById(addCart.id).appendChild(pPrice);
-
+console.log(items[i]);
 if (items[i].gram1!==undefined){
 
    const addCart = document.createElement("div");
@@ -205,7 +205,7 @@ if (items[i].gram1!==undefined){
 
    const weight = document.createElement("div");
      weight.className = 'weight';
-       weight.innerHTML =  items[i].gram1 + ' гр.';
+       weight.innerHTML =  items[i].gram1 ;
      document.getElementById(addCart.id).appendChild(weight);
 
    const pPrice = document.createElement("div");

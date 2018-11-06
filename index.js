@@ -6,15 +6,17 @@ app.use( bodyParser.urlencoded( {extended:true} ) );
 app.use( bodyParser.json() )
 app.use('/public', express.static('public'));
 
+let  desert= require("./public/json/desert.js");
 let menuPizza = require("./public/json/menuPizza.js");
 let menuHot = require("./public/json/menuHot.js");
 let menuCold = require("./public/json/menuCold.js");
 let menuGarnirs= require("./public/json/garnirs.js");
-let milk= require("./public/json/milk.js");
+let cocktail= require("./public/json/cocktail.js");
 let pivo= require("./public/json/pivo.js");
-
-let allMenuWith = menuPizza.concat(menuHot,menuCold, menuGarnirs,milk);
-let allMenuWithout = pivo
+let vodka= require("./public/json/vodka.js");
+let tea= require("./public/json/tea.js");
+let allMenuWith = menuPizza.concat(menuHot,menuCold, menuGarnirs,cocktail,desert);
+let allMenuWithout = pivo.concat(vodka,tea);
 app.get('/',(req, res) => {
   res.render('index.ejs');
 })

@@ -40,7 +40,7 @@ module.exports =  [
   {
     id:'vodka',
     name:'Спиртные напитки',
-    type:'with'
+
   },
   {
     id:'tea',

@@ -238,6 +238,7 @@ overflow: hidden;
     -webkit-perspective: inherit;
             perspective: inherit;
     z-index: 2;
+		color:black;
 }
 
 .container .back{
