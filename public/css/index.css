@@ -5,6 +5,9 @@
   height: 100%;
   overflow: hidden;
 }
+.twoBlock{
+  border: 1px solid red;
+}
 .index{
   margin-top: 40px;
   margin-bottom:  40px;
