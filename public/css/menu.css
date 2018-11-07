@@ -12,7 +12,9 @@
   align-items: center;
   justify-content: flex-start;
 }
-
+.centerMain{
+    width: 75%;
+}
 #enterKind{
   text-align: center;
   width: 100%;

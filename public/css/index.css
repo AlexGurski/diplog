@@ -15,7 +15,14 @@
   /border:1px solid gold;
   width: 100%;
 }
-
+.serviceBlock{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  border:1px solid black;
+}
 .slideShow, .slideShowParty{
 position: relative;
 display: flex;

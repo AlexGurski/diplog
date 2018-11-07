@@ -159,7 +159,6 @@ ul li a:hover::before {
 .centerMain{
 /  border:3px solid red;
   display: flex;
-    width: 75%;
   justify-content: space-around;
   flex-wrap: wrap;
 }

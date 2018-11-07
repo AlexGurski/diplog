@@ -1,0 +1,61 @@
+.allService{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.nashiUslugi{
+    text-align: center;
+    font-size: 50px;
+}
+.serviceArray{
+display: flex;
+flex-direction: row;
+width: 100%;
+justify-content: space-around;
+}
+      .service{
+        margin:  10px;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+.service:hover{
+background-color: white;
+}
+      .event{
+        width: 280px;
+        height: 280px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+      }
+      .eventText{
+        text-align: justify;
+        padding:  10px;
+        color:black;
+      }
+      .eventName{
+          color:black;
+      }
+      .svadba{
+        background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/svadba.jpg");
+        background-size: 100% 100%;
+      }
+      .korporativ{
+        background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/koroparativ.jpg");
+        background-size: 100% 100%;
+      }
+      .deti{
+        background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/deti.jpg");
+        background-size: 100% 100%;
+      }
+
+a{
+text-decoration: none;
+}

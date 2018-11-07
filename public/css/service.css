@@ -1,9 +1,50 @@
 .centerMain{
   text-align: center;
-
   color:#f5f5dc;
   border-left:  5px dashed #f2f291;
   border-right:  5px dashed #f2f291;
-  border-radius: 50px 50px 0px 0px;
   overflow: auto;
+  margin: 0px;
+  width: 100%;
+}
+.service{
+  margin:  10px;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.service:hover{
+background-color: white;
+}
+.event{
+  width: 380px;
+  height: 380px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.eventText{
+  text-align: justify;
+  padding:  10px;
+  color:black;
+}
+.eventName{
+    color:black;
+}
+.svadba{
+  background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/svadba.jpg");
+  background-size: 100% 100%;
+}
+.korporativ{
+  background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/koroparativ.jpg");
+  background-size: 100% 100%;
+}
+.deti{
+  background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/deti.jpg");
+  background-size: 100% 100%;
 }
