@@ -1,0 +1,49 @@
+@keyframes fade1 {
+0%{ opacity: 0; }
+10%{ opacity: 1; }
+20%{ opacity: 1; }
+30%{ opacity: 1; }
+40%{ opacity: 0; }
+50%{ opacity: 0; }
+60%{ opacity: 0; }
+70%{ opacity: 0; }
+80%{ opacity: 0; }
+90%{ opacity: 0;}
+100% { opacity: 0;}
+}
+
+.mainMenuBluda div{
+display: flex;
+width: 100%;
+height: 100%;
+border-radius: 25px;
+overflow: hidden;
+opacity:0;
+animation-name: fade1;
+animation-duration: 20s;
+animation-iteration-count: infinite;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+align-items: flex-end;
+}
+
+.mainMenuBluda div:nth-child(1) {
+  position: relative;
+  background-image: url("../image/mainAtmosphere.jpg");
+  animation-delay: 0s; }
+.mainMenuBluda div:nth-child(2) {
+background-image: url("../image/atmosphere.jpg");
+  position: relative;
+  top:-100% ;
+  animation-delay: 5s; }
+.mainMenuBluda div:nth-child(3) {
+  background-image: url("../image/atmosphere1.jpg");
+  position: relative;
+  top:-200% ;
+  animation-delay: 10s; }
+.mainMenuBluda div:nth-child(4) {
+    background-image: url("../image/proba.jpg");
+  position: relative;
+  top:-300% ;
+  animation-delay: 15s;
+}
