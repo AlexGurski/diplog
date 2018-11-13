@@ -62,6 +62,10 @@ background-color: white;
         background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/deti.jpg");
         background-size: 100% 100%;
       }
+      .birthday{
+            background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/birthday.jpg");
+            background-size: 100% 100%;
+          }
 
 a{
 text-decoration: none;

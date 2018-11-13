@@ -64,3 +64,17 @@ cursor: pointer;
     height: 94px;
     width: 94px;
 }
+@media screen and (max-width: 1060px) {
+.headerItemMenuDiscription{
+  opacity: 1;
+}
+.headerItemMenuImage{
+  opacity: 0.4;
+}
+.headerItemMenu{
+    background-color: black;
+    border: 3px dashed white;
+    height: 94px;
+    width: 94px;
+}
+}

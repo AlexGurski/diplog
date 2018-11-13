@@ -5,8 +5,11 @@
   height: 100%;
   overflow: hidden;
 }
-.twoBlock{
-  border: 1px solid red;
+.menuOnMain{
+  border:3px solid red;
+  font-size: 25px;
+  text-align: center;
+  background-color: red;
 }
 .index{
   margin-top: 40px;
