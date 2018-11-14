@@ -1,6 +1,6 @@
 .centerMain{
   width: 100%;
-  border: 2px solid red;
+  /border: 2px solid red;
 }
 
 label[for] {
@@ -10,8 +10,6 @@ label[for] {
 input[type="checkbox"] {
  display: none;
 }
-
-
 
 .lightbox, .grid {
  width: 100%;

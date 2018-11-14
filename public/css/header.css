@@ -6,7 +6,6 @@
  font-family: classic; /* Гарнитура шрифта */
  src: url("../fonts/grafiti.otf"); /* Путь к файлу со шрифтом */
 }
-
 @font-face {
  font-family: tolstyak; /* Гарнитура шрифта */
  src: url("../fonts/tolstyak.ttf"); /* Путь к файлу со шрифтом */
