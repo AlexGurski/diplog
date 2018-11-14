@@ -24,7 +24,7 @@ animation-name: fade;
 animation-duration: 20s;
 animation-iteration-count: infinite;
 background-repeat: no-repeat;
-background-size: 100% 100%;
+background-size: contain;
 background-position: center;
 align-items: flex-end;
 }
