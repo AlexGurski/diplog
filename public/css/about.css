@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 1060px) {
 .menuAtmosphereText,  .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
-    width: 100%;
+    width: 90%;
   }
   .menuAtmosphere{
     flex-direction: column;
