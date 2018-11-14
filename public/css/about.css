@@ -24,7 +24,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 /  border-top: 2px solid red;
 /  border-bottom: 2px solid red;
   padding-top:50px;
@@ -36,9 +36,22 @@
 .menuAtmosphereText{
   text-align: justify;
 }
+.thisShow{
+  display: none;
+}
+
 @media screen and (max-width: 1060px) {
-  .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
-    width: 90%;
+.menuAtmosphereText,  .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
+    width: 100%;
+  }
+  .menuAtmosphere{
+    flex-direction: column;
+  }
+  .thisShow{
+    display: block;
+  }
+  .thisHide{
+    display: none;
   }
 }
 .mainScroll{
