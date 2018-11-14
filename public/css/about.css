@@ -1,15 +1,14 @@
 .centerMain{
   text-align: center;
-  font-size: 50px;
+  font-size:35px;
   color:#f5f5dc;
-
   border-radius: 50px 50px 0px 0px;
-
   overflow: hidden;
 }
 .mainMenyPark{
   margin-top: 20px;
   font-family: elzevir;
+    font-size: 50px;
 }
 .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
   font-family: tolstyak;
@@ -18,7 +17,6 @@
   height: 550px;
   border: 3px solid #f2f291;
   margin:0 auto;
-
   border-radius: 25px;
 }
 
@@ -27,14 +25,17 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
-  padding:50px;
+/  border-top: 2px solid red;
+/  border-bottom: 2px solid red;
+  padding-top:50px;
+  padding-bottom:50px;
 }
 .menuAtmosphereText, .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
   width: 45%;
 }
-
+.menuAtmosphereText{
+  text-align: justify;
+}
 @media screen and (max-width: 1060px) {
   .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
     width: 90%;
