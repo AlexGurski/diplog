@@ -10,6 +10,10 @@
  font-family: tolstyak; /* Гарнитура шрифта */
  src: url("../fonts/tolstyak.ttf"); /* Путь к файлу со шрифтом */
 }
+@font-face {
+ font-family: antiqua; /* Гарнитура шрифта */
+ src: url("../fonts/Antiqua.ttf"); /* Путь к файлу со шрифтом */
+}
 *{
   color:#f2f291;
 }

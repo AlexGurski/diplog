@@ -4,10 +4,11 @@
   width: 100%;
   overflow-y: hidden;
 }
-
 .nashiUslugi{
     text-align: center;
     font-size: 50px;
+    font-family: 'elzevir';
+    font-weight: 900;
 }
 .serviceArray{
 display: flex;
@@ -15,11 +16,11 @@ flex-direction: row;
 width: 100%;
 justify-content: space-around;
 }
+
 @media screen and (max-width: 1060px) {
   .serviceArray{
 justify-content: flex-start;
   }
-
 }
       .service{
         margin:  10px;
@@ -33,14 +34,14 @@ justify-content: flex-start;
           transition: all 0.8s ease;
       }
 .service:hover{
-background-color: white;
+background-color: gold;
 }
       .event{
         width: 280px;
         height: 280px;
         border-radius: 10px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-direction: column;
       }
@@ -48,9 +49,13 @@ background-color: white;
         text-align: justify;
         padding:  10px;
         color:black;
+        font-family: classic;
+          text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
       }
       .eventName{
           color:black;
+          font-family: tolstyak;
+          font-size: 150%;
       }
       .svadba{
         background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/svadba.jpg");
