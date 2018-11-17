@@ -14,11 +14,12 @@
   font-family: tolstyak;
   text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
   color:#f5f5dc;
-  height: 500px;
+  /height: 500px;
+  height: 29vw;
 /  border: 3px dashed #f2f291;
-  margin:0 auto;
   border-radius: 25px;
   box-shadow: 3px 3px 3px yellow, -3px -3px 3px #f2f291;
+  margin: 5px;
 }
 
 .menuAtmosphere{
@@ -28,11 +29,11 @@
   justify-content: space-between;
 /  border-top: 2px solid red;
 /  border-bottom: 2px solid red;
-  padding-top:50px;
-  padding-bottom:50px;
+  padding-top:20px;
+  padding-bottom:20px;
 }
 .menuAtmosphereText, .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
-  width: 45%;
+  width: 47%;
 }
 .menuAtmosphereText{
   text-align: justify;
@@ -42,12 +43,15 @@
   display: none;
 }
 
-
-
 @media screen and (max-width: 1060px) {
 .menuAtmosphereText,  .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
     width: 90%;
+
   }
+  .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
+      width: 90%;
+      height: 500px;
+    }
   .menuAtmosphere{
     flex-direction: column;
   }
