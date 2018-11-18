@@ -44,6 +44,10 @@
                  10px 20px 5px rgba(0,0,0,0.05),
                  -10px 20px 5px rgba(0,0,0,0.05);
 }
+.nashiUslugi{
+  color:#f2f291;
+  text-shadow: 0 0 5px #fff;
+}
 .index{
   margin-top: 40px;
   margin-bottom:  40px;

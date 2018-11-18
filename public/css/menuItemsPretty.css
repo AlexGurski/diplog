@@ -6,7 +6,11 @@
 	 border-radius: 25px;
 	 position: relative;
 /	 background-color:black;
+	background-image:url("../image/table.jpg");
 	 border: 5px dotted #f5f5dc;
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: 100% 100%;
 }
 
 .knopka {
@@ -34,7 +38,7 @@
 	text-align: center;
 	font-family: "left";
 font-size: 24px;
-color:   #f5f5dc;
+color:   black;
 line-height: 28px;
 height: 56px;
 overflow: hidden;
@@ -43,7 +47,7 @@ overflow: hidden;
 	cursor: pointer;
 	border-radius: 8px;
 	display: flex;
-	border:2px solid   #f5f5dc;
+	border:2px dotted  black;
 	justify-content: space-around;
 	align-items: flex-start;
 	margin: 5px;
@@ -53,7 +57,7 @@ overflow: hidden;
 
 .pPrice, .weight{
 	cursor: pointer;
-	color:  #f5f5dc;
+	color: black;
 	font-size: 24px;
 	letter-spacing: 1.3px;
 
@@ -64,7 +68,7 @@ overflow: hidden;
   flex-grow: 1;
   border:2px solid  black;
   display: flex;
-  border-radius: 15px;
+  border-radius: 25px;
   justify-content: center;
 	flex-wrap: wrap;
 	width: 100%;
@@ -158,6 +162,7 @@ overflow: hidden;
 }
 
 .container{
+	border-radius: 25px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 	-webkit-perspective: 1000px;
@@ -185,10 +190,11 @@ overflow: hidden;
 
 
 .back{
-    background-image: -webkit-repeating-linear-gradient(top left,rgb(239, 252, 255) 0%,rgb(242, 255, 170) 28.9%,rgb(245, 252, 255) 50.7%,rgb(239, 252, 202) 81.9%,rgb(241, 252, 255) 100%);
+
+  /  background-image: -webkit-repeating-linear-gradient(top left,rgb(239, 252, 255) 0%,rgb(242, 255, 170) 28.9%,rgb(245, 252, 255) 50.7%,rgb(239, 252, 202) 81.9%,rgb(241, 252, 255) 100%);
     /* IE10+ */
-    background-image: repeating-linear-gradient(to bottom right,rgb(239, 252, 255) 0%,rgb(242, 255, 170) 28.9%,rgb(245, 252, 255) 50.7%,rgb(239, 252, 202) 81.9%,rgb(241, 252, 255) 100%);
-    background-image: -ms-repeating-linear-gradient(top left,rgb(239, 252, 255) 0%,rgb(242, 255, 170) 28.9%,rgb(245, 252, 255) 50.7%,rgb(239, 252, 202) 81.9%,rgb(241, 252, 255) 100%);
+/    background-image: repeating-linear-gradient(to bottom right,rgb(239, 252, 255) 0%,rgb(242, 255, 170) 28.9%,rgb(245, 252, 255) 50.7%,rgb(239, 252, 202) 81.9%,rgb(241, 252, 255) 100%);
+/    background-image: -ms-repeating-linear-gradient(top left,rgb(239, 252, 255) 0%,rgb(242, 255, 170) 28.9%,rgb(245, 252, 255) 50.7%,rgb(239, 252, 202) 81.9%,rgb(241, 252, 255) 100%);
 
 }
 
