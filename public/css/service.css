@@ -19,6 +19,14 @@
 .service:hover{
 background-color: white;
 }
+.serviceBlock{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+/  border:1px solid black;
+}
 .event{
   width: 380px;
   height: 380px;
@@ -36,15 +44,6 @@ background-color: white;
 .eventName{
     color:black;
 }
-.svadba{
-  background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/svadba.jpg");
-  background-size: 100% 100%;
-}
-.korporativ{
-  background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/koroparativ.jpg");
-  background-size: 100% 100%;
-}
-.deti{
-  background-image:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) ), url("../image/deti.jpg");
-  background-size: 100% 100%;
+.nashiUslugi{
+  display: none;
 }
