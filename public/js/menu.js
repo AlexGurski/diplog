@@ -31,11 +31,19 @@ if (kind !==undefined){
       for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
       document.getElementsByClassName(name)[i].style.display='block';
   }
-} else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+}
+else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+  if (name==='pivo' || name==='zakuski'){
+     document.getElementsByClassName('zakuski')[i].style.display='flex';
+     document.getElementsByClassName('pivo')[i].style.display='flex';
+  }
+    if (name==='tea' || name==='cofe'){
+      document.getElementsByClassName('tea')[i].style.display='flex';
+      document.getElementsByClassName('cofe')[i].style.display='flex';
+    }
  document.getElementsByClassName(name)[i].style.display='flex';
+
 }}
-
-
 
 }
 
@@ -104,7 +112,7 @@ for (let i=0;i<massivKind.length;i++){
   const  img = document.createElement("div");
   img.className = 'menuItemWithPhoto ';
   //img.src  = "public/image/"+massivKind[i]+".jpg";
-  img.style.backgroundImage = "url(public/image/"+massivKind[i]+".jpg)";
+  img.style.backgroundImage = "url(public/image/menuPhoto/"+massivKind[i]+".jpg)";
   document.getElementById(div.id).appendChild(img);
 
 
@@ -116,23 +124,32 @@ for (let i=0;i<massivKind.length;i++){
         for (var i=0; i<items.length; i++){
           const  text = document.createElement("div");
           text.className = 'menuItemWithDiscriptionText';
-          text.id = 'discriptionText'+items[i].kind;
+          text.id = 'discriptionText'+items[i].name.split(' ').join('');
           document.getElementById('discription'+items[i].kind).appendChild(text);
 
             const  name = document.createElement("div");
-            name.className = 'menuItemWithDiscriptionTextGram';
+            name.className = 'menuItemWithDiscriptionTextName';
             name.innerHTML = items[i].name;
-            document.getElementById('discription'+items[i].kind).appendChild(name);
+            document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(name);
 
             const  gram = document.createElement("div");
             gram.className = 'menuItemWithDiscriptionTextGram';
             gram.innerHTML = items[i].gram;
-            document.getElementById('discription'+items[i].kind).appendChild(gram);
+            document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(gram);
+            if (items[i].other!=undefined){
+              const  other = document.createElement("div");
+                other.className = 'menuItemWithDiscriptionTextOther';
+                other.innerHTML = items[i].other;
+                document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(other);
+              }
 
             const  price = document.createElement("div");
-            price.className = 'menuItemWithDiscriptionTextGram';
+            price.className = 'menuItemWithDiscriptionTextPrice';
             price.innerHTML = items[i].price;
-            document.getElementById('discription'+items[i].kind).appendChild(price);
+            document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(price);
+
+
+
         }
 
 }

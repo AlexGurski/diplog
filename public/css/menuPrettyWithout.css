@@ -1,22 +1,36 @@
 .menuItemWith{
   width: 100%;
-  border: 2px solid blue;
+  /border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 325px;
+  align-items: flex-start;
 }
 
 .menuItemWithPhoto{
-
-  width: 25%;
-  border: 2px solid red;
+  height: 300px;
+/  border: 2px solid red;
   background-size: 100% 100%;
 }
 
 .menuItemWithDiscription{
   width: 100%;
-  border: 2px solid gold;
+/  border: 2px solid gold;
   display: flex;
   flex-direction: column;
+  color: white;
+  margin-top: 1em;
 }
 
 .menuItemWithDiscriptionText{
-  border:1px solid red;
+  /border-top: 1px dashed #f2f291;
+    color: white;
+    margin-top: 5px;
+}
+.menuItemWithDiscriptionTextOther{
+  color: grey;
+}
+.menuItemWithDiscriptionTextPrice{
+  text-align: right;
 }

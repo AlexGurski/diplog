@@ -15,7 +15,7 @@
  src: url("../fonts/Antiqua.ttf"); /* Путь к файлу со шрифтом */
 }
 *{
-  color:#f2f291;
+/color:#f2f291;
 }
 .header{
 / position: fixed;
