@@ -35,6 +35,16 @@
 body{
   background-color: #1d1d1d;;
 }
+hr{
+background:url('../image/hrline.png');
+background-position: center;
+background-repeat: no-repeat;
+border: 0;
+height:20px; /* высота нашей картинки-линии */
+background-size: contain;
+width: 100%;
+margin: 10px;
+}
 .headerAdress span{
 /  border: 1px solid red;
   width: 33%;

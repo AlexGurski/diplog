@@ -3,7 +3,7 @@
   color:#f5f5dc;
   border-left:  5px dashed #f2f291;
   border-right:  5px dashed #f2f291;
-  overflow: auto;
+
   margin: 0px;
   width: 100%;
 }
@@ -47,3 +47,72 @@ background-color: white;
 .nashiUslugi{
   display: none;
 }
+.serviceName{
+  color:#f2f291;
+  text-shadow: 0 0 5px #fff;
+  margin-top: 10px;
+  font-size: 50px;
+  font-family: elzevir;
+}
+.serviceText{
+  color:#f2f291;
+  text-shadow: 0 0 5px black;
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: antiqua;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.serviceMenu{
+  margin-top: 20px;
+  color:#f2f291;
+  text-shadow: 0 0 5px black;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: classic;
+  text-align: center;
+  color:gold;
+}
+.slideShowParty{
+  margin-top: 20px;
+  margin-bottom:  20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.img{
+  flex-shrink: 0;
+  position: relative;
+  height: 280px;
+  width: 330px;
+  border-radius: 15px;
+  margin: 20px;
+  background-size: 100% 100%;
+  box-shadow:
+   0 1px 4px rgba(0, 0, 0, .3),
+   -23px 0 20px -23px rgba(0, 0, 0, .8),
+   23px 0 20px -23px rgba(0, 0, 0, .8),
+   0 0 40px rgba(0, 0, 0, .5) inset;
+}
+.slideShowParty div:nth-child(1) {
+  background-image: url("../image/service5.jpg");
+ }
+ .slideShowParty div:nth-child(3) {
+   background-image: url("../image/service1.jpg");
+  }
+  .slideShowParty div:nth-child(4) {
+    background-image: url("../image/service2.jpg");
+   }
+   .slideShowParty div:nth-child(5) {
+     background-image: url("../image/service3.jpg");
+    }
+    .slideShowParty div:nth-child(6) {
+      background-image: url("../image/service6.jpg");
+     }
+     .slideShowParty div:nth-child(2) {
+       background-image: url("../image/service4.jpg");
+       padding-right: : 10px;
+      }

@@ -6,16 +6,6 @@
   overflow: hidden;
 }
 
-hr{
-background:url('../image/hrline.png');
-background-position: center;
-background-repeat: no-repeat;
-border: 0;
-height:20px; /* высота нашей картинки-линии */
-background-size: contain;
-width: 100%;
-margin: 10px;
-}
 
 .menuOnMain{
   background-image: url('../image/elka1.jpg');
@@ -81,7 +71,7 @@ overflow-y: auto;
   /border:2px solid blue;
   flex-shrink: 0;
   position: relative;
-  height: 80%;
+  height: 280px;
   width: 300px;
   border-radius: 15px;
   margin-left: 20px;

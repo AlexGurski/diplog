@@ -20,13 +20,21 @@ let supzavtrak= require("./public/json/supzavtrak.js");
 let sandwblinch= require("./public/json/sandwblinch.js");
 let salat= require("./public/json/salat.js");
 
+let service= require("./public/json/serviceJSON.js");
+
 let allMenuWith = menuPizza.concat(salat, sandwblinch, supzavtrak, menuHot,menuCold, menuGarnirs,cocktail,desert);
 let allMenuWithout = pivo.concat(vodka,tea,sokmorozh);
 
 app.get('/service/:id', (req,res) => {
      let id = req.params.id;
-     console.log(id)
-     res.render('oneService.ejs',{post :`1`});
+     let push = [];
+     for (let i=0;i<service.length;i++){
+       if (req.params.id ===service[i].id) {
+         push = service[i]
+       }
+     }
+     console.log(push)
+     res.render('oneService.ejs',{post:push});
    })
 
 app.get('/',(req, res) => {
