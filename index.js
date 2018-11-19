@@ -22,6 +22,13 @@ let salat= require("./public/json/salat.js");
 
 let allMenuWith = menuPizza.concat(salat, sandwblinch, supzavtrak, menuHot,menuCold, menuGarnirs,cocktail,desert);
 let allMenuWithout = pivo.concat(vodka,tea,sokmorozh);
+
+app.get('/service/:id', (req,res) => {
+     let id = req.params.id;
+     console.log(id)
+     res.render('oneService.ejs',{post :`1`});
+   })
+
 app.get('/',(req, res) => {
   res.render('index.ejs');
 })
