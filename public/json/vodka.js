@@ -8,7 +8,6 @@ module.exports =  [
     kind:'vodka',
     other:'Армения'
   },
-
   {
     name:'Коньяк "Боставан"',
     gram:'0,5мл',

@@ -1,7 +1,7 @@
 async function getElementMenu(){
     let responseMenu = await fetch('/allMenu')
     let products = await responseMenu.json();
-    await   console.log(products)
+  //  await   console.log(products)
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   create(products);
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
@@ -57,8 +57,8 @@ async function getMenuWith(){
     let responseMenuWithout = await fetch('/menuWithout');
     let productsWithout = await responseMenuWithout.json();
     let products = await responseMenu.json();
-    console.log(products);
-    console.log(productsWithout);
+  //  console.log(products);
+  //  console.log(productsWithout);
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
@@ -89,7 +89,7 @@ function create(items){
              text.innerHTML = items[i].name;
              document.getElementById(div.id).appendChild(text );
     }
-  console.log('createheader')
+//  console.log('createheader')
 }
 function arrayUnique(massivKind){
     return massivKind.filter((e,i,a)=>a.indexOf(e)==i)
@@ -103,9 +103,9 @@ for (let i=0;i<items.length;i++){
   massivKind[i] =  items[i].kind;
 }
 
-console.log(massivKind);
+//console.log(massivKind);
 massivKind = arrayUnique(massivKind);
-console.log(massivKind);
+//console.log(massivKind);
 
 for (let i=0;i<massivKind.length;i++){
   const  div = document.createElement("div");
@@ -217,7 +217,7 @@ function createMenuPretty(items){
        pPrice.className = 'pPrice';
        pPrice.innerHTML =  items[i].price
      document.getElementById(addCart.id).appendChild(pPrice);
-console.log(items[i]);
+//console.log(items[i]);
 if (items[i].gram1!==undefined){
 
    const addCart = document.createElement("div");
