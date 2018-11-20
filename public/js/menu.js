@@ -54,9 +54,9 @@ else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
 }
 
 async function getMenuWith(){
-
     let responseMenu = await fetch('/menuWith');
     let responseMenuWithout = await fetch('/menuWithout');
+//console.log(responseMenu)
     let productsWithout = await responseMenuWithout.json();
     let products = await responseMenu.json();
   //  console.log(products);
@@ -68,64 +68,38 @@ async function getMenuWith(){
 //    let rezult = searchMenu(products);
   //  console.log(rezult);
     return  await items;
-
-
 }
 
-function searchMenu(){
-  let items = [];
-  for (let i=0;i<document.getElementsByClassName('ItemsCenter').length;i++){
-    if ( document.getElementsByClassName('ItemsCenter')[i].style.display!=='none'){
-      items.push(document.getElementsByClassName('ItemsCenter')[i]);
-    }
-  }
-  console.log(items.discription);
-  /*
+async function searchMenu(){
+  let discriptionForSearch = [];
+  let responseMenu =  await fetch('/menuWith');
+  let items = await  responseMenu.json();
   for (let i=0;i < items.length; i++){
-if((items[i].discription!==undefined) && (items[i].discription.includes(document.getElementById('searchTextMenu'))))
+    if((items[i].discription!==undefined) && (items[i].discription.includes(document.getElementById('searchTextMenu').value)))
    {
       discriptionForSearch.push(items[i]);
     }
 }
-//  console.log(discriptionForSearch);
-  return discriptionForSearch;*/
+//console.log(discriptionForSearch);
+filterOne(discriptionForSearch);
 }
 
+function filterOne(item){
+        console.log(item);
+        for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
+          document.getElementsByClassName('ItemsCenter')[i].style.display='none';
+        }
+        for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
+        document.getElementsByClassName('menuItemWith')[i].style.display='none';
+      }
+       for (let i=0;i<item.length;i++){
+         document.getElementById('00'+item[i].id).style.display='block';
+       }
+}
 window.onload = () => {
   let items = getElementMenu();
   let menuWith = getMenuWith();
-  //console.log(searchMenu(menuWith,'сало'));
-
-  menuWith.then(value =>{
-  return value;
-  })
-  .then(value=>{
-  let search='сало';
-
-  return searchMenu(value,search)
-  })
-  .then(value => {
-    //console.log(value)
-  //  filterOne(value);
-  })
-
 }
-/*
-function filterOne(item){
-  for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
-    document.getElementsByClassName('ItemsCenter')[i].style.display='none';
-  }
-  for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
-  document.getElementsByClassName('menuItemWith')[i].style.display='none';
-}
- console.log(document.getElementById('00'+item[0].id));
-
- for (let i=0;i<item.length;i++){
-   document.getElementById('00'+item[i].id).style.display='block';
- }
-  console.log(item);
-}*/
-
 
 function create(items){
     for (var i=0; i<items.length; i++){
