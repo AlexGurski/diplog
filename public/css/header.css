@@ -27,7 +27,7 @@
   align-items: center;
   flex-direction: column;
   background-image: url('../image/footer.jpg');
-  background-size: 100% 90%;;
+  background-size: 100% 90%;
   background-repeat: no-repeat;
   background-position: bottom;
 }
@@ -63,7 +63,6 @@ transform: rotate(-5deg);
 /border:2px solid red;
 }
 .headerAdress{
-
 display: flex;
 justify-content: space-between;
 padding: 1em;
@@ -155,13 +154,6 @@ ul li a:hover::before {
   flex-wrap: wrap;
 }
 
-.AllItems{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  margin: 10px 40px 10px 40px;
-/  border: 1px solid red;
-}
 
 @media screen and (max-width: 1060px) {
 

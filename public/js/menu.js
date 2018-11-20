@@ -1,11 +1,11 @@
 async function getElementMenu(){
     let responseMenu = await fetch('/allMenu')
     let products = await responseMenu.json();
-  //  await   console.log(products)
+
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   create(products);
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
-      document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
+    document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
     let idClassName = document.getElementsByClassName('headerItemMenu')[i].id
 
     for (let i=0;i < products.length;i++){
@@ -18,9 +18,10 @@ async function getElementMenu(){
     }
     return products;
 }
+
 function filter (name,kind){
-  //вот тут искать with если с ним то так, иначе что-то придумать
-  console.log(name, kind);
+
+  //console.log(name, kind);
   for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
     document.getElementsByClassName('ItemsCenter')[i].style.display='none';
   }
@@ -53,6 +54,7 @@ else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
 }
 
 async function getMenuWith(){
+
     let responseMenu = await fetch('/menuWith');
     let responseMenuWithout = await fetch('/menuWithout');
     let productsWithout = await responseMenuWithout.json();
@@ -62,15 +64,68 @@ async function getMenuWith(){
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
-    let items = products.concat(productsWithout)
-    await   console.log(items);
-    return items;
+    let items = products.concat(productsWithout);
+//    let rezult = searchMenu(products);
+  //  console.log(rezult);
+    return  await items;
+
+
+}
+
+function searchMenu(){
+  let items = [];
+  for (let i=0;i<document.getElementsByClassName('ItemsCenter').length;i++){
+    if ( document.getElementsByClassName('ItemsCenter')[i].style.display!=='none'){
+      items.push(document.getElementsByClassName('ItemsCenter')[i]);
+    }
+  }
+  console.log(items.discription);
+  /*
+  for (let i=0;i < items.length; i++){
+if((items[i].discription!==undefined) && (items[i].discription.includes(document.getElementById('searchTextMenu'))))
+   {
+      discriptionForSearch.push(items[i]);
+    }
+}
+//  console.log(discriptionForSearch);
+  return discriptionForSearch;*/
 }
 
 window.onload = () => {
   let items = getElementMenu();
   let menuWith = getMenuWith();
+  //console.log(searchMenu(menuWith,'сало'));
+
+  menuWith.then(value =>{
+  return value;
+  })
+  .then(value=>{
+  let search='сало';
+
+  return searchMenu(value,search)
+  })
+  .then(value => {
+    //console.log(value)
+  //  filterOne(value);
+  })
+
 }
+/*
+function filterOne(item){
+  for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
+    document.getElementsByClassName('ItemsCenter')[i].style.display='none';
+  }
+  for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
+  document.getElementsByClassName('menuItemWith')[i].style.display='none';
+}
+ console.log(document.getElementById('00'+item[0].id));
+
+ for (let i=0;i<item.length;i++){
+   document.getElementById('00'+item[i].id).style.display='block';
+ }
+  console.log(item);
+}*/
+
 
 function create(items){
     for (var i=0; i<items.length; i++){
@@ -96,7 +151,7 @@ function arrayUnique(massivKind){
 };
 
 function createMenuPrettyWithout(items){
-  console.log(items);
+//  console.log(items);
 
 let massivKind = [];
 for (let i=0;i<items.length;i++){
@@ -165,6 +220,7 @@ function createMenuPretty(items){
       const  div = document.createElement("div");
        div.className = 'ItemsCenter '+items[i].kind;
        div.id = '00'+items[i].id;
+       div.discription = items[i].discription;
        document.getElementById('centerMain').appendChild(div);
 
 //ТУТ БУДЕТ ТРЕШАК!!!!

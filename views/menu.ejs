@@ -10,21 +10,24 @@
 <body>
   <% include blocks/allMainBorder.ejs %>
   <script src="../public/js/menu.js " ></script>
-
-<div class = 'AllItems'>
-  <div class = 'centerMainHeader' id ='centerMainHeader'>
+<div class='all'>
+  <div class='left'>
+  <input type="text" id='searchTextMenu' size="40" onkeydown="OrderAdmin()">
   </div>
+        <div class = 'AllItems'>
+          <div class = 'centerMainHeader' id ='centerMainHeader'>
+          </div>
 
-<div id='enterKind'>
-МЕНЮ
-</div>
-  <div class = 'centerMain' id = 'centerMain'>
+        <div id='enterKind'>
+        МЕНЮ
+        </div>
+          <div class = 'centerMain' id = 'centerMain'>
+          </div>
+        </div>
 
-
-
+  <div class='right'>
   </div>
-    <% include blocks/allFooter.ejs %>
 </div>
-
+  <% include blocks/allFooter.ejs %>
 </body>
 </html>

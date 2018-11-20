@@ -1,10 +1,16 @@
-.footer{
-  margin-top: 40px;
-  margin-bottom:  40px;
+.allFooter{
   height: 300px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer{
+  margin: 10px 40px 10px 40px;
+  width: 100%;
+  height: 100%;
   background-image: url('../image/header1.jpg');
-  background-size: 100% 100%;;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: bottom;
   margin-bottom: 0px;
@@ -37,6 +43,7 @@
   opacity: 0.8;
   margin-bottom: 0px;
   border-radius: 0px 0px 20px 20px;
+  align-self: center;
 }
 .footerText{
   justify-content: center;
