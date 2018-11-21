@@ -35,8 +35,8 @@ height: 5px;
 .telNumber{
   font-family: antiqua;
   font-size: 30px;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border-top: 1px dashed #333;
+  border-bottom: 1px dashed  #333;
   width: 100%;
   text-align: center;
   margin-top: 10px;
@@ -93,8 +93,8 @@ body{
 }
 .extraItems{
   width: 25%;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
+  border-left: 1px dashed grey;
+  border-right: 1px dashed  grey;
   overflow: auto;
 
   align-items: center;

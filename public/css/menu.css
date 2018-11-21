@@ -31,20 +31,21 @@
 }
 
 .centerMainHeader{
-  margin-bottom: 20px;
-  background-color: black;
+  margin-left: 20px;
+//background-color: black;
   border-radius: 30px;
-  border: 4px dotted #f5f5dc;
+//  border: 4px dotted #f5f5dc;
   border-style: double;
-  height: 130px;
+  height: 99%;
   display: flex;
-/  overflow-x: scroll;
-  overflow-y: hidden;
+  flex-direction: column;
+  overflow: auto;
+  width: 150px;
   align-items: center;
-  justify-content: flex-start;
-  width: 90%;
 }
-
+.centerMainHeader::-webkit-scrollbar{
+  width: 0px;
+}
 #enterKind{
   text-align: center;
   width: 100%;
@@ -62,11 +63,12 @@ border-radius: 50%;
 position: relative;
 border: 1px dotted black;
 cursor: pointer;
+margin-bottom: 10px;
 }
 
 .headerItemMenuImage{
-  height: 98px;
-  width:  98px;
+  height: 100px;
+  width:  100px;
   border-radius: 50%;
 }
 
@@ -92,9 +94,6 @@ cursor: pointer;
 }
 .headerItemMenu:hover{
     background-color: black;
-    border: 3px dashed white;
-    height: 94px;
-    width: 94px;
 }
 @media screen and (max-width: 1060px) {
   .centerMainHeader{
