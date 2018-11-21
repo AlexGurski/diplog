@@ -1,26 +1,4 @@
 
-.service{
-  margin:  10px;
-  width: 400px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
-.service:hover{
-background-color: white;
-}
-
-.event{
-  width: 380px;
-  height: 380px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
 .eventText{
   text-align: justify;
   padding:  10px;
@@ -38,6 +16,10 @@ background-color: white;
   margin-top: 10px;
   font-size: 50px;
   font-family: elzevir;
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  color: black;
 }
 .serviceText{
   color:#f2f291;
@@ -47,6 +29,7 @@ background-color: white;
   font-family: antiqua;
   text-align: left;
   margin-bottom: 20px;
+    color: brown;
 }
 .serviceMenu{
   margin-top: 20px;
@@ -56,7 +39,7 @@ background-color: white;
   font-size: 30px;
   font-family: classic;
   text-align: center;
-  color:gold;
+  color:brown;
 }
 .slideShowParty{
   margin-top: 20px;

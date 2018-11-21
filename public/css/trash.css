@@ -7,8 +7,6 @@
  src: url("../fonts/tolstyak.ttf"); /* Путь к файлу со шрифтом */
 }
 
-
-
 .centerMain{
  /  border:2px solid green;
   flex-basis:70vw;

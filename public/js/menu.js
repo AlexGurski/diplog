@@ -34,19 +34,6 @@ if (kind !==undefined){
   }
 }
 else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
-  if (name==='pivo' || name==='zakuski'){
-     document.getElementsByClassName('zakuski')[i].style.display='flex';
-     document.getElementsByClassName('pivo')[i].style.display='flex';
-  }
-    if (name==='tea' || name==='cofe'){
-      document.getElementsByClassName('tea')[i].style.display='flex';
-      document.getElementsByClassName('cofe')[i].style.display='flex';
-    }
-
-    if (name==='cola' || name==='juice'){
-      document.getElementsByClassName('juice')[i].style.display='flex';
-      document.getElementsByClassName('cola')[i].style.display='flex';
-    }
  document.getElementsByClassName(name)[i].style.display='flex';
 }}
 

@@ -50,7 +50,6 @@ body{
   font-family: antiqua;
 }
 .adress{
-
   width: 100%;
   text-align: center;
   font-size: 30px;
@@ -67,7 +66,11 @@ body{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
+  transition: all 0.7s linear;
+  cursor: pointer;
+}
+.headerLogo:hover{
+  transform: scale(1.11, 1.11);
 }
 .headerMenu{
   width: 24vw;
@@ -109,4 +112,10 @@ body{
   overflow: auto;
   margin-left: 10px;
   margin-right: 10px;
+}
+.alex{
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  color:grey;
 }
