@@ -29,17 +29,17 @@
   font-family: antiqua;
   text-align: left;
   margin-bottom: 20px;
-    color: brown;
+    color: black;
+      text-shadow: 1px 1px 5px gold;
 }
 .serviceMenu{
   margin-top: 20px;
   color:#f2f291;
-  text-shadow: 0 0 5px black;
-
+  text-shadow: 3px 1px 5px black;
   font-size: 30px;
   font-family: classic;
   text-align: center;
-  color:brown;
+  color:red;
 }
 .slideShowParty{
   margin-top: 20px;
