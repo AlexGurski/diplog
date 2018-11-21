@@ -12,9 +12,16 @@
 }
 @font-face {
  font-family: antiqua; /* Гарнитура шрифта */
- src: url("../fonts/Antiqua.ttf"); /* Путь к файлу со шрифтом */
+ src: url("../fonts/grafiti.otf"); /* Путь к файлу со шрифтом */
 }
-
+.black{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: black;
+}
 ::-webkit-scrollbar-thumb {
 -webkit-border-radius: 15px;
 border-radius: 15px;
@@ -25,49 +32,82 @@ background-color:grey;
 width: 5px;
 height: 5px;
 }
+.telNumber{
+  font-family: antiqua;
+  font-size: 30px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:#8B4513;
+}
 body{
-  background-color: black;
+  background-color: white;
+  font-family: antiqua;
+}
+.adress{
+
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+.adressText{
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 .headerLogo{
-  width: 12vw;
+  width: 100%;
   height: 12vw;
   background-image: url("../image/logo.png");
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
-  border: 2px solid red;
+
 }
 .headerMenu{
   width: 24vw;
-  border: 2px solid blue;
 }
 .workSpace{
+  margin-top: 20px;
   position: absolute;
   display: flex;
   flex-direction: row;
-  background-color: #FFFAFA;
+  background-color: white;
   position: absolute;
   left: 0;
   top: 20px;
   width: 100%;
-  height: calc(100% - 20px);
+  height: calc(100% - 60px);
 }
 
 .AllItems{
   width: 50%;
-/  border: 2px solid gold;
-    overflow: auto;
+  overflow: auto;
   scroll-behavior: smooth;
+  height: 100%;
 }
 .extraItems{
   width: 25%;
-/  border: 2px solid red;
-  overflow: auto;
-}
-.header{
-  width: 25%;
-/  border: 2px solid blue;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+.header{
+  width: 25%;
+  scroll-behavior: smooth;
+  overflow: auto;
+  margin-left: 10px;
+  margin-right: 10px;
 }

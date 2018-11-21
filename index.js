@@ -34,7 +34,7 @@ let allMenuWithout = pivo.concat(vodka,tea,sokmorozh);
 app.get('/allMenu', (req,res) =>{
   rez('menuIndex', {})
         .then((item) =>{
-          console.log(item)
+          //console.log(item)
          res.send (item);
        })
          .catch((errorMessage)=>{

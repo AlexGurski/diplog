@@ -1,6 +1,45 @@
-.centerMain{
+.AllItems{
+  		transition: all 0.3s linear;
+}
+.AllItems:hover{
+  color:#8B4513;
+}
+.AllItems:hover .hi{
+  font-size: 35px;
+}
+.imageFull{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.image{
+  width: 35vw;
+  height: 35vw;
+//  border:1px solid red;
+  background-image: url("../image/indexPhoto.jpg");
+  background-size: 100% 100%;
+  margin-top: 5%;
+  background-position: center;
+}
+.hi{
+  	transition: all 0.4s linear;
+  margin-top: 7%;
   text-align: center;
-  font-size: 50px;
-  color:black;
-  overflow: hidden;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.goHi{
+  margin-top: 1em;
+  text-align: center;
+  font-size: 40px;
+}
+.goHi span{
+  font-size: 20px;
+}
+
+.extra{
+  margin: 10px;
+  width: 23vw;
+  height: 30vw;
+  border:2px solid red;
 }
