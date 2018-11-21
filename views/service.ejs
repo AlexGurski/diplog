@@ -7,26 +7,34 @@
 <link rel="stylesheet" type="text/css" href="../public/css/service.css">
 </head>
   <body>
-  <% include blocks/allMainBorder.ejs %>
-  <div class = 'AllItems'>
-    <div class = 'centerMain' id = 'centerMain'>
 
-Хотите уютно и весело отдохнуть? Сытно и вкусно поужинать или пообедать? Вы можете позвонить нам, и заказать столик, а мы будем рады вам создать атмосферу уюта,тепла. Приходите, будем рады видеть вас.
+    <div class = 'workSpace'>
+        <div class = 'AllItems'>
+          <div class = 'centerMain' id = 'centerMain'>
 
-<img src='/public/image/reserved.jpg'><br>
-<hr>
-<div class = 'serviceBlock'>
-  <% include blocks/indexService.ejs %>
-</div>
-<hr>
-Ждем вас в гости:
-г. Барановичи, Парк имени 30-летия ВЛКСМ
-+375 (163) 41 09 78
-ЕЖЕДНЕВНО 10:00 - 22:00
+      Хотите уютно и весело отдохнуть? Сытно и вкусно поужинать или пообедать? Вы можете позвонить нам, и заказать столик, а мы будем рады вам создать атмосферу уюта,тепла. Приходите, будем рады видеть вас.
+
+      <img src='/public/image/reserved.jpg'><br>
+      <hr>
+      <div class = 'serviceBlock'>
+        <% include blocks/indexService.ejs %>
+      </div>
+      Ждем вас в гости:
+      г. Барановичи, Парк имени 30-летия ВЛКСМ
+      +375 (163) 41 09 78
+      ЕЖЕДНЕВНО 10:00 - 22:00
+          </div>
+
+        </div>
+        <div class='extraItems'>
+          <div class = 'serviceBlock'>
+              <% include blocks/indexService.ejs %>
+          </div>
+        </div>
+            <% include blocks/allMainBorder.ejs %>
     </div>
-      <% include blocks/allFooter.ejs %>
 
-  </div>
+
 
 
 

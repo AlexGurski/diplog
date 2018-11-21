@@ -1,19 +1,4 @@
-.centerMain{
-  text-align: center;
-  color:#f5f5dc;
-  border-left:  5px dashed #f2f291;
-  border-right:  5px dashed #f2f291;
 
-  margin: 0px;
-  width: 100%;
-}
-.AllItems{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  margin: 10px 40px 10px 40px;
-/  border: 1px solid red;
-}
 .service{
   margin:  10px;
   width: 400px;
@@ -26,14 +11,7 @@
 .service:hover{
 background-color: white;
 }
-.serviceBlock{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-end;
-/  border:1px solid black;
-}
+
 .event{
   width: 380px;
   height: 380px;
@@ -74,7 +52,7 @@ background-color: white;
   margin-top: 20px;
   color:#f2f291;
   text-shadow: 0 0 5px black;
-  margin-top: 20px;
+
   font-size: 30px;
   font-family: classic;
   text-align: center;

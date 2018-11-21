@@ -1,15 +1,12 @@
 .centerMain{
   text-align: center;
   font-size:35px;
-  color:#f5f5dc;
-  border-radius: 50px 50px 0px 0px;
-  overflow: hidden;
+  color:black;
 }
 .AllItems{
   display: flex;
   flex-direction: column;
   align-items:center;
-  margin: 10px 40px 10px 40px;
 /  border: 1px solid red;
 }
 .mainMenyPark{

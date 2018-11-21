@@ -8,26 +8,25 @@
 <link rel="stylesheet" type="text/css" href="../public/css/menuPrettyWithout.css">
 </head>
 <body>
-  <% include blocks/allMainBorder.ejs %>
+
   <script src="../public/js/menu.js " ></script>
-<div class='all'>
-  <div class='left'>
-  <input type="text" id='searchTextMenu'  onkeydown="searchMenu()">
-  </div>
-        <div class = 'AllItems'>
-          <div class = 'centerMainHeader' id ='centerMainHeader'>
-          </div>
 
-        <div id='enterKind'>
-        МЕНЮ
-        </div>
-          <div class = 'centerMain' id = 'centerMain'>
-          </div>
-        </div>
 
-  <div class='right'>
-  </div>
-</div>
-  <% include blocks/allFooter.ejs %>
+        <div class = 'workSpace'>
+            <div class = 'AllItems'>
+              <div id='enterKind'>
+              МЕНЮ
+              </div>
+                <div class = 'centerMain' id = 'centerMain'>
+                </div>
+            </div>
+            <div class='extraItems'>
+                <input type="text" id='searchTextMenu'  onkeydown="searchMenu()">
+              <div class = 'centerMainHeader' id ='centerMainHeader'>
+
+              </div>
+            </div>
+                <% include blocks/allMainBorder.ejs %>
+        </div>
 </body>
 </html>

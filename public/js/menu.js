@@ -4,12 +4,13 @@ async function getElementMenu(){
 
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   create(products);
+    console.log(products)
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
     document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
     let idClassName = document.getElementsByClassName('headerItemMenu')[i].id
 
     for (let i=0;i < products.length;i++){
-      if (products[i].id === idClassName){
+      if (products[i]._id === idClassName){
         document.getElementById('enterKind').innerHTML = products[i].name.toUpperCase()
       }
     }
@@ -20,7 +21,6 @@ async function getElementMenu(){
 }
 
 function filter (name,kind){
-
   //console.log(name, kind);
   for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
     document.getElementsByClassName('ItemsCenter')[i].style.display='none';
@@ -48,19 +48,17 @@ else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
       document.getElementsByClassName('cola')[i].style.display='flex';
     }
  document.getElementsByClassName(name)[i].style.display='flex';
-
 }}
 
 }
-
 async function getMenuWith(){
     let responseMenu = await fetch('/menuWith');
     let responseMenuWithout = await fetch('/menuWithout');
 //console.log(responseMenu)
     let productsWithout = await responseMenuWithout.json();
     let products = await responseMenu.json();
-  //  console.log(products);
-  //  console.log(productsWithout);
+   console.log(products);
+    console.log(productsWithout);
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
@@ -93,7 +91,7 @@ function filterOne(item){
         document.getElementsByClassName('menuItemWith')[i].style.display='none';
       }
        for (let i=0;i<item.length;i++){
-         document.getElementById('00'+item[i].id).style.display='block';
+         document.getElementById('00'+item[i]._id).style.display='block';
        }
 }
 window.onload = () => {
@@ -102,15 +100,16 @@ window.onload = () => {
 }
 
 function create(items){
+  console.log(items);
     for (var i=0; i<items.length; i++){
             const  div = document.createElement("div");
              div.className = 'headerItemMenu';
-             div.id = items[i].id;
+             div.id = items[i]._id;
              document.getElementById('centerMainHeader').appendChild(div);
 
              const  img = document.createElement("img");
              img.className = 'headerItemMenuImage';
-             img.src = "../public/image/allMenu/"+items[i].id+'.jpg';
+             img.src = "../public/image/allMenu/"+items[i]._id+'.jpg';
              document.getElementById(div.id).appendChild(img);
 
              const  text = document.createElement("div");
@@ -193,7 +192,7 @@ function createMenuPretty(items){
   for (var i=0; i<items.length; i++){
       const  div = document.createElement("div");
        div.className = 'ItemsCenter '+items[i].kind;
-       div.id = '00'+items[i].id;
+       div.id = '00'+items[i]._id;
        div.discription = items[i].discription;
        document.getElementById('centerMain').appendChild(div);
 
@@ -201,25 +200,25 @@ function createMenuPretty(items){
 
     const  img = document.createElement("div");
      img.className = 'imageMenu';
-     img.id = i + items[i].id;
+     img.id = i + items[i]._id;
      document.getElementById(div.id).appendChild(img);
 
         const conteiner = document.createElement("div");
         conteiner.className = 'container';
-        conteiner.id = items[i].id + i;
+        conteiner.id = items[i]._id + i;
         document.getElementById(img.id).appendChild(conteiner);
 
           const front = document.createElement("div");
           front.className = 'front';
-          front.id = '123'+ items[i].id;
-          front.style.backgroundImage = "url(public/image/menuPhoto/"+items[i].id+".jpg)";
+          front.id = '123'+ items[i]._id;
+          front.style.backgroundImage = "url(public/image/menuPhoto/"+items[i]._id+".jpg)";
           document.getElementById(conteiner.id).appendChild(front);
 
 
 
           const back = document.createElement("div");
           back.className = 'back';
-          back.id = i + items[i].id + i;
+          back.id = i + items[i]._id + i;
           document.getElementById(conteiner.id).appendChild(back);
 
                      const pDisc = document.createElement("p");
@@ -235,7 +234,7 @@ function createMenuPretty(items){
 
      const addCart = document.createElement("div");
      addCart.className = 'addCart';
-     addCart.id = items[i].id;
+     addCart.id = items[i]._id;
      document.getElementById(div.id).appendChild(addCart);
 
      const weight = document.createElement("div");
@@ -252,7 +251,7 @@ if (items[i].gram1!==undefined){
 
    const addCart = document.createElement("div");
    addCart.className = 'addCart';
-   addCart.id = items[i].id + items[i].gram1;
+   addCart.id = items[i]._id + items[i].gram1;
    document.getElementById(div.id).appendChild(addCart);
 
    const weight = document.createElement("div");

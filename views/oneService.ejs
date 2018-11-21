@@ -7,40 +7,44 @@
 <link rel="stylesheet" type="text/css" href="../public/css/service.css">
 </head>
   <body>
-  <% include blocks/allMainBorder.ejs %>
-  <div class = 'AllItems'>
-<div class = 'centerMain' id = 'centerMain'>
+    <div class = 'workSpace'>
+        <div class = 'AllItems'>
+          <div class = 'centerMain' id = 'centerMain'>
 
-          <div class ='serviceName'>
-          <%=post.name %>
+                    <div class ='serviceName'>
+                    <%=post.name %>
+                    </div>
+                    <div class ='serviceText'>
+                    <%=post.text %>
+                  </div>
+                  <hr>
+                      <div class ='serviceMenu'>
+                        При организации банкетов, кафе "Парк Авеню" предоставляет эксклюзивное оформление залов и особое меню.
+                      </div>
+
+                      <div class = 'index slideShowParty'>
+                        <div class = 'img'>
+                        </div>
+                        <div class = 'img'>
+                        </div>
+                        <div class = 'img'>
+                        </div>
+                        <div class = 'img'>
+                        </div>
+                        <div class = 'img'>
+                        </div>
+                        <div class = 'img'>
+                        </div>
+                      </div>
           </div>
-          <div class ='serviceText'>
-          <%=post.text %>
         </div>
-        <hr>
-            <div class ='serviceMenu'>
-              При организации банкетов, кафе "Парк Авеню" предоставляет эксклюзивное оформление залов и особое меню.
-            </div>
+        <div class='extraItems'>
+          <div class = 'serviceBlock'>
 
-            <div class = 'index slideShowParty'>
-              <div class = 'img'>
-              </div>
-              <div class = 'img'>
-              </div>
-              <div class = 'img'>
-              </div>
-              <div class = 'img'>
-              </div>
-              <div class = 'img'>
-              </div>
-              <div class = 'img'>
-              </div>
-            </div>
-</div>
+          </div>
+        </div>
+            <% include blocks/allMainBorder.ejs %>
+    </div>
 
-
-
-  </div>
-    <% include blocks/allFooter.ejs %>
   </body>
 </html>
