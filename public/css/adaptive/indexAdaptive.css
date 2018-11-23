@@ -115,8 +115,7 @@ nav li {
   height: 20%;
   position: relative;
   background: #222;
-  color: #fff;
-  font-family: "Patua One", cursive;
+  color: white;
 }
 
 nav li:hover {
