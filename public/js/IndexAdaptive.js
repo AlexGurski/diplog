@@ -38,4 +38,4 @@ function navToggle(e) {
   }
 }
 
-window.onload = resize;
+//window.onload = resize;
