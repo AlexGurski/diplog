@@ -14,6 +14,7 @@
  font-family: antiqua; /* Гарнитура шрифта */
  src: url("../fonts/grafiti.otf"); /* Путь к файлу со шрифтом */
 }
+
 .black{
   position: absolute;
   top: 0;
@@ -99,7 +100,7 @@ body{
   width: 25%;
   border-left: 1px dashed grey;
   border-right: 1px dashed  grey;
-  overflow: auto;
+  overflow-y: auto;
 
   align-items: center;
   margin-left: 10px;
