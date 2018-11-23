@@ -43,20 +43,20 @@ inset 0 0 30px #000;
 
 .mainMenuUslugam div:nth-child(1) {
   position: relative;
-  background-image: url("../image/mainAtmosphere.jpg");
+  background-image: url("../image/about/furshet.jpg");
   animation-delay: 0s; }
 .mainMenuUslugam div:nth-child(2) {
-background-image: url("../image/atmosphere.jpg");
+  background-image: url("../image/about/furshet0.jpg");
   position: relative;
   top:-100% ;
   animation-delay: 5s; }
 .mainMenuUslugam div:nth-child(3) {
-  background-image: url("../image/atmosphere1.jpg");
+  background-image: url("../image/about/furshet3.jpg");
   position: relative;
   top:-200% ;
   animation-delay: 10s; }
 .mainMenuUslugam div:nth-child(4) {
-    background-image: url("../image/proba.jpg");
+  background-image: url("../image/about/furshet2.jpg");
   position: relative;
   top:-300% ;
   animation-delay: 15s;

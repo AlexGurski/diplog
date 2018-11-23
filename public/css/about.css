@@ -3,6 +3,46 @@
   font-size:35px;
   color:black;
 }
+.extraItems{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.extraAbout{
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed grey;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding-bottom: 20px;
+}
+
+.exPhoto{
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items:center;
+  text-align: center;
+}
+.gps{
+    background-image: url("../image/gps.png");
+    background-position: center;
+    background-size: 100% 100%;
+}
+.tel{
+  background-image: url("../image/telephone.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
+.tim{
+  background-image: url("../image/time.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
 .AllItems{
   display: flex;
   flex-direction: column;
@@ -15,59 +55,31 @@
     font-size: 50px;
 }
 .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
-  font-family: tolstyak;
+font-family: classic;
   text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
   color:#f5f5dc;
-  /height: 500px;
   height: 29vw;
 /  border: 3px dashed #f2f291;
   border-radius: 25px;
-  box-shadow: 3px 3px 3px yellow, -3px -3px 3px #f2f291;
   margin: 5px;
 }
-
 .menuAtmosphere{
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 /  border-top: 2px solid red;
 /  border-bottom: 2px solid red;
   padding-top:20px;
   padding-bottom:20px;
 }
 .menuAtmosphereText, .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
-  width: 47%;
+  width: 90%;
 }
 .menuAtmosphereText{
   text-align: justify;
   font-family: 'antiqua';
 }
-.thisShow{
-  display: none;
-}
 
-@media screen and (max-width: 1060px) {
-.menuAtmosphereText,  .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
-    width: 90%;
-
-  }
-  .mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
-      width: 90%;
-      height: 500px;
-    }
-  .menuAtmosphere{
-    flex-direction: column;
-  }
-  .thisShow{
-    display: block;
-  }
-  .thisHide{
-    display: none;
-  }
-}
-.mainScroll{
-  height: 100%;
-  overflow: auto;
-}
 .mainScroll::-webkit-scrollbar {width:0px;}

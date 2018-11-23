@@ -45,21 +45,21 @@ inset 0 0 30px #000;
 
 .mainMenuAtmosphere div:nth-child(1) {
   position: relative;
-  background-image: url("../image/mainAtmosphere.jpg");
+  background-image: url("../image/about/atmosphere0.jpg");
 
   animation-delay: 0s; }
 .mainMenuAtmosphere div:nth-child(2) {
-background-image: url("../image/atmosphere.jpg");
+background-image: url("../image/about/atmosphere.jpg");
   position: relative;
   top:-100% ;
   animation-delay: 5s; }
 .mainMenuAtmosphere div:nth-child(3) {
-  background-image: url("../image/atmosphere1.jpg");
+  background-image: url("../image/about/atmosphere1.jpg");
   position: relative;
   top:-200% ;
   animation-delay: 10s; }
 .mainMenuAtmosphere div:nth-child(4) {
-    background-image: url("../image/proba.jpg");
+    background-image: url("../image/about/atmosphere2.jpg");
   position: relative;
   top:-300% ;
   animation-delay: 15s;
