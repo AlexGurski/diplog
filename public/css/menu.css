@@ -100,10 +100,20 @@ margin-bottom: 10px;
   display: none;
 }
 .extraItems{
-  width: 135px;
+  width: 155px;
   margin: 0;
 }
 .AllItems{
-  width: 100%
+  width: 100%;
 }
+.headerItemMenuDiscription{
+  opacity: 1;
+}
+.headerItemMenuImage{
+  opacity: 0.4;
+}
+.headerItemMenu{
+    background-color: black;
+}
+
 }
