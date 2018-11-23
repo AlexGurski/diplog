@@ -100,7 +100,7 @@ margin-bottom: 10px;
   display: none;
 }
 .extraItems{
-  width: 100px;
+  width: 200px;
   margin: 0;
 }
 .headerItemMenu{
@@ -116,7 +116,7 @@ width: 67px;
 }
 
 .AllItems{
-  width: 80%;
+  width: 900px;
 }
 .headerItemMenuDiscription{
   opacity: 1;
