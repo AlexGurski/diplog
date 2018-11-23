@@ -1,211 +1,211 @@
 module.exports =  [
   {
-    id:'bananas',
+    _id:'bananas',
     name:'Коктейль "Банановый"',
     gram:'1/300',
     price:'2р 45к',
     kind:'milk',
-    discription:'Молоко, мороженное сливочное, банан, сироп'
+    other:'Молоко, мороженное сливочное, банан, сироп'
   },
   {
-    id:'persik',
+    _id:'persik',
     name:'Коктейль "Персиковый"',
     gram:'1/300',
     price:'2р 80к',
     kind:'milk',
-    discription:'Молоко, мороженное сливочное, персик, сироп'
+  other:'Молоко, мороженное сливочное, персик, сироп'
   },
   {
-    id:'belosnezhka',
+    _id:'belosnezhka',
     name:'Коктейль "Белоснежка"',
     gram:'1/300',
     price:'2р 10к',
     kind:'milk',
-    discription:'Молоко, мороженное сливочное,  сироп'
+    other:'Молоко, мороженное сливочное,  сироп'
   },
   {
-    id:'klubnbananas',
+    _id:'klubnbananas',
     name:'Коктейль "Клубнично - банановый"',
     gram:'1/300',
     price:'2р 60к',
     kind:'milk',
-    discription:'Молоко, мороженное сливочное, банан, клубника, сироп'
+    other:'Молоко, мороженное сливочное, банан, клубника, сироп'
   },
   {
-    id:'shokolad',
+    _id:'shokolad',
     name:'Коктейль "Шоколадный"',
     gram:'1/300',
     price:'3р 00к',
     kind:'milk',
-    discription:'Молоко, мороженное,  сироп'
+    other:'Молоко, мороженное,  сироп'
   },
   {
-    id:'klubnika',
+    _id:'klubnika',
     name:'Коктейль "Клубничный"',
     gram:'1/300',
     price:'2р 15к',
     kind:'milk',
-    discription:'Молоко, мороженное сливочное, клубника, сироп'
+    other:'Молоко, мороженное сливочное, клубника, сироп'
   },
 ////////////////////////////////////////////////////
 {
-  id:'krovavajamary',
+  _id:'krovavajamary',
   name:'Кровавая Мэри',
   gram:'1/250',
   price:'2р 80к',
   kind:'cocktail',
-  discription:'Водка, томатный сок, лимон, специи'
+  other:'Водка, томатный сок, лимон, специи'
 },
 {
-  id:'krasnyjmak',
+  _id:'krasnyjmak',
   name:'Красный Мак',
   gram:'1/250',
   price:'2р 80к',
   kind:'cocktail',
-  discription:'Коньяк, вермут, "спрайт", лёд'
+  other:'Коньяк, вермут, "спрайт", лёд'
 },
 {
-  id:'exotic',
+  _id:'exotic',
   name:'Экзотика',
   gram:'1/250',
   price:'3р 20к',
   kind:'cocktail',
-  discription:'вермут, виноградный сок, лёд'
+  other:'вермут, виноградный сок, лёд'
 },
 {
-  id:'margaritas',
+  _id:'margaritas',
   name:'Маргаритас',
   gram:'1/250',
   price:'6р 10к',
   kind:'cocktail',
-  discription:'текила, цитрусовый ликер, лимон, сироп, "спрайт"'
+  other:'текила, цитрусовый ликер, лимон, сироп, "спрайт"'
 },
 {
-  id:'vishnymetel',
+  _id:'vishnymetel',
   name:'Вишнёвая метель',
   gram:'1/250',
   price:'3р 70к',
   kind:'cocktail',
-  discription:'коньяк, вишневый сок, мороженое'
+other:'коньяк, вишневый сок, мороженое'
 },
 {
-  id:'morskayavolna',
+  _id:'morskayavolna',
   name:'Морская волна',
   gram:'1/250',
   price:'2р 40к',
   kind:'cocktail',
-  discription:'водка, грейпфруктовый сок, клюквенный морс, лимон'
+  other:'водка, грейпфруктовый сок, клюквенный морс, лимон'
 },
 {
-  id:'milenruzh',
+  _id:'milenruzh',
   name:'Мулен Руж',
   gram:'1/250',
   price:'3р 10к',
   kind:'cocktail',
-  discription:'коньяк, мультифруктовый сок, шампанское, лёд'
+  other:'коньяк, мультифруктовый сок, шампанское, лёд'
 },
 {
-  id:'persikblue',
+  _id:'persikblue',
   name:'Персик БЛЮ',
   gram:'1/250',
   price:'2р 90к',
   kind:'cocktail',
-  discription:'ликёр, мороженое, сок, персик'
+  other:'ликёр, мороженое, сок, персик'
 },
 {
-  id:'dejavu',
+  _id:'dejavu',
   name:'Дежавю',
   gram:'1/250',
   price:'3р 10к',
   kind:'cocktail',
-  discription:'коньяк, вермут, виноградный сок, лёд'
+  other:'коньяк, вермут, виноградный сок, лёд'
 },
 {
-  id:'cosmopoliten',
+  _id:'cosmopoliten',
   name:'Космополитен',
   gram:'1/250',
   price:'2р 60к',
   kind:'cocktail',
-  discription:'водка, цитрусовый ликер, морс, лимон, лёд'
+  other:'водка, цитрусовый ликер, морс, лимон, лёд'
 },
 {
-  id:'persikshampan',
+  _id:'persikshampan',
   name:'Персик-Шампань',
   gram:'1/250',
   price:'3р 60к',
   kind:'cocktail',
-  discription:'ром, цитрусовый ликер, шампанское, персиковый сок'
+  other:'ром, цитрусовый ликер, шампанское, персиковый сок'
 },
 {
-  id:'palomalite',
+  _id:'palomalite',
   name:'Палома лайт',
   gram:'1/250',
   price:'5р 90к',
   kind:'cocktail',
-  discription:'текила, грейпфрутовый сок, "спрайт", лёд'
+  other:'текила, грейпфрутовый сок, "спрайт", лёд'
 },
 {
-  id:'daikiriklubn',
+  _id:'daikiriklubn',
   name:'Дайкири клубничный',
   gram:'1/250',
   price:'5р 70к',
   kind:'cocktail',
-  discription:'ром, "спрайт", сироп клубничный, лимон'
+  other:'ром, "спрайт", сироп клубничный, лимон'
 },
 {
-  id:'plyazhnyj',
+  _id:'plyazhnyj',
   name:'Пляжный',
   gram:'1/250',
   price:'2р 80к',
   kind:'cocktail',
-  discription:'водка, цитрусовый ликёр, морс, апельсиновый сок'
+  other:'водка, цитрусовый ликёр, морс, апельсиновый сок'
 },
 {
-  id:'raiski',
+  _id:'raiski',
   name:'Райский',
   gram:'1/250',
   price:'4р 50к',
   kind:'cocktail',
-  discription:'ром, мультифруктовый сок, персиковый сок, сироп клубничный, лёд'
+  other:'ром, мультифруктовый сок, персиковый сок, сироп клубничный, лёд'
 },
 {
-  id:'tekilasanrise',
+  _id:'tekilasanrise',
   name:'Текила-Санрайз',
   gram:'1/250',
   price:'6р 80к',
   kind:'cocktail',
-  discription:'текила, апельсиновый сок, сироп клубничный, лёд'
+  other:'текила, апельсиновый сок, сироп клубничный, лёд'
 },
 {
-  id:'amerikanoflirt',
+  _id:'amerikanoflirt',
   name:'Амаретто флирт',
   gram:'1/250',
   price:'3р 30к',
   kind:'cocktail',
-  discription:'амаретто, шампанское, мультифруктовый сок, лёд'
+  other:'амаретто, шампанское, мультифруктовый сок, лёд'
 },
 {
-  id:'karmen',
+  _id:'karmen',
   name:'Кармен',
   gram:'1/250',
   price:'3р 00к',
   kind:'cocktail',
-  discription:'вино красное, сироп клубничный, "спрайт", лёд'
+  other:'вино красное, сироп клубничный, "спрайт", лёд'
 },
 {
-  id:'romkola',
+  _id:'romkola',
   name:'Ром-кола',
   gram:'1/250',
   price:'4р 60к',
   kind:'cocktail',
-  discription:'ром, кока-кола, лимон'
+  other:'ром, кока-кола, лимон'
 },
 {
-  id:'glintvine',
+  _id:'glintvine',
   name:'Глинтвейн',
   gram:'1/250',
   price:'4р 00к',
   kind:'cocktail',
-  discription:'вино кр., виноградный сок, сахар, лимон, апельсин, корица, гвоздика'
+  other:'вино кр., виноградный сок, сахар, лимон, апельсин, корица, гвоздика'
 },
 ]

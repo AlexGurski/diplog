@@ -1,147 +1,147 @@
 module.exports =  [
-  {
+  { _id:'heineken',
     name:'Heineken',
     gram:'0,5',
     price:'3р 60к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  { _id:'amstelPilsner',
     name:'AMSTEL Premium',
     gram:'0,5',
     price:'3р 20к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  { _id:'zlatybazantba',
     name:'Zlaty Bazant б/а',
     gram:'0,5',
     price:'2р 90к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  { _id:'zlatybazant',
     name:'Zlaty Bazant',
     gram:'0,5',
     price:'3р 20к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  { _id:'ZlatyBazantcherne',
     name:'Zlaty Bazant cherne',
     gram:'0,5',
     price:'3р 20к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  { _id:'bobrov',
     name:'Бобров светлое',
     gram:'0,5',
     price:'2р 00к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  { _id:'dubi',
     name:'"Дуб и обруч" Бочковое живое',
     gram:'0,5',
     price:'3р 90к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  { _id:'germahy',
     name:'Немецкое нефильрованное',
     gram:'0,5',
     price:'3р 90к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  { _id:'germahysvet',
     name:'Немецкое светлое',
     gram:'0,5',
     price:'3р 80к',
-    kind:'pivo',
+    kind:'pivo'
   },
-  {
+  {_id:'czech',
     name:'Чешское оригинальное',
     gram:'0,5',
     price:'3р 80к',
-    kind:'pivo',
+    kind:'pivo'
   },
   ////////////////////////////////////
-  {
+  {_id:'germahzakus',
     name:'Закуска "По-Баварски"',
     gram:'100/160/30/30',
     price:'4р 00к',
     kind:'zakuski',
     other:'гренки, крыло, кетчуп, соус фирменный'
   },
-  {
+  {_id:'nikitin',
     name:'Арахис "Никитин"',
     gram:'1/30',
     price:'0р 50к',
-    kind:'zakuski',
+    kind:'zakuski'
   },
-  {
+  {_id:'LAYS',
     name:'Чипсы "Lays"',
     gram:'1/40',
     price:'1р 10к',
-    kind:'zakuski',
+    kind:'zakuski'
   },
-  {
+  {_id:'fistash',
     name:'Фисташки жаренные',
     gram:'1/30',
     price:'1р 60к',
-    kind:'zakuski',
+    kind:'zakuski'
   },
 
   /////////////////////////////
-  {
+  {_id:'espresso',
     name:'Эспрессо',
     gram:'50/5',
     price:'1р 60к',
-    kind:'cofe',
+    kind:'cofe'
   },
-  {
+  {_id:'amerikano',
     name:'Американо',
     gram:'200/5',
     price:'1р 60к',
-    kind:'cofe',
+    kind:'cofe'
   },
-  {
+  {_id:'capuchinhi',
     name:'Капучино',
     gram:'200/5',
     price:'1р 80к',
     kind:'cofe',
     other:'эспрессо, молоко, корица'
   },
-  {
+  {_id:'LATA',
     name:'Латтэ',
     gram:'1/200',
     price:'2р 80к',
     kind:'cofe',
     other:'эспрессо, молоко, сироп(вишня, клубника, арбуз, кокос, ананас, шоколад, мята, орех, "ирландский ликёр", " Пина колада")'
   },
-  {
+  {_id:'mokachinho',
     name:'Мокачино',
     gram:'1/200',
     price:'3р 20к',
     kind:'cofe',
     other:'эспрессо, молоко, сливки, шоколад, сахар'
   },
-  {
+  {_id:'gliasse',
     name:'Гляссе',
     gram:'200/5',
     price:'2р 80к',
     kind:'cofe',
     other:'американо, мороженое, сироп(шоколад, мята, карамель)'
   },
-  {
+  {_id:'PARis',
     name:'По-Парижски',
     gram:'200/5',
     price:'2р 40к',
     kind:'cofe',
     other:'американо, коньяк, ликер'
   },
-  {
+  {_id:'VENNA',
     name:'По-Венски',
     gram:'200/5',
     price:'3р 00к',
     kind:'cofe',
     other:'американо, сливки, шоколад'
   },
-  {
+  {_id:'kofeamaretto',
     name:'Кофе с ликёром "Амаретто"',
     gram:'200/5',
     price:'1р 90к',

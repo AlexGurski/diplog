@@ -1,5 +1,5 @@
 module.exports =  [
-  {
+  {_id:'vodkakon',
     name:'Коньяк "Араспел"',
     gram:'0,5мл',
     price:'3р 61к',
@@ -8,7 +8,7 @@ module.exports =  [
     kind:'vodka',
     other:'Армения'
   },
-  {
+  {_id:'vodk11akon',
     name:'Коньяк "Боставан"',
     gram:'0,5мл',
     price:'2р 16к',
@@ -17,7 +17,7 @@ module.exports =  [
     kind:'vodka',
     other:'Республика Беларусь'
   },
-  {
+  {_id:'1vodkakon',
     name:'Коньяк "Луидор"',
     gram:'0,5мл',
     price:'2р 16к',
@@ -26,26 +26,26 @@ module.exports =  [
     kind:'vodka',
     other:'Республика Беларусь'
   },
-  {
+  {_id:'vod124kakon',
     name:'Советское Шампанское полусладкое 0,75 мл',
     gram:'1 бут.',
     price:'14р 10к',
     kind:'vodka',
 
   },
-  {
+  {_id:'vo412dkakon',
     name:'Советское Шампанское брют 0,375 мл',
     gram:'1 бут.',
     price:'8р 60к',
     kind:'vodka',
   },
-  {
+  {_id:'vodkako876n',
     name:'Советское Шампанское брют 0,75 мл',
     gram:'1 бут.',
     price:'14р 10к',
     kind:'vodka',
   },
-  {
+  {_id:'vodkakjgvon',
     name:'Вино "Алазанская долина"',
     gram:'0,75мл',
     price:'2р 05к',
@@ -54,7 +54,7 @@ module.exports =  [
     kind:'vodka',
     other:'красное полусладкое, белое полусладкое. Грузия'
   },
-  {
+  {_id:'vodksdkon',
     name:'Вино "Пиросмани"',
     gram:'0,75мл',
     price:'2р 06к',
@@ -63,7 +63,7 @@ module.exports =  [
     kind:'vodka',
     other:'красное полусладкое. Грузия'
   },
-  {
+  {_id:'vo111kakon',
     name:'Вино "MARQUIS DE SALVARY"',
     gram:'0,75мл',
     price:'1р 50к',
@@ -72,7 +72,7 @@ module.exports =  [
     kind:'vodka',
     other:'красное полусладкое, белое полусладкое. Франция'
   },
-  {
+  {_id:'vofsdakon',
     name:'Вино "BARON DE TERVANTS"',
     gram:'0,75мл',
     price:'1р 30к',
@@ -81,7 +81,7 @@ module.exports =  [
     kind:'vodka',
     other:'красное полусладкое, белое полусладкое. Франция'
   },
-  {
+  {_id:'vodkafsdkon',
     name:'Вино "Grand Curve De Baron"',
     gram:'0,75мл',
     price:'1р 25к',
@@ -90,7 +90,7 @@ module.exports =  [
     kind:'vodka',
     other:'белое полусухое. Франция'
   },
-  {
+  {_id:'vodkafsdkofffn',
     name:'Вино "Letizia"',
     gram:'0,75мл',
     price:'1р 40к',
@@ -99,7 +99,7 @@ module.exports =  [
     kind:'vodka',
     other:'белое полусладкое, красное полусладкое. Италия'
   },
-  {
+  {_id:'vodkvinishko',
     name:'Вино "Ditfisimo"',
     gram:'0,75мл',
     price:'1р 35к',
@@ -108,7 +108,7 @@ module.exports =  [
     kind:'vodka',
     other:'белое сухое. Италия'
   },
-  {
+  {_id:'vodkvinisehko',
     name:'Вино "San Cipriano"',
     gram:'0,75мл',
     price:'1р 26к',
@@ -117,7 +117,7 @@ module.exports =  [
     kind:'vodka',
     other:'красное сухое. Италия'
   },
-  {
+  {_id:'vo11dkvinishko',
     name:'Вино "Die blaue Diva"',
     gram:'0,75мл',
     price:'1р 33к',
@@ -126,7 +126,7 @@ module.exports =  [
     kind:'vodka',
     other:'бeлое полусухое. Германия'
   },
-  {
+  {_id:'vodkvinisdfshko',
     name:'Вино "Die Braut Otto Klang"',
     gram:'0,75мл',
     price:'1р 23к',
@@ -135,7 +135,7 @@ module.exports =  [
     kind:'vodka',
     other:'красное полусладкое. Германия'
   },
-  {
+  {_id:'vode3fkvinishko',
     name:'Вино "Perfino Bianco"',
     gram:'0,75мл',
     price:'1р 40к',
@@ -144,7 +144,7 @@ module.exports =  [
     kind:'vodka',
     other:'Белое. Италия'
   },
-  {
+  {_id:'vodkvi4322nishko',
     name:'Текила "Сауза Сильвер"',
     gram:'0,50мл',
     price:'4р 90к',
@@ -153,7 +153,7 @@ module.exports =  [
     kind:'vodka',
     other:'Мексика'
   },
-  {
+  {_id:'vo3dk5vini6shko',
     name:'Ром "J.WRAY JAMAICA"',
     gram:'0,50мл',
     price:'3р 59к',
@@ -162,7 +162,7 @@ module.exports =  [
     kind:'vodka',
     other:'Silver rum. Ямайка'
   },
-  {
+  {_id:'vodkvinsdishko',
     name:'Виски "Джим Бим"',
     gram:'0,50мл',
     price:'5р 30к',
@@ -171,7 +171,7 @@ module.exports =  [
     kind:'vodka',
     other:'США'
   },
-  {
+  {_id:'vodkvinishfffko',
     name:'Виски "Скотиш Хантер"',
     gram:'0,50мл',
     price:'4р 00к',
@@ -180,7 +180,7 @@ module.exports =  [
     kind:'vodka',
     other:'Великобритания'
   },
-  {
+  {_id:'vod11kvinishko',
     name:'Настойка горькая "Flavoured Vodka"',
     gram:'0,50мл',
     price:'3р 98к',
@@ -188,7 +188,7 @@ module.exports =  [
     price1:'79р 60к',
     kind:'vodka',
   },
-  {
+  {_id:'vodkvinishk5o',
     name:'Водка "Дикая утка"',
     gram:'0,50мл',
     price:'1р 48к',
@@ -197,7 +197,7 @@ module.exports =  [
     kind:'vodka',
     other:'Республика Беларусь'
   },
-  {
+  {_id:'vo1dkvinishk5o',
     name:'Водка "Налибоки"',
     gram:'0,50мл',
     price:'1р 37к',
@@ -206,7 +206,7 @@ module.exports =  [
     kind:'vodka',
     other:'Республика Беларусь'
   },
-  {
+  {_id:'vodkv44inishk5o',
     name:'Водка "Сваяк"',
     gram:'0,50мл',
     price:'1р 50к',
@@ -215,7 +215,7 @@ module.exports =  [
     kind:'vodka',
     other:'Республика Беларусь'
   },
-  {
+  {_id:'vodkvinffdshk5o',
     name:'Водка "Бульбашь"',
     gram:'0,50мл',
     price:'1р 51к',
@@ -224,7 +224,7 @@ module.exports =  [
     kind:'vodka',
     other:'Республика Беларусь'
   },
-  {
+  {_id:'vodkvinissddhk15o',
     name:'Настойка горькая "STARKA"',
     gram:'0,50мл',
     price:'1р 60к',

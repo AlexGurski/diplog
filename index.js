@@ -10,8 +10,10 @@ const assert = require('assert');
 const url = 'mongodb://alex:panik1993@ds239873.mlab.com:39873/heroku_4b2prwdg';
 const dbName = 'heroku_4b2prwdg';
 
-  const rez =   require("./public/modules/searchJS");
+let service= require("./public/json/serviceJSON.js");
 
+  const rez =   require("./public/modules/searchJS");
+/*
 let desert= require("./public/json/desert.js");
 let menuPizza = require("./public/json/menuPizza.js");
 let menuHot = require("./public/json/menuHot.js");
@@ -26,10 +28,11 @@ let supzavtrak= require("./public/json/supzavtrak.js");
 let sandwblinch= require("./public/json/sandwblinch.js");
 let salat= require("./public/json/salat.js");
 
-let service= require("./public/json/serviceJSON.js");
 
-//let allMenuWith = menuPizza.concat(salat, sandwblinch, supzavtrak, menuHot,menuCold, menuGarnirs,cocktail,desert);
+
+let allMenuWith = menuPizza.concat(salat, sandwblinch, supzavtrak, menuHot,menuCold, menuGarnirs,cocktail,desert);
 let allMenuWithout = pivo.concat(vodka,tea,sokmorozh);
+*/
 
 app.get('/allMenu', (req,res) =>{
   rez('menuIndex', {})
@@ -51,9 +54,17 @@ app.get('/menuWith', (req,res) =>{
          .catch((errorMessage)=>{
            console.log(errorMessage);
          });
-
 })
 
+app.get('/menuWithout', (req,res) =>{
+  rez('menuWithout', {})
+        .then((items) =>{
+         res.send (items);
+       })
+         .catch((errorMessage)=>{
+           console.log(errorMessage);
+         });
+})
 
 app.get('/service/:id', (req,res) => {
      let id = req.params.id;
@@ -87,11 +98,6 @@ app.get('/galery',(req, res) => {
   res.render('galery.ejs');
 })
 
-
-
-app.get('/menuWithout', (req,res) =>{
-  res.send(allMenuWithout);
-})
  app.listen(process.env.PORT || 3000, () => {
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;

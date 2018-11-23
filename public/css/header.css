@@ -68,9 +68,10 @@ body{
   background-repeat: no-repeat;
   transition: all 0.7s linear;
   cursor: pointer;
+    transform: scale(0.9, 0.9);
 }
 .headerLogo:hover{
-  transform: scale(1.11, 1.11);
+  transform: scale(1, 1);
 }
 .headerMenu{
   width: 24vw;

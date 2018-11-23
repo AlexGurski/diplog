@@ -34,12 +34,12 @@
 }
 .serviceMenu{
   margin-top: 20px;
-  color:#f2f291;
-  text-shadow: 3px 1px 5px black;
+
+  text-shadow: 3px 1px 5px red;
   font-size: 30px;
   font-family: classic;
   text-align: center;
-  color:red;
+  color:black;
 }
 .slideShowParty{
   margin-top: 20px;

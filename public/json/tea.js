@@ -1,137 +1,137 @@
 module.exports =  [
-  {
+  {_id:'greenblack',
     name:'Greenfield чёрный',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenblsdfack',
     name:'Greenfield чёрный с ароматом бергамота',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenblac11k',
     name:'Greenfield чёрный с ароматом барбариса ',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'123greenblack',
     name:'Greenfield чёрный с ароматом черники и сливок',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenbsdfslack',
     name:'Greenfield чёрный с ароматом корицы, апельсина, лимона',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenblggack',
     name:'Greenfield чёрный с ароматом фруктов и душистых трав',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenbla123ck',
     name:'Greenfield чёрный с ароматом карамели и шоколоа тоффи',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'gree654nblack',
     name:'Greenfield чёрный с ароматом клюквы и ванили',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenbla777ck',
     name:'Greenfield чёрный с ароматом гречишного мёда',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'gr123eenbg0lack',
     name:'Greenfield чёрный с ароматом шоколада и клубники',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'green11111black',
     name:'Greenfield чёрный с ароматом лимона и карамели',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenblack087',
     name:'Greenfield зелёный ',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'gree0873fnblack',
     name:'Greenfield зелёный с ароматом ананаса',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'green222black',
     name:'Greenfield зелёный с ароматом жасмина',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenbla242ck',
     name:'Greenfield зелёный с ароматом мелиссы и мяты',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'gree1111nblack',
     name:'Greenfield травяной с ароматом имбиря',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'green6tgbvblack',
     name:'Greenfield травяной с ароматом винограда',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenfsdfsdblack',
     name:'Greenfield травяной с ароматом ромашки, шиповника и мелиссы',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenbsdf120lack',
     name:'Greenfield травяной с ароматом яблока с корицей и ромашки',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenbl09jkyack',
     name:'Greenfield с ароматом малины',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greesdfkknblack',
     name:'Greenfield с ароматом молока и лепестками мальвы',
     gram:'0,5мл',
     price:'0р 90к',
     kind:'tea'
   },
-  {
+  {_id:'greenbmnnnlack',
     name:'Лимон',
     gram:'10гр',
     price:'0р 20к',
     kind:'tea'
   },
-  {
+  {_id:'12greenb777lack',
     name:'Лимон',
     gram:'5гр',
     price:'0р 06к',
