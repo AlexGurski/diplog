@@ -15,6 +15,9 @@
  src: url("../fonts/grafiti.otf"); /* Путь к файлу со шрифтом */
 }
 
+#nav-trigger{
+  display: none;
+}
 .black{
   position: absolute;
   top: 0;
@@ -120,4 +123,10 @@ body{
   text-align: center;
   font-size: 11px;
   color:grey;
+}
+
+@media screen and (orientation:portrait) {
+#nav-trigger{
+  display: block;
+}
 }
