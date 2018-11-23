@@ -31,7 +31,6 @@
 }
 
 .centerMainHeader{
-  margin-left: 20px;
 //background-color: black;
   border-radius: 30px;
 //  border: 4px dotted #f5f5dc;
@@ -40,7 +39,7 @@
   display: flex;
   justify-content: space-around;
   overflow: auto;
-  width: 90%;
+  width: 99%;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -59,7 +58,7 @@
 .headerItemMenu{
 height: 100px;
 width: 100px;
-margin-left:  15px;
+margin-left:  5px;
 border-radius: 50%;
 position: relative;
 border: 1px dotted black;
@@ -96,20 +95,15 @@ margin-bottom: 10px;
 .headerItemMenu:hover{
     background-color: black;
 }
-@media screen and (max-width: 1060px) {
-  .centerMainHeader{
-    width: 100%;
-  }
-.headerItemMenuDiscription{
-  opacity: 1;
+@media screen and (orientation:portrait) {
+.header{
+  display: none;
 }
-.headerItemMenuImage{
-  opacity: 0.4;
+.extraItems{
+  width: 135px;
+  margin: 0;
 }
-.headerItemMenu{
-    background-color: black;
-    border: 3px dashed white;
-    height: 94px;
-    width: 94px;
+.AllItems{
+  width: 100%
 }
 }
