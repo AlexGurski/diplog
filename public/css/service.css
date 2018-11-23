@@ -1,4 +1,3 @@
-
 .eventText{
   text-align: justify;
   padding:  10px;
@@ -9,6 +8,23 @@
 }
 .nashiUslugi{
   display: none;
+}
+.servicePhoto{
+  background-image: url('../image/reserved.jpg');
+  background-size: 100% 100%;
+  width: 30vw;
+  height: 20vw;
+  border-radius: 25px;
+}
+.allService{
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  text-align: center;
+}
+.serviceTextMain{
+  font-size: 1.5em;
 }
 .serviceName{
   color:#f2f291;
@@ -25,6 +41,7 @@
   color:#f2f291;
   text-shadow: 0 0 5px black;
   margin-top: 10px;
+  padding: 1em;
   font-size: 25px;
   font-family: antiqua;
   text-align: left;
