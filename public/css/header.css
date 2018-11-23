@@ -127,6 +127,10 @@ body{
 }
 
 @media screen and (orientation:portrait) {
+  .header{
+    display: none;
+    width: 0%;
+  }
 #nav-trigger{
   display: block;
 }
