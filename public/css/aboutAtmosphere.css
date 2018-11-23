@@ -52,15 +52,15 @@ inset 0 0 30px #000;
 background-image: url("../image/about/atmosphere.jpg");
   position: relative;
   top:-100% ;
-  animation-delay: 5s; }
+  animation-delay: 6s; }
 .mainMenuAtmosphere div:nth-child(3) {
   background-image: url("../image/about/atmosphere1.jpg");
   position: relative;
   top:-200% ;
-  animation-delay: 10s; }
+  animation-delay: 11s; }
 .mainMenuAtmosphere div:nth-child(4) {
     background-image: url("../image/about/atmosphere2.jpg");
   position: relative;
   top:-300% ;
-  animation-delay: 15s;
+  animation-delay: 17s;
 }

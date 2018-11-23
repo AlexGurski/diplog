@@ -49,15 +49,15 @@ inset 0 0 30px #000;
 background-image: url("../image/about/furshet1.jpg");
   position: relative;
   top:-100% ;
-  animation-delay: 5s; }
+  animation-delay: 4s; }
 .mainMenuBluda div:nth-child(3) {
   background-image: url("../image/about/menu3.jpg");
   position: relative;
   top:-200% ;
-  animation-delay: 10s; }
+  animation-delay: 8s; }
 .mainMenuBluda div:nth-child(4) {
     background-image: url("../image/about/menu4.jpg");
   position: relative;
   top:-300% ;
-  animation-delay: 15s;
+  animation-delay: 12s;
 }
