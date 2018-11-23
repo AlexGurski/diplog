@@ -100,10 +100,21 @@ margin-bottom: 10px;
   display: none;
 }
 .extraItems{
-/  width: 155px;
-/  margin: 0;
-display: none;
+  width: 100px;
+  margin: 0;
 }
+.headerItemMenu{
+height: 67px;
+width: 67px;
+}
+.headerItemMenuImage{
+  height: 67px;
+  width:  67px;
+}
+.headerItemMenuDiscription{
+  font-size: 0.9em;
+}
+
 .AllItems{
   width: 100%;
 }
