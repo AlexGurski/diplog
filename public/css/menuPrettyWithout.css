@@ -1,11 +1,10 @@
 .menuItemWith{
-  width: 100%;
+
   /border: 2px solid blue;
   display: flex;
   flex-direction: column;
   background-color: black;
   width: 325px;
-
 }
 
 .menuItemWithPhoto{
@@ -15,7 +14,7 @@
 }
 
 .menuItemWithDiscription{
-  width: 100%;
+    background-color:  black;
 /  border: 2px solid gold;
   display: flex;
   flex-direction: column;
@@ -26,8 +25,9 @@
 .menuItemWithDiscriptionText{
   /border-top: 1px dashed #f2f291;
     color: white;
-    margin-top: 5px;
+    padding-top: 5px;
     cursor: pointer;
+    background-color:  black;
 }
 .menuItemWithDiscriptionText:hover{
   background-color: #0d0d0d;
