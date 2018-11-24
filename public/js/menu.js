@@ -1,15 +1,15 @@
 async function getElementMenu(){
-    let responseMenu = await fetch('/allMenu')
-    let products = await responseMenu.json();
+  var responseMenu = await fetch('/allMenu')
+    var products = await responseMenu.json();
 
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   create(products);
     console.log(products)
-    for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
+    for (var i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
     document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
-    let idClassName = document.getElementsByClassName('headerItemMenu')[i].id
+    var idClassName = document.getElementsByClassName('headerItemMenu')[i].id
 
-    for (let i=0;i < products.length;i++){
+    for (var i=0;i < products.length;i++){
       if (products[i]._id === idClassName){
         document.getElementById('enterKind').innerHTML = products[i].name.toUpperCase()
       }
@@ -22,15 +22,15 @@ async function getElementMenu(){
 
 function filter (name,kind){
   //console.log(name, kind);
-  for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
+  for (var i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
     document.getElementsByClassName('ItemsCenter')[i].style.display='none';
   }
-  for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
+  for (var i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
   document.getElementsByClassName('menuItemWith')[i].style.display='none';
 
 }
 if (kind !==undefined){
-      for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+      for (var i = 0; i < document.getElementsByClassName(name).length;i++ ){
       document.getElementById('centerMain').style.transform='scale(0.1)';
     setTimeout(()=>{
     document.getElementsByClassName(name)[i].style.display='block';
@@ -38,7 +38,7 @@ if (kind !==undefined){
   },300)
   }
 }
-else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+else {  for (var i = 0; i < document.getElementsByClassName(name).length;i++ ){
 
  document.getElementById('centerMain').style.opacity=0;
  setTimeout(()=>{
@@ -49,27 +49,27 @@ else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
 
 }
 async function getMenuWith(){
-    let responseMenu = await fetch('/menuWith');
-    let responseMenuWithout = await fetch('/menuWithout');
+    var responseMenu = await fetch('/menuWith');
+    var responseMenuWithout = await fetch('/menuWithout');
 //console.log(responseMenu)
-    let productsWithout = await responseMenuWithout.json();
-    let products = await responseMenu.json();
+    var productsWithout = await responseMenuWithout.json();
+    var products = await responseMenu.json();
    console.log(products);
     console.log(productsWithout);
     await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
-    let items = products.concat(productsWithout);
+    var items = products.concat(productsWithout);
 //    let rezult = searchMenu(products);
   //  console.log(rezult);
     return  await items;
 }
 
 async function searchMenu(){
-  let discriptionForSearch = [];
-  let responseMenu =  await fetch('/menuWith');
-  let items = await  responseMenu.json();
-  for (let i=0;i < items.length; i++){
+  var discriptionForSearch = [];
+var responseMenu =  await fetch('/menuWith');
+  var items = await  responseMenu.json();
+  for (var i=0;i < items.length; i++){
     if((items[i].discription!==undefined) && (items[i].discription.includes(document.getElementById('searchTextMenu').value)))
    {
       discriptionForSearch.push(items[i]);
@@ -81,13 +81,13 @@ filterOne(discriptionForSearch);
 
 function filterOne(item){
         console.log(item);
-        for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
+        for (var i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
           document.getElementsByClassName('ItemsCenter')[i].style.display='none';
         }
-        for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
+        for (var i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
         document.getElementsByClassName('menuItemWith')[i].style.display='none';
       }
-       for (let i=0;i<item.length;i++){
+       for (var i=0;i<item.length;i++){
          document.getElementById('00'+item[i]._id).style.display='block';
        }
 }
@@ -122,8 +122,8 @@ function arrayUnique(massivKind){
 function createMenuPrettyWithout(items){
 //  console.log(items);
 
-let massivKind = [];
-for (let i=0;i<items.length;i++){
+var massivKind = [];
+for (var i=0;i<items.length;i++){
   massivKind[i] =  items[i].kind;
 }
 
@@ -131,7 +131,7 @@ for (let i=0;i<items.length;i++){
 massivKind = arrayUnique(massivKind);
 //console.log(massivKind);
 
-for (let i=0;i<massivKind.length;i++){
+for (var i=0;i<massivKind.length;i++){
   const  div = document.createElement("div");
   div.className = 'menuItemWith '+massivKind[i];
   div.id = '00'+massivKind[i];
@@ -176,13 +176,8 @@ for (let i=0;i<massivKind.length;i++){
             price.className = 'menuItemWithDiscriptionTextPrice';
             price.innerHTML = items[i].price;
             document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(price);
-
-
-
         }
-
 }
-
 function createMenuPretty(items){
 
   for (var i=0; i<items.length; i++){
