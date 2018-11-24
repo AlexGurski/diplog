@@ -1,0 +1,13 @@
+@media screen and (orientation:portrait) {
+
+    .AllItems{
+      width: 100%;
+    }
+    .extraItems{
+      display: none;
+    }
+  .img{
+    width: 40vw;
+    height: 32vw;
+  }
+}
