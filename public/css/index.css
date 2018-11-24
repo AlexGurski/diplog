@@ -8,7 +8,11 @@
   font-size: 35px;
 }
 .imageFull{
-  display: flex;
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
   width: 100%;
   justify-content: center;
 }
@@ -22,13 +26,23 @@
   background-position: center;
 }
 .extra{
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+
   margin: 10px;
   width: 23vw;
   height: 30vw;
   border-bottom: 1px dotted grey;
-  display: flex;
+
   flex-direction: column;
-  align-items: center;
+
   text-align: center;
 }
 .extraName{

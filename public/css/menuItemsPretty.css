@@ -43,12 +43,19 @@ height: 56px;
 overflow: hidden;
 }
 .addCart{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
 	cursor: pointer;
 	border-radius: 8px;
-	display: flex;
 	border:2px dotted  black;
 	justify-content: space-around;
-	align-items: flex-start;
+	-webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 	margin: 5px;
 	padding: 5px;
 	margin-bottom: 5px;
@@ -63,12 +70,20 @@ overflow: hidden;
 }
 
 .centerMenu {
+	display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
 	background-color: black;
   flex-grow: 1;
   border:2px solid  black;
-  display: flex;
   border-radius: 25px;
   justify-content: center;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
 	flex-wrap: wrap;
 	width: 100%;
 }

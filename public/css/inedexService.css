@@ -1,4 +1,8 @@
 .allService{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -18,7 +22,6 @@
         border-radius: 10px;
         cursor: pointer;
         transition: all 0.8s ease;
-
       }
 
 .service:hover{
@@ -26,13 +29,22 @@ opacity: 0.8;
 background-color: #E0FFFF;
 }
       .event{
+        display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
         align-self: center;
         width: 90%;
         height: 90%;
         border-radius: 10px;
-        display: flex;
+
         justify-content: space-between;
-        align-items: center;
+
         flex-direction: column;
       }
       .eventText{
@@ -65,19 +77,40 @@ background-color: #E0FFFF;
           }
 
 .service a{
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
 text-decoration: none;
 width: 100%;
 height: 100%;
-    display: flex;
+
     justify-content: center;
 
 }
 .serviceBlock{
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
   width: 100%;
-  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
   flex-wrap: wrap;
+  
   justify-content: space-around;
   align-items: flex-end;
+
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+
 /  border:1px solid black;
 }
 .nashiUslugi{

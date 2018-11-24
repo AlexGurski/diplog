@@ -1,6 +1,8 @@
 .menuItemWith{
-
-  /border: 2px solid blue;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   background-color: black;
@@ -14,9 +16,14 @@
 }
 
 .menuItemWithDiscription{
+  display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
     background-color:  black;
 /  border: 2px solid gold;
-  display: flex;
+
   flex-direction: column;
   color: white;
   margin-top: 1em;
