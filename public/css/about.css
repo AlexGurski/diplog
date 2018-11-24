@@ -87,8 +87,11 @@ font-family: classic;
 
 @media screen and (orientation:portrait) {
   .map{
-    height:90vw;
-    width: 100%;
+    height:60vw;
+    width: 99%;
+  }
+  .extraItems{
+    display: block;
   }
 .AllItems{
   display: none;
