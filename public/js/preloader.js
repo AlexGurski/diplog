@@ -1,6 +1,9 @@
-window.addEventListener('load', function() {
+//window.addEventListener('load', function() {
 
-let preload=document.getElementById('preloader');
-preload.style.display = 'none';
+window.load= function() {
+  let preload=document.getElementById('preloader');
+  preload.style.display = 'none';
+  };
 
-})
+
+//})
