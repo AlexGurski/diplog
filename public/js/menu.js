@@ -93,9 +93,7 @@ function filterOne(item){
 }
 getElementMenu();
   getMenuWith();
-window.onload = () => {
 
-}
 
 function create(items){
   console.log(items);
