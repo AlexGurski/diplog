@@ -2,7 +2,7 @@ async function getElementMenu(){
     let responseMenu = await fetch('/allMenu')
     let products = await responseMenu.json();
 
-    await   new Promise((resolve, reject) => setTimeout(resolve, 0));
+  //  await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   create(products);
     console.log(products)
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
@@ -56,7 +56,7 @@ async function getMenuWith(){
     let products = await responseMenu.json();
    console.log(products);
     console.log(productsWithout);
-    await   new Promise((resolve, reject) => setTimeout(resolve, 0));
+  //  await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
     let items = products.concat(productsWithout);
