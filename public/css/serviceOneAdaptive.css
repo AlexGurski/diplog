@@ -1,5 +1,26 @@
+.extraAbout{
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed grey;
+  font-size: 1.5em;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.tel{
+  background-image: url("../image/telephone.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
+.exPhoto{
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
 @media screen and (orientation:portrait) {
-
     .AllItems{
       width: 100%;
     }
@@ -9,5 +30,12 @@
   .img{
     width: 40vw;
     height: 32vw;
+  }
+  .extraAbout{
+    width: 100%;
+    display: flex;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
   }
 }
