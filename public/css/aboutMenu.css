@@ -54,10 +54,10 @@ background-image: url("../image/about/furshet1.jpg");
   background-image: url("../image/about/menu3.jpg");
   position: relative;
   top:-200% ;
-  animation-delay: 8s; }
+  animation-delay: 9s; }
 .mainMenuBluda div:nth-child(4) {
   background-image: url("../image/about/menu4.jpg");
   position: relative;
   top:-300% ;
-  animation-delay: 12s;
+  animation-delay: 14s;
 }
