@@ -88,8 +88,8 @@ margin-bottom: 10px;
 @media screen and (orientation:portrait) {
 
 .ItemsCenter{
-  width: 38vw;
-  height: 60vw;
+/  width: 38vw;
+/  height: 60vw;
 }
   .workSpace{
     flex-direction: column-reverse;
