@@ -1,15 +1,9 @@
-.all{
-  width: 100%;
-  height: 100%;
-  border:2px solid blue;
-  display: flex;
-  flex-wrap: nowrap;
-}
+
 .AllItems{
   display: flex;
   flex-direction: column;
   align-items:center;
-  width: 65%;
+  width: 60%;
   /border: 1px solid red;
   display: flex;
   flex-direction: column;
@@ -21,14 +15,10 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.left, .right{
-  width: 20%;
-  border: 1px solid white;
-}
-.right{
+.extraItems{
   width: 15%;
-  border: 1px solid white;
 }
+
 
 .centerMainHeader{
 //background-color: black;
@@ -114,7 +104,6 @@ width: 67px;
 .headerItemMenuDiscription{
   font-size: 0.9em;
 }
-
 .AllItems{
   width: 900px;
 }
@@ -127,5 +116,4 @@ width: 67px;
 .headerItemMenu{
     background-color: black;
 }
-
 }

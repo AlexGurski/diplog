@@ -42,7 +42,7 @@ height: 5px;
   font-size: 30px;
   border-top: 1px dashed #333;
   border-bottom: 1px dashed  #333;
-  width: 100%;
+  width: 95%;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -65,7 +65,7 @@ body{
   margin-top: 30px;
 }
 .headerLogo{
-  width: 100%;
+  width: 95%;
   height: 12vw;
   background-image: url("../image/logo.png");
   background-size: contain;
@@ -116,8 +116,7 @@ body{
   width: 25%;
   scroll-behavior: smooth;
   overflow: auto;
-  margin-left: 10px;
-  margin-right: 10px;
+
 }
 .alex{
   width: 100%;
@@ -125,7 +124,9 @@ body{
   font-size: 11px;
   color:grey;
 }
-
+.map{
+  width: 95%;
+}
 @media screen and (orientation:portrait) {
 #nav-trigger{
   display: block;
