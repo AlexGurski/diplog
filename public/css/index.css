@@ -14,7 +14,9 @@ display: -ms-flexbox;
 display: -webkit-flex;
 display: flex;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+    justify-content: center;
 }
 .image{
   width: 35vw;

@@ -22,7 +22,9 @@
   display: -webkit-flex;
   display: flex;
 
-  justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   flex-wrap: wrap;
   transition: linear 0.5s;
 }
@@ -41,7 +43,9 @@
   -ms-flex-align: center;
   align-items: center;
   height: 99%;
-  justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   overflow: auto;
   width: 99%;
 
@@ -118,7 +122,9 @@ display: -ms-flexbox;
 display: -webkit-flex;
 display: flex;
     height: 100px;
-    justify-content: flex-start;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+  justify-content: flex-start;
     -webkit-flex-wrap: nowrap;
     -moz-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;

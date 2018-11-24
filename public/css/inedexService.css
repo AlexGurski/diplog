@@ -43,7 +43,9 @@ align-items: center;
         height: 90%;
         border-radius: 10px;
 
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+ justify-content: space-between;
 
         flex-direction: column;
       }
@@ -86,7 +88,9 @@ text-decoration: none;
 width: 100%;
 height: 100%;
 
-    justify-content: center;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+  justify-content: center;
 
 }
 .serviceBlock{
@@ -102,8 +106,10 @@ display: flex;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
-  
-  justify-content: space-around;
+
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   align-items: flex-end;
 
   -webkit-box-align: end;

@@ -81,7 +81,9 @@ display: flex;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
-  justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+     -ms-flex-pack: space-evenly;
+   justify-content: space-evenly;
 }
 
 .img{
