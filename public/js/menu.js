@@ -81,9 +81,10 @@ function filterOne(item){
          document.getElementById('00'+item[i]._id).style.display='block';
        }
 }
+getElementMenu();
+  getMenuWith();
 window.onload = () => {
-  let items = getElementMenu();
-  let menuWith = getMenuWith();
+
 }
 
 function create(items){

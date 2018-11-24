@@ -44,6 +44,17 @@
   background-position: center;
   background-size: 100% 100%;
 }
+.vk{
+  width: 100px;
+  background-image: url("../image/vk.png");
+  background-position: center;
+  background-size: 100% 100%;
+}
+a{
+  text-decoration: none;
+  color:black;
+  cursor: pointer;
+}
 .AllItems{
   display: flex;
   flex-direction: column;
