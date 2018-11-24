@@ -130,4 +130,7 @@ body{
 #nav-trigger{
   display: block;
 }
+.header{
+  display: none;
+}
 }
