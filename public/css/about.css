@@ -86,6 +86,7 @@ font-family: classic;
 .mainScroll::-webkit-scrollbar {width:0px;}
 
 @media screen and (orientation:portrait) {
+
   .map{
     height:60vw;
     width: 99%;
@@ -99,9 +100,12 @@ font-family: classic;
 .extraItems{
   width: 99%;
 }
-*{
-  font-size: 1em;
+.mainMenuAtmosphere, .mainMenuBluda, .mainMenuUslugam{
+  height: 59vw;
+text-align: center;
+  font-size: 1.3em;
 }
+
 .extraAbout{
   width: 100%;
   display: flex;

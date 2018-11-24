@@ -19,90 +19,9 @@
           <div class = 'mainMenyPark'>
           Кафе <br>
           "Парк Авеню"<br>
-
             </div>
 
-
-
-      <div class = 'menuAtmosphere' id = 'box'>
-        <div class='menuAtmosphereText'>
-          «Парк Авеню» - это классическое кафе с летней террасой. Исходя из меню (белорусское,
-          европейское), это универсальное заведение, в которое с одинаковым
-          успехом могут приходить компании и семейные пары с детьми. Приятным
-          бонусом можно назвать полноценное вегетарианское меню.
-        </div>
-          <div class = 'mainMenuAtmosphere'>
-
-                <div class = img1>
-                  Это удивительное место, в котором вы можете провести время в дружной обстановке.
-                </div>
-                <div class = img2>
-                  Это удивительное место, в котором вы можете провести время в дружной обстановке.
-                </div>
-                <div class = img3>
-                  Это удивительное место, в котором вы можете провести время в дружной обстановке.
-                </div>
-                <div class = img4>
-                  Это удивительное место, в котором вы можете провести время в дружной обстановке.
-                </div>
-          </div>
-    </div>
-    <div class = 'menuAtmosphere' id = 'box'>
-
-      <div class='menuAtmosphereText thisShow'>
-          Уютный зал на 60 мест дополняет летняя терраса, для которой используется
-          световое оформление в ночное время суток. Разноцветные гирлянды, свечи,
-          напольные лампы на террасе и освещение самого парка создают атмосферу
-          романтичности и таинственности. Кроме того, парк, где находится кафе,
-          это идеальное место для фотосессии.
-            </div>
-
-          <div class = 'mainMenuBluda' id = 'box'>
-               <div class = img1>
-                 Гостепреимная атмосфера, по домашнему вкусные и недорогие блюда, приготовленные мастерами своего дела.
-               </div>
-               <div class = img2>
-                 Гостепреимная атмосфера, по домашнему вкусные и недорогие блюда, приготовленные мастерами своего дела.
-               </div>
-               <div class = img3>
-                    Гостепреимная атмосфера, по домашнему вкусные и недорогие блюда, приготовленные мастерами своего дела.
-               </div>
-               <div class = img4>
-                    Гостепреимная атмосфера, по домашнему вкусные и недорогие блюда, приготовленные мастерами своего дела.
-               </div>
-          </div>
-
-    </div>
-
-    <div class = 'menuAtmosphere' id = 'box'>
-      <div class='menuAtmosphereText'>
-          Праздничное меню - это изысканные и красиво оформленные блюда европейской
-          и белорусской кухни, которые согласовывают в обязательном порядке,
-          учитывая все пожелания заказчика.
-          Выездная регистрация свадьбы, музыкальное сопровождение на свой вкус,
-          парковка и другие удобства к услугам гостей от кафе «Парк Авеню».
-    </div>
-          <div class = mainMenuUslugam id = 'box'>
-
-            <div class = img1>
-            К вашим услугам банкетное обслуживание, проведение вечеринок, презентаций, свадеб, фуршетов.
-            </div>
-            <div class = img2>
-              К вашим услугам банкетное обслуживание, проведение вечеринок, презентаций, свадеб, фуршетов.
-            </div>
-            <div class = img3>
-              К вашим услугам банкетное обслуживание, проведение вечеринок, презентаций, свадеб, фуршетов.
-            </div>
-            <div class = img4>
-              К вашим услугам банкетное обслуживание, проведение вечеринок, презентаций, свадеб, фуршетов.
-            </div>
-
-    </div>
-
-  <!--
-  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A03f5552e5936b514b9b4d81e4db127666e3081220d2156e781911c37bd852b99&amp;width=100%25&amp;height=648&amp;lang=ru_RU&amp;scroll=true"></script>
-  -->
-        </div>
+      <% include blocks/aboutWeDiscription.ejs %>
     </div>
       </div>
     <div class='extraItems'>
@@ -113,8 +32,8 @@
                 г. Барановичи, Парк имени 30-летия ВЛКСМ
               </div>
             </div>
-            <div class='map'>
-              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A03f5552e5936b514b9b4d81e4db127666e3081220d2156e781911c37bd852b99&amp;width=99%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <div class='map adaptive'>
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A03f5552e5936b514b9b4d81e4db127666e3081220d2156e781911c37bd852b99&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
               </div>
             <div class ='extraAbout telephone'>
               <div class='exPhoto tel'>
@@ -132,6 +51,9 @@
               <div class='exAbText'>
                 ЕЖЕДНЕВНО <br>10:00 - 22:00
               </div>
+            </div>
+            <div class='adaptive'>
+              <% include blocks/aboutWeDiscription.ejs %>
             </div>
     </div>
 

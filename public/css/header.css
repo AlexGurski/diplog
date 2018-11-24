@@ -127,11 +127,17 @@ body{
 .map{
   width: 95%;
 }
+.adaptive{
+  display: none;
+}
 @media screen and (orientation:portrait) {
 #nav-trigger{
   display: block;
 }
 .header{
   display: none;
+}
+.adaptive{
+  display: block;
 }
 }
