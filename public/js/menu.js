@@ -27,14 +27,24 @@ function filter (name,kind){
   }
   for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
   document.getElementsByClassName('menuItemWith')[i].style.display='none';
+
 }
 if (kind !==undefined){
       for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
-      document.getElementsByClassName(name)[i].style.display='block';
+      document.getElementById('centerMain').style.transform='scale(0.1)';
+    setTimeout(()=>{
+    document.getElementsByClassName(name)[i].style.display='block';
+    document.getElementById('centerMain').style.transform='scale(1)';
+  },300)
   }
 }
 else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
- document.getElementsByClassName(name)[i].style.display='flex';
+
+ document.getElementById('centerMain').style.opacity=0;
+ setTimeout(()=>{
+    document.getElementsByClassName(name)[i].style.display='flex';
+   document.getElementById('centerMain').style.opacity=1;
+ },500)
 }}
 
 }

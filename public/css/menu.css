@@ -14,6 +14,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  transition: linear 0.5s;
 }
 .extraItems{
   width: 15%;
@@ -86,7 +87,10 @@ margin-bottom: 10px;
 }
 @media screen and (orientation:portrait) {
 
-
+.ItemsCenter{
+  width: 38vw;
+  height: 60vw;
+}
   .workSpace{
     flex-direction: column-reverse;
   }
