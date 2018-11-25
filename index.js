@@ -95,7 +95,7 @@ app.get('/galery',(req, res) => {
   res.render('galery.ejs');
 })
 
- app.listen(process.env.PORT || 5924, () => {
+ app.listen(process.env.PORT || 3000, () => {
 
-      console.log('--// PARK AVENJU start 5924 --//');
+      console.log('--// PARK AVENJU start 3000 --//');
   })﻿;
