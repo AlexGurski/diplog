@@ -1,3 +1,4 @@
+   require("@babel/polyfill");
 const express = require('express');
 const bodyParser = require( 'body-parser' );
 const app = express();
@@ -95,6 +96,6 @@ app.get('/galery',(req, res) => {
 })
 
  app.listen(process.env.PORT || 3000, () => {
-   require("@babel/polyfill");
+
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;
