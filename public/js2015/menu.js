@@ -1,163 +1,32 @@
 'use strict';
 
-var getElementMenu = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var responseMenu, products, _loop, i;
 
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return fetch('/allMenu');
+async function getElementMenu() {
+  var responseMenu = await fetch('/allMenu');
+  var products = await responseMenu.json();
 
-          case 2:
-            responseMenu = _context.sent;
-            _context.next = 5;
-            return responseMenu.json();
+  //  await   new Promise((resolve, reject) => setTimeout(resolve, 0));
+  await create(products);
+  console.log(products);
 
-          case 5:
-            products = _context.sent;
-            _context.next = 8;
-            return create(products);
+  var _loop = function _loop(i) {
+    document.getElementsByClassName('headerItemMenu')[i].onclick = function () {
+      var idClassName = document.getElementsByClassName('headerItemMenu')[i].id;
 
-          case 8:
-            console.log(products);
-
-            _loop = function _loop(i) {
-              document.getElementsByClassName('headerItemMenu')[i].onclick = function () {
-                var idClassName = document.getElementsByClassName('headerItemMenu')[i].id;
-
-                for (var _i = 0; _i < products.length; _i++) {
-                  if (products[_i]._id === idClassName) {
-                    document.getElementById('enterKind').innerHTML = products[_i].name.toUpperCase();
-                  }
-                }
-                filter(document.getElementsByClassName('headerItemMenu')[i].id, products[i].type);
-              };
-            };
-
-            for (i = 0; i < document.getElementsByClassName('headerItemMenu').length; i++) {
-              _loop(i);
-            }
-            return _context.abrupt('return', products);
-
-          case 12:
-          case 'end':
-            return _context.stop();
+      for (var _i = 0; _i < products.length; _i++) {
+        if (products[_i]._id === idClassName) {
+          document.getElementById('enterKind').innerHTML = products[_i].name.toUpperCase();
         }
       }
-    }, _callee, this);
-  }));
-
-  return function getElementMenu() {
-    return _ref.apply(this, arguments);
+      filter(document.getElementsByClassName('headerItemMenu')[i].id, products[i].type);
+    };
   };
-}();
 
-var getMenuWith = function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-    var responseMenu, responseMenuWithout, productsWithout, products, items;
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return fetch('/menuWith');
-
-          case 2:
-            responseMenu = _context2.sent;
-            _context2.next = 5;
-            return fetch('/menuWithout');
-
-          case 5:
-            responseMenuWithout = _context2.sent;
-            _context2.next = 8;
-            return responseMenuWithout.json();
-
-          case 8:
-            productsWithout = _context2.sent;
-            _context2.next = 11;
-            return responseMenu.json();
-
-          case 11:
-            products = _context2.sent;
-
-            console.log(products);
-            console.log(productsWithout);
-            //  await   new Promise((resolve, reject) => setTimeout(resolve, 0));
-            _context2.next = 16;
-            return createMenuPretty(products);
-
-          case 16:
-            _context2.next = 18;
-            return createMenuPrettyWithout(productsWithout);
-
-          case 18:
-            items = products.concat(productsWithout);
-            //    let rezult = searchMenu(products);
-            //  console.log(rezult);
-
-            _context2.next = 21;
-            return items;
-
-          case 21:
-            return _context2.abrupt('return', _context2.sent);
-
-          case 22:
-          case 'end':
-            return _context2.stop();
-        }
-      }
-    }, _callee2, this);
-  }));
-
-  return function getMenuWith() {
-    return _ref2.apply(this, arguments);
-  };
-}();
-
-var searchMenu = function () {
-  var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-    var discriptionForSearch, responseMenu, items, i;
-    return regeneratorRuntime.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            discriptionForSearch = [];
-            _context3.next = 3;
-            return fetch('/menuWith');
-
-          case 3:
-            responseMenu = _context3.sent;
-            _context3.next = 6;
-            return responseMenu.json();
-
-          case 6:
-            items = _context3.sent;
-
-            for (i = 0; i < items.length; i++) {
-              if (items[i].discription !== undefined && items[i].discription.includes(document.getElementById('searchTextMenu').value)) {
-                discriptionForSearch.push(items[i]);
-              }
-            }
-            //console.log(discriptionForSearch);
-            filterOne(discriptionForSearch);
-
-          case 9:
-          case 'end':
-            return _context3.stop();
-        }
-      }
-    }, _callee3, this);
-  }));
-
-  return function searchMenu() {
-    return _ref3.apply(this, arguments);
-  };
-}();
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+  for (var i = 0; i < document.getElementsByClassName('headerItemMenu').length; i++) {
+    _loop(i);
+  }
+  return products;
+}
 
 function filter(name, kind) {
   //console.log(name, kind);
@@ -194,7 +63,35 @@ function filter(name, kind) {
     }
   }
 }
+async function getMenuWith() {
+  var responseMenu = await fetch('/menuWith');
+  var responseMenuWithout = await fetch('/menuWithout');
+  //console.log(responseMenu)
+  var productsWithout = await responseMenuWithout.json();
+  var products = await responseMenu.json();
+  console.log(products);
+  console.log(productsWithout);
+  //  await   new Promise((resolve, reject) => setTimeout(resolve, 0));
+  await createMenuPretty(products);
+  await createMenuPrettyWithout(productsWithout);
+  var items = products.concat(productsWithout);
+  //    let rezult = searchMenu(products);
+  //  console.log(rezult);
+  return await items;
+}
 
+async function searchMenu() {
+  var discriptionForSearch = [];
+  var responseMenu = await fetch('/menuWith');
+  var items = await responseMenu.json();
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].discription !== undefined && items[i].discription.includes(document.getElementById('searchTextMenu').value)) {
+      discriptionForSearch.push(items[i]);
+    }
+  }
+  //console.log(discriptionForSearch);
+  filterOne(discriptionForSearch);
+}
 
 function filterOne(item) {
   console.log(item);
