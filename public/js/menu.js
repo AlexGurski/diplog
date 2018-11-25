@@ -1,10 +1,7 @@
-   require("@babel/polyfill");
-   
+
 async function getElementMenu(){
     let responseMenu = await fetch('/allMenu')
     let products = await responseMenu.json();
-
-  //  await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   create(products);
     console.log(products)
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
@@ -23,13 +20,11 @@ async function getElementMenu(){
 }
 
 function filter (name,kind){
-  //console.log(name, kind);
   for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
     document.getElementsByClassName('ItemsCenter')[i].style.display='none';
   }
   for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
   document.getElementsByClassName('menuItemWith')[i].style.display='none';
-
 }
 if (kind !==undefined){
       for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
@@ -40,8 +35,8 @@ if (kind !==undefined){
   },300)
   }
 }
-else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
 
+else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
  document.getElementById('centerMain').style.opacity=0;
  setTimeout(()=>{
     document.getElementsByClassName(name)[i].style.display='flex';
@@ -53,17 +48,13 @@ else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
 async function getMenuWith(){
     let responseMenu = await fetch('/menuWith');
     let responseMenuWithout = await fetch('/menuWithout');
-//console.log(responseMenu)
     let productsWithout = await responseMenuWithout.json();
     let products = await responseMenu.json();
    console.log(products);
     console.log(productsWithout);
-  //  await   new Promise((resolve, reject) => setTimeout(resolve, 0));
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
     let items = products.concat(productsWithout);
-//    let rezult = searchMenu(products);
-  //  console.log(rezult);
     return  await items;
 }
 
@@ -122,14 +113,11 @@ function arrayUnique(massivKind){
 };
 
 function createMenuPrettyWithout(items){
-//  console.log(items);
 
 let massivKind = [];
 for (let i=0;i<items.length;i++){
   massivKind[i] =  items[i].kind;
 }
-
-//console.log(massivKind);
 massivKind = arrayUnique(massivKind);
 //console.log(massivKind);
 

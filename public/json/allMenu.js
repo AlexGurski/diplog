@@ -19,11 +19,7 @@ module.exports =  [
     name:'Гарниры',
     type:'with'
   },
-  {
-    id:'milk',
-    name:'Коктейли молочные',
-    type:'with'
-  },
+
   {
     id:'pivo',
     name:'Пиво',
@@ -33,14 +29,16 @@ module.exports =  [
     name:'Закуски к пиву',
   },
   {
+    id:'milk',
+    name:'Коктейли молочные'
+  },
+  {
     id:'cocktail',
     name:'Коктейли',
-    type:'with'
   },
   {
     id:'vodka',
     name:'Спиртные напитки',
-
   },
   {
     id:'tea',
@@ -92,7 +90,6 @@ module.exports =  [
     id:'cola',
     name:'Coca-Cola',
   },
-
   {
       id:'sous',
       name:'Соусы',

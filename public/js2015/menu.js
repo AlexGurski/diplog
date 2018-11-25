@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 async function getElementMenu() {
   var responseMenu = await fetch('/allMenu');
   var products = await responseMenu.json();
