@@ -10,8 +10,7 @@ const url = 'mongodb://alex:panik1993@ds239873.mlab.com:39873/heroku_4b2prwdg';
 const dbName = 'heroku_4b2prwdg';
 
 let service= require("./public/json/serviceJSON.js");
-
-  const rez =   require("./public/modules/searchJS");
+const rez =   require("./public/modules/searchJS");
 /*
 let desert= require("./public/json/desert.js");
 let menuPizza = require("./public/json/menuPizza.js");
@@ -26,8 +25,6 @@ let sokmorozh= require("./public/json/sokmorozh.js");
 let supzavtrak= require("./public/json/supzavtrak.js");
 let sandwblinch= require("./public/json/sandwblinch.js");
 let salat= require("./public/json/salat.js");
-
-
 
 let allMenuWith = menuPizza.concat(salat, sandwblinch, supzavtrak, menuHot,menuCold, menuGarnirs,cocktail,desert);
 let allMenuWithout = pivo.concat(vodka,tea,sokmorozh);
@@ -98,5 +95,6 @@ app.get('/galery',(req, res) => {
 })
 
  app.listen(process.env.PORT || 3000, () => {
+   require("@babel/polyfill");
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;

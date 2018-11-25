@@ -1,4 +1,4 @@
-require('babel-polyfill');
+
 async function getElementMenu(){
     let responseMenu = await fetch('/allMenu')
     let products = await responseMenu.json();
