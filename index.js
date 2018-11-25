@@ -8,7 +8,7 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const url = 'mongodb://alex:panik1993@ds239873.mlab.com:39873/heroku_4b2prwdg';
 const dbName = 'heroku_4b2prwdg';
-require('babel-polyfill');
+
 let service= require("./public/json/serviceJSON.js");
 
   const rez =   require("./public/modules/searchJS");
