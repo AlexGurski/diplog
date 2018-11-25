@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build":"babel js -d js2015 --presets es2015",
-    "watch":"babel public/js -d public/js2015 --presets es2015 -w"
+    "build":"babel public/js/menu.js -o public/js2015/menu.js --presets es2015",
+    "watch":"babel public/js -o public/js2015 --presets es2015 -w"
   },
   "author": "",
   "license": "ISC",
