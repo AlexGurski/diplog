@@ -30,6 +30,9 @@
             <li>
               <a href="/about">О нас</a>
             </li>
+            <li>
+              <a href="/order">Заказ</a>
+            </li>
           </ul>
       </div>
       <div class='telNumber'>
@@ -63,4 +66,26 @@
       designed by Alex Gurski ©
       </div>
     </div>
+    <script type="application/javascript">
+
+      const  ip = document.createElement("p");
+      ip.className = 'ip';
+      ip.id = 'ip'
+      document.getElementsByClassName('black')[0].appendChild(ip);
+
+        function getIP(json) {
+
+          if (document.cookie !=''){
+          //  alert( document.cookie );
+            ip.innerHTML = document.cookie;
+            }
+                else {
+                  document.cookie = "name="+ navigator.platform +" " + navigator.appCodeName +" " +json.ip;
+                  ip.innerHTML = document.cookie;
+                }
+          }
+
+      </script>
+
+      <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 </body>

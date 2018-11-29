@@ -18,7 +18,10 @@
 #nav-trigger{
   display: none;
 }
-
+.ip{
+opacity: 0;
+font-size: 1px;
+}
 .black{
   position: absolute;
   top: 0;

@@ -37,5 +37,3 @@ function navToggle(e) {
     nav.className = 'in';
   }
 }
-
-//window.onload = resize;

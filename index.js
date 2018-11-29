@@ -1,4 +1,7 @@
-
+const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+  "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+];
+let Data = new Date();
 const express = require('express');
 const bodyParser = require( 'body-parser' );
 const app = express();
@@ -9,7 +12,7 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const url = 'mongodb://alex:panik1993@ds239873.mlab.com:39873/heroku_4b2prwdg';
 const dbName = 'heroku_4b2prwdg';
-
+var massivZaskazov = {};
 let service= require("./public/json/serviceJSON.js");
 const rez =   require("./public/modules/searchJS");
 /*
@@ -31,10 +34,64 @@ let allMenuWith = menuPizza.concat(salat, sandwblinch, supzavtrak, menuHot,menuC
 let allMenuWithout = pivo.concat(vodka,tea,sokmorozh);
 */
 
+MongoClient.connect(url, (err, client) => {
+
+assert.equal(null, err);
+const db = client.db(dbName);
+const collection =db.collection('order');
+  app.post("/order", (req,res) => {
+      req.body.timeOrder =  Data.getHours() + ':' + Data.getMinutes() + ':' + Data.getSeconds() + '. ' + Data.getDate() + ' '
+        + monthNames[Data.getMonth()] +' '+ Data.getFullYear();
+            collection.insertOne(req.body,(err,result)=>{
+              console.log(req.body)
+                      if(err){
+                        console.log(err);
+                        res.sendStatus(500);
+                      }
+                    delete   massivZaskazov[req.body.ip]
+                      res.redirect('/order')
+                  })
+      })
+});
+
+
+app.get('/orderItems', (req,res) => {
+          res.send(massivZaskazov);
+        })
+
+app.post("/submitMenu", (req,res) => {
+  let   massiv = typeof massivZaskazov[req.body.ip] === "undefined" ? [] : massivZaskazov[req.body.ip];
+  console.log('--POST MENU--');
+    for (let i = 0; i < massiv.length;i++){
+      if (massiv[i]._id.substr(0,14) === req.body._id.substr(0,14)){
+      massiv.splice(i,1);
+    }
+  }
+    massiv.push(req.body);
+    console.log(req.body.ip)
+    massivZaskazov[req.body.ip] = massiv;
+    massiv = [];
+
+  res.send("ACCEPT");
+});
+
+app.post("/submitMenuDelete", (req,res) => {
+        let  massiv = typeof massivZaskazov[req.body.ip] == "undefined" ? [] : massivZaskazov[req.body.ip];
+      for (let i = 0; i < massiv.length;i++){
+        if (massiv[i]._id.substr(0,14) === req.body._id.substr(0,14)){
+        massiv.splice(i,1);
+        }
+      }
+
+      res.send(null);
+      massivZaskazov[req.body.ip] = massiv;
+      massiv = [];
+});
+
+
 app.get('/allMenu', (req,res) =>{
   rez('menuIndex', {})
         .then((item) =>{
-          //console.log(item)
          res.send (item);
        })
          .catch((errorMessage)=>{
@@ -82,6 +139,9 @@ app.get('/',(req, res) => {
 app.get('/menu',(req, res) => {
   res.render('menu.ejs');
 })
+app.get('/order',(req, res) => {
+  res.render('order.ejs');
+})
 
 app.get('/about',(req, res) => {
   res.render('about.ejs');
@@ -91,9 +151,101 @@ app.get('/service',(req, res) => {
   res.render('service.ejs');
 })
 
+app.get('/admin/armor/:id', (req,res) => {
+
+              rez('armor', {_id:req.params.id})
+                  .then((item) =>{
+                     res.render('armorSolo.ejs',{post:item});
+
+                   })
+                     .catch((errorMessage)=>{
+                       console.log(errorMessage);
+                  });
+            })
+
+app.get('/admin', (req,res) => {
+  rez('order', {})
+  .then((items) =>{ //console.log(items);
+     res.render ('admin.ejs', {post:items});})
+     .catch((errorMessage)=>{
+       console.log(errorMessage);
+     });
+    })
+
+    MongoClient.connect(url, (err, client) => {
+                assert.equal(null, err);
+                const db = client.db(dbName);
+                const collection =db.collection('menu');
+                  app.post("/admin", (req,res) => {
+                        console.log(req.body)
+                           collection.update(
+                               {_id: String(req.body.name) },
+                               {name: req.body.name,
+                                discription:req.body.discription,
+                                kind:req.body.kind,
+                                price:req.body.price,
+                                gram:req.body.weight
+                               }
+                               ,{ upsert: true },
+                               function(err, result){
+                                 console.log(err);
+                               }
+
+                           );
+                            res.redirect('/admin')
+
+                       }) ;
+                     })
+
+
+    app.get('/adminOrder', (req,res) => {
+    rez('order', {})
+    .then((items) =>{
+       res.send(items);})
+       .catch((errorMessage)=>{
+         console.log(errorMessage);
+       });
+      })
+
+      app.get('/admin/:id', (req,res) => {
+        rez('order', {_id:req.params.id})
+            .then((items) =>{ //console.log(items);
+               res.render('editFinalOrder.ejs',{post:items});
+             })
+               .catch((errorMessage)=>{
+                 console.log(errorMessage);
+            });
+      })
+
 app.get('/galery',(req, res) => {
   res.render('galery.ejs');
 })
+
+MongoClient.connect(url, (err, client) => {
+assert.equal(null, err);
+const db = client.db(dbName);
+const collection =db.collection('order');
+  app.post("/updateStatusOrder", (req,res) => {
+        const  event = req.body;
+           collection.updateOne(
+               {_id: String(req.body.id) },
+               { $set: {status: req.body.status}},
+               function(err, result){
+                 console.log(err);
+               }
+           );
+           res.send(null);
+       }) ;
+     })
+
+     app.get('/adminArmor', (req,res) => {
+             rez('armor', {})
+             .then((items) =>{
+                res.send(items);})
+                .catch((errorMessage)=>{
+                  console.log(errorMessage);
+                });
+               })
 
  app.listen(process.env.PORT || 3000, () => {
 

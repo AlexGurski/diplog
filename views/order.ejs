@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="../public/image/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <% include blocks/preloader.ejs %>
+    <% include blocks/indexAdaptive.ejs %>
+  <div class='black'>
+  </div>
+        <div class = 'workSpace'>
+            <div class = 'AllItems'>
+              <div class="centerPostOrder">
+          </div>
+            </div>
+
+                      <div class='extraItems'>
+                        <div class = 'buyerName'>
+                          <p>  Введите ваше имя</p><br>
+                            <input type = 'text' class = 'inputBox' id = 'nameOrder'><br>
+                          <p>  Введите ваш номер телефона</p><br>
+                            <input type = 'text' class = 'inputBox' id = 'telephoneOrder'><br>
+                            <p>  Введите ваш адрес</p> <input type="checkbox" id="one" onchange="fun1()"> Без доставки <br>
+                              <input type = 'text' class = 'inputBox' id = 'adressOrder'><br>
+                      <p>  Комментарий</p><br>
+                        <input type = 'text' class = 'inputBox' id = 'commentOrder'><br>
+                      </div>
+                      <div class="buyerPrice">
+                            <div id='orderCost'>  Стоимость заказа  </div>
+                            <div id='deliveryCost'> Стоимость доставки  </div>
+                            <div id='finalCost'> Общая стоимость </div>
+                        <div id ='buttonOrder'>Оформить заказ</div>
+                          </div>
+                      </div>
+
+        <% include blocks/allMainBorder.ejs %>
+        </div>
+          <script src="../public/js/order.js"></script>
+        <link rel="stylesheet" type="text/css" href="../public/css/order.css">
+
+</body>
+</html>

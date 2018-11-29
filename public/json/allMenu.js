@@ -1,98 +1,98 @@
 module.exports =  [
   {
-    id:'pizza',
+    _id:'pizza',
     name:'Пицца',
     type:'with'
   },
   {
-    id:'hot',
+    _id:'hot',
     name:'Горячие блюда',
     type:'with'
   },
   {
-    id:'cold',
+    _id:'cold',
     name:'Холодные закуски',
     type:'with'
   },
   {
-    id:'garnirs',
+    _id:'garnirs',
     name:'Гарниры',
     type:'with'
   },
 
   {
-    id:'pivo',
-    name:'Пиво',
+    _id:'pivo',
+    name:'Пиво'
   },
   {
-    id:'zakuski',
-    name:'Закуски к пиву',
+    _id:'zakuski',
+    name:'Закуски к пиву'
   },
   {
-    id:'milk',
+    _id:'milk',
     name:'Коктейли молочные'
   },
   {
-    id:'cocktail',
-    name:'Коктейли',
+    _id:'cocktail',
+    name:'Коктейли'
   },
   {
-    id:'vodka',
-    name:'Спиртные напитки',
+    _id:'vodka',
+    name:'Спиртные напитки'
   },
   {
-    id:'tea',
-    name:'Чай',
+    _id:'tea',
+    name:'Чай'
   },
   {
-    id:'cofe',
-    name:'Кофе',
+    _id:'cofe',
+    name:'Кофе'
   },
   {
-    id:'icecream',
-    name:'Мороженое',
+    _id:'icecream',
+    name:'Мороженое'
   },
   {
-    id:'desert',
+    _id:'desert',
     name:'Десерт',
     type:'with'
   },
   {
-    id:'sandwich',
+    _id:'sandwich',
     name:'Сэндвичи',
     type:'with'
   },
   {
-    id:'blinchiki',
+    _id:'blinchiki',
     name:'Блинчики',
       type:'with'
   },
   {
-    id:'zavtraki',
+    _id:'zavtraki',
     name:'Завтраки',
       type:'with'
   },
   {
-    id:'soup',
+    _id:'soup',
     name:'Супы',
     type:'with'
   },
   {
-    id:'salat',
+    _id:'salat',
     name:'Салаты',
       type:'with'
   },
   {
-    id:'juice',
+    _id:'juice',
     name:'Соки',
   },
   {
-    id:'cola',
-    name:'Coca-Cola',
+    _id:'cola',
+    name:'Coca-Cola'
   },
   {
-      id:'sous',
-      name:'Соусы',
+      _id:'sous',
+      name:'Соусы'
     },
 
 

@@ -5,59 +5,119 @@ async function getElementMenu(){
     await   create(products);
     console.log(products)
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
-    document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
-    let idClassName = document.getElementsByClassName('headerItemMenu')[i].id
+        document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
+        let idClassName = document.getElementsByClassName('headerItemMenu')[i].id
 
-    for (let i=0;i < products.length;i++){
-      if (products[i]._id === idClassName){
-        document.getElementById('enterKind').innerHTML = products[i].name.toUpperCase()
-      }
-    }
-        filter(document.getElementsByClassName('headerItemMenu')[i].id , products[i].type);
-      }
+            for (let i=0;i < products.length;i++){
+              if (products[i]._id === idClassName){
+                document.getElementById('enterKind').innerHTML = products[i].name.toUpperCase()
+              }
+            }
+            filter(document.getElementsByClassName('headerItemMenu')[i].id , products[i].type);
+          }
     }
     return products;
-}
+ }
 
 function filter (name,kind){
-  for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
-    document.getElementsByClassName('ItemsCenter')[i].style.display='none';
-  }
-  for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
-  document.getElementsByClassName('menuItemWith')[i].style.display='none';
-}
-if (kind !==undefined){
-      for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
-      document.getElementById('centerMain').style.transform='scale(0.1)';
-    setTimeout(()=>{
-    document.getElementsByClassName(name)[i].style.display='block';
-    document.getElementById('centerMain').style.transform='scale(1)';
-  },300)
-  }
+      for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
+        document.getElementsByClassName('ItemsCenter')[i].style.display='none';
+      }
+      for (let i = 0; i < document.getElementsByClassName('menuItemWith').length;i++ ){
+      document.getElementsByClassName('menuItemWith')[i].style.display='none';
+    }
+    if (kind !==undefined){
+          for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+          document.getElementById('centerMain').style.transform='scale(0.1)';
+              setTimeout(()=>{
+              document.getElementsByClassName(name)[i].style.display='block';
+              document.getElementById('centerMain').style.transform='scale(1)';
+               },300)
+            }
+    }
+
+    else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
+     document.getElementById('centerMain').style.opacity=0;
+     setTimeout(()=>{
+        document.getElementsByClassName(name)[i].style.display='flex';
+       document.getElementById('centerMain').style.opacity=1;
+     },500)
+    }}
+
 }
 
-else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
- document.getElementById('centerMain').style.opacity=0;
- setTimeout(()=>{
-    document.getElementsByClassName(name)[i].style.display='flex';
-   document.getElementById('centerMain').style.opacity=1;
- },500)
-}}
-
-}
 async function getMenuWith(){
+
     let responseMenu = await fetch('/menuWith');
     let responseMenuWithout = await fetch('/menuWithout');
     let productsWithout = await responseMenuWithout.json();
     let products = await responseMenu.json();
-   console.log(products);
-    console.log(productsWithout);
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
+
+
+    var   addCart = await document.getElementsByClassName('addCart');
+    //console.log(addCart)
+        for(var i=0; i < addCart.length; i++){
+          addCart[i].onclick = add
+        }
     let items = products.concat(productsWithout);
-    return  await items;
+    return items;
 }
 
+getElementMenu();
+
+var itemsAfterPromise = Promise.resolve(getMenuWith());
+
+
+function add () {
+
+  itemsAfterPromise.then((value)=>{
+//    console.log(this.id);
+  //  console.log(value[0]._id)
+    for (let i=0;i < value.length;i++){
+        if (this.id===value[i]._id){
+        //  console.log(value[i])
+          return value[i];
+        }
+    }
+  }).then((rezult)=>{console.log(rezult);
+    rezult.counter = 1;
+    rezult.ip = document.getElementById('ip').innerHTML;
+  //  console.log(rezult.price.replace(' ','').replace('р','.').replace('к',''))
+    rezult.price = rezult.price.replace(' ','').replace('р','.').replace('к','');
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", '/submitMenu', false);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(rezult));
+    return xhr.responseText;
+  //  setTimeout(()=>{console.log(xhr.responseText)},10)
+}).then((response)=>{
+  console.log(response);
+  if (response === 'ACCEPT'){
+
+    document.getElementById('poppupAdd').innerText = " добавлен(а) в заказ"
+    document.getElementById('poppupAdd').style.opacity = '0.9'
+    document.getElementById('poppupAdd').style.top = event.clientY - document.getElementById('poppupAdd').offsetHeight/2 +'px';
+    document.getElementById('poppupAdd').style.left = event.clientX - document.getElementById('poppupAdd').offsetWidth/2 +'px';
+    setTimeout(()=>{
+      document.getElementById('poppupAdd').style.opacity = '0'
+      setTimeout(()=>{
+          document.getElementById('poppupAdd').style.top = '-400px'
+      },1000)
+    },3000)
+  }
+})
+
+
+
+
+
+
+
+};
+
+/*
 async function searchMenu(){
   let discriptionForSearch = [];
   let responseMenu =  await fetch('/menuWith');
@@ -68,10 +128,10 @@ async function searchMenu(){
       discriptionForSearch.push(items[i]);
     }
 }
-//console.log(discriptionForSearch);
-filterOne(discriptionForSearch);
-}
 
+ filterOne(discriptionForSearch);
+}
+/*
 function filterOne(item){
         console.log(item);
         for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
@@ -84,8 +144,9 @@ function filterOne(item){
          document.getElementById('00'+item[i]._id).style.display='block';
        }
 }
-getElementMenu();
-  getMenuWith();
+*/
+
+
 
 
 function create(items){
@@ -233,24 +294,27 @@ function createMenuPretty(items){
        pPrice.innerHTML =  items[i].price
      document.getElementById(addCart.id).appendChild(pPrice);
 //console.log(items[i]);
-if (items[i].gram1!==undefined){
 
-   const addCart = document.createElement("div");
-   addCart.className = 'addCart';
-   addCart.id = items[i]._id + items[i].gram1;
-   document.getElementById(div.id).appendChild(addCart);
+////////////////////////////////////////ЗАКОММЕНТИТЬ ПЕРЕД ЗАЩИТОЙ!/////////////////////////////////////!!
 
-   const weight = document.createElement("div");
-     weight.className = 'weight';
-       weight.innerHTML =  items[i].gram1 ;
-     document.getElementById(addCart.id).appendChild(weight);
+        if (items[i].gram1!==undefined){
+           const addCart = document.createElement("div");
+           addCart.className = 'addCart';
+           addCart.id = items[i]._id + items[i].gram1;
+           document.getElementById(div.id).appendChild(addCart);
 
-   const pPrice = document.createElement("div");
-     pPrice.className = 'pPrice';
-     pPrice.innerHTML =  items[i].price1
-   document.getElementById(addCart.id).appendChild(pPrice);
+           const weight = document.createElement("div");
+             weight.className = 'weight';
+               weight.innerHTML =  items[i].gram1 ;
+             document.getElementById(addCart.id).appendChild(weight);
 
- }
- }
+           const pPrice = document.createElement("div");
+             pPrice.className = 'pPrice';
+             pPrice.innerHTML =  items[i].price1
+           document.getElementById(addCart.id).appendChild(pPrice);
+
+         }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  }
 
 }
