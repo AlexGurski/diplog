@@ -207,7 +207,7 @@ position: relative;
 .extraItems{
   position: relative;
   width: 94%;
-/  height: 30%;
+  height: auto;
 }
 .frontImage{
   display: none;
