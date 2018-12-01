@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+<script src="../public/js/armor.js"></script>
+<% include blocks/preloader.ejs %>
+<div class='black'>
+</div>
+<div class = 'workSpace'>
+  <div class = 'AllItems' id ='AllItems'>
+       <div class = 'center' id = 'center'>
+      <form action="/armor" method="post" id='form'>
+               <p> Выберите дату:  </p>
+                <input type="date" name="date" id="mydate" value="2018-09-03"
+                 max="2018-10-03" min="2018-09-03"  > <splan id=free></splan>
+
+
+          <p> <label for="date">Имя</label></p>
+          <input  type="text" name="name" id="title"
+
+        <br> <p> <label for="date">Номер телефона</label</p>
+        <br>  <input  type="text" name="telephone" id="title" >
+
+        <p>  <label for="date">Количество столиков</label><br></p>
+          <input  type="text" name="table" id="title" ><br>
+
+        <p>  <label for="date">Время</label><br></p>
+          <input  type="text" name="time" id="title" ><br>
+
+        <p>  <label for="text">Комментарий</label><br></p>
+          <textarea name="text" id="content" cols="30" rows="10"></textarea><br>
+            <button id = 'button'>Отправить данные</button>
+                  <input  type="text" name="_id" id="newId" value="ss">
+       </form>
+         </div>
+  </div>
+     <div class='extraItems'>
+     </div>
+         <% include blocks/allMainBorder.ejs %>
+
+
+
+    <link rel="stylesheet" type="text/css" href="../public/css/armor.css">
+   <% include blocks/indexAdaptive.ejs %>
+   </body>
+   </html>

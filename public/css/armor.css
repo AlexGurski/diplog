@@ -1,0 +1,33 @@
+p{
+  font-size: 20px;
+  color:black;
+  margin-bottom: 5px;
+}
+#free{
+
+  color:red;
+}
+
+#title, #content,#mydate{
+  font-size: 20px;
+  width: 90%;
+}
+#newId{
+	opacity: 0;
+}
+
+.center{
+  width: 100%;
+ display: flex;
+ align-self: center;
+ justify-content: center;
+}
+
+@media screen and (orientation:portrait) {
+  .extraItems{
+    display: none;
+  }
+  .AllItems{
+    width: 99%;
+  }
+}

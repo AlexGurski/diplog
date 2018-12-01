@@ -175,7 +175,6 @@ app.get('/service',(req, res) => {
 })
 
 app.get('/admin/armor/:id', (req,res) => {
-
               rez('armor', {_id:req.params.id})
                   .then((item) =>{
                      res.render('armorSolo.ejs',{post:item});
@@ -194,6 +193,55 @@ app.get('/admin', (req,res) => {
        console.log(errorMessage);
      });
     })
+
+    app.get('/armor', (req, res) => {
+                  res.render ('armor.ejs');
+                  } );
+
+      app.get('/armorFree', (req,res) => {
+              rez('armor', {})
+              .then((items) =>{
+                res.send(items);})
+                  .catch((errorMessage)=>{
+                    console.log(errorMessage);
+                    });
+    })
+
+    app.get('/adminArmor', (req,res) => {
+            rez('armor', {})
+            .then((items) =>{
+               res.send(items);})
+               .catch((errorMessage)=>{
+                 console.log(errorMessage);
+               });
+              })
+
+              app.get('/admin/armor/:id', (req,res) => {
+
+            rez('armor', {_id:req.params.id})
+                .then((item) =>{
+                   res.render('armorSolo.ejs',{post:item});
+
+                 })
+                   .catch((errorMessage)=>{
+                     console.log(errorMessage);
+                });
+          })
+
+              MongoClient.connect(url, (err, client) => {
+              assert.equal(null, err);
+              const db = client.db(dbName);
+              const collection =db.collection('armor');
+                app.post("/armor", (req,res) => {
+                          collection.insertOne(req.body,(err,result)=>{
+                                    if(err){
+                                      console.log(err);
+                                      res.sendStatus(500);
+                                    }
+                                    res.redirect('/armor')
+                                })
+                    })
+              });
 
     MongoClient.connect(url, (err, client) => {
                 assert.equal(null, err);
@@ -261,14 +309,6 @@ const collection =db.collection('order');
        }) ;
      })
 
-     app.get('/adminArmor', (req,res) => {
-             rez('armor', {})
-             .then((items) =>{
-                res.send(items);})
-                .catch((errorMessage)=>{
-                  console.log(errorMessage);
-                });
-               })
 
   fs.readFile( './sitemap.xml', function(err, data) {
     app.get('/sitemap.xml', function(req, res) {
