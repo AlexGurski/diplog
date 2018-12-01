@@ -1,11 +1,13 @@
-
+.AllItems{
+  height: auto;
+}
 .centerPostOrder{
   display: flex;
   flex-direction: column;
   color: black;
   overflow: auto;
   width: 99%;
-  height: 100%;
+
 }
 .centerPostOrderBot{
   opacity: 0;
@@ -193,15 +195,19 @@ margin-top: 2em;
     flex-grow: 0;
   }
   .workSpace{
-    flex-direction: column;
+  display: block;
   }
   .AllItems{
     width: 99%;
-    height: 70%;
+     display: flex;
+
+position: relative;
+
   }
 .extraItems{
+  position: relative;
   width: 94%;
-  height: 30%;
+/  height: 30%;
 }
 .frontImage{
   display: none;
