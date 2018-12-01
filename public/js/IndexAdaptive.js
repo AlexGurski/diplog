@@ -16,9 +16,9 @@ window.addEventListener('resize', resize);
 function resize() {
   windowHeight = window.innerHeight;
   windowWidth = window.innerWidth;
-  fontSize = windowHeight*0.1;
+  fontSize = windowHeight*0.04;
   headingSize = windowWidth*0.1;
-  if(headingSize > windowHeight*0.3) headingSize = windowHeight*0.3;
+  if(headingSize > windowHeight*0.2) headingSize = windowHeight*0.2;
 
   for(var i = 0; i < labels.length; i++) {
     labels[i].style.fontSize = fontSize+'px';
