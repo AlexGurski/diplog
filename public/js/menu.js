@@ -47,15 +47,17 @@ function filter (name,kind){
 }
 
 async function getMenuWith(){
-
     let responseMenu = await fetch('/menuWith');
     let responseMenuWithout = await fetch('/menuWithout');
     let productsWithout = await responseMenuWithout.json();
     let products = await responseMenu.json();
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
+var addCartWithout = await document.getElementsByClassName('  menuItemWithDiscriptionText');
 
-
+  for(var i=0; i < addCartWithout.length; i++){
+    addCartWithout[i].onclick =  addWithout
+  }
     var   addCart = await document.getElementsByClassName('addCart');
     //console.log(addCart)
         for(var i=0; i < addCart.length; i++){
@@ -63,58 +65,85 @@ async function getMenuWith(){
         }
     let items = products.concat(productsWithout);
     return items;
-}
-
+};
 getElementMenu();
-
 var itemsAfterPromise = Promise.resolve(getMenuWith());
+
+function addWithout() {
+    itemsAfterPromise.then((value)=>{
+  //  console.log(this.id.replace('discriptionText', ''));
+  //  console.log(value[0]._id)
+        for (let i=0;i < value.length;i++){
+            if (this.id.replace('discriptionText', '') === value[i]._id){
+            // console.log(value[i])
+              return value[i];
+            }
+        }
+      })
+      .then((rezult)=>{
+        console.log(rezult);
+        rezult.counter = 1;
+        rezult.ip = document.getElementById('ip').innerHTML;
+        rezult.price = rezult.price.replace(' ','').replace('р','.').replace('к','');
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", '/submitMenu', false);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(rezult));
+        return xhr.responseText;
+
+    }).then((response)=>{
+      console.log(response);
+      if (response === 'ACCEPT'){
+        document.getElementById('poppupAdd').innerText = " добавлен(а) в заказ"
+        document.getElementById('poppupAdd').style.opacity = '0.9'
+        document.getElementById('poppupAdd').style.top = event.clientY - document.getElementById('poppupAdd').offsetHeight/2 +'px';
+        document.getElementById('poppupAdd').style.left = event.clientX - document.getElementById('poppupAdd').offsetWidth/2 +'px';
+        setTimeout(()=>{
+          document.getElementById('poppupAdd').style.opacity = '0'
+          setTimeout(()=>{
+              document.getElementById('poppupAdd').style.top = '-400px'
+          },1000)
+        },3000)
+      }
+    })
+};
 
 
 function add () {
-
-  itemsAfterPromise.then((value)=>{
-//    console.log(this.id);
-  //  console.log(value[0]._id)
-    for (let i=0;i < value.length;i++){
-        if (this.id===value[i]._id){
-        //  console.log(value[i])
-          return value[i];
+      itemsAfterPromise.then((value)=>{
+    //    console.log(this.id);
+      //  console.log(value[0]._id)
+        for (let i=0;i < value.length;i++){
+            if (this.id===value[i]._id){
+            //  console.log(value[i])
+              return value[i];
+            }
         }
-    }
-  }).then((rezult)=>{console.log(rezult);
-    rezult.counter = 1;
-    rezult.ip = document.getElementById('ip').innerHTML;
-  //  console.log(rezult.price.replace(' ','').replace('р','.').replace('к',''))
-    rezult.price = rezult.price.replace(' ','').replace('р','.').replace('к','');
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", '/submitMenu', false);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(rezult));
-    return xhr.responseText;
-  //  setTimeout(()=>{console.log(xhr.responseText)},10)
-}).then((response)=>{
-  console.log(response);
-  if (response === 'ACCEPT'){
+      }).then((rezult)=>{console.log(rezult);
+        rezult.counter = 1;
+        rezult.ip = document.getElementById('ip').innerHTML;
+        rezult.price = rezult.price.replace(' ','').replace('р','.').replace('к','');
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", '/submitMenu', false);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(rezult));
+        return xhr.responseText;
 
-    document.getElementById('poppupAdd').innerText = " добавлен(а) в заказ"
-    document.getElementById('poppupAdd').style.opacity = '0.9'
-    document.getElementById('poppupAdd').style.top = event.clientY - document.getElementById('poppupAdd').offsetHeight/2 +'px';
-    document.getElementById('poppupAdd').style.left = event.clientX - document.getElementById('poppupAdd').offsetWidth/2 +'px';
-    setTimeout(()=>{
-      document.getElementById('poppupAdd').style.opacity = '0'
-      setTimeout(()=>{
-          document.getElementById('poppupAdd').style.top = '-400px'
-      },1000)
-    },3000)
-  }
-})
-
-
-
-
-
-
-
+    }).then((response)=>{
+      console.log(response);
+      if (response === 'ACCEPT'){
+        document.getElementById('poppupAdd').innerText = " добавлен(а) в заказ"
+        document.getElementById('poppupAdd').style.opacity = '0.9'
+        document.getElementById('poppupAdd').style.top = event.clientY - document.getElementById('poppupAdd').offsetHeight/2 +'px';
+        document.getElementById('poppupAdd').style.left = event.clientX - document.getElementById('poppupAdd').offsetWidth/2 +'px';
+        setTimeout(()=>{
+          document.getElementById('poppupAdd').style.opacity = '0'
+          setTimeout(()=>{
+              document.getElementById('poppupAdd').style.top = '-400px'
+          },1000)
+        },3000)
+      }
+    })
 };
 
 /*
@@ -204,32 +233,29 @@ for (let i=0;i<massivKind.length;i++){
         for (var i=0; i<items.length; i++){
           const  text = document.createElement("div");
           text.className = 'menuItemWithDiscriptionText';
-          text.id = 'discriptionText'+items[i].name.split(' ').join('');
+          text.id = 'discriptionText'+items[i]._id.split(' ').join('');
           document.getElementById('discription'+items[i].kind).appendChild(text);
 
             const  name = document.createElement("div");
             name.className = 'menuItemWithDiscriptionTextName';
             name.innerHTML = items[i].name;
-            document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(name);
+            document.getElementById('discriptionText'+items[i]._id.split(' ').join('')).appendChild(name);
 
             const  gram = document.createElement("div");
             gram.className = 'menuItemWithDiscriptionTextGram';
             gram.innerHTML = items[i].gram;
-            document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(gram);
+            document.getElementById('discriptionText'+items[i]._id.split(' ').join('')).appendChild(gram);
             if (items[i].other!=undefined){
               const  other = document.createElement("div");
                 other.className = 'menuItemWithDiscriptionTextOther';
                 other.innerHTML = items[i].other;
-                document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(other);
+                document.getElementById('discriptionText'+items[i]._id.split(' ').join('')).appendChild(other);
               }
 
             const  price = document.createElement("div");
             price.className = 'menuItemWithDiscriptionTextPrice';
             price.innerHTML = items[i].price;
-            document.getElementById('discriptionText'+items[i].name.split(' ').join('')).appendChild(price);
-
-
-
+            document.getElementById('discriptionText'+items[i]._id.split(' ').join('')).appendChild(price);
         }
 
 }
@@ -296,7 +322,7 @@ function createMenuPretty(items){
 //console.log(items[i]);
 
 ////////////////////////////////////////ЗАКОММЕНТИТЬ ПЕРЕД ЗАЩИТОЙ!/////////////////////////////////////!!
-
+/*
         if (items[i].gram1!==undefined){
            const addCart = document.createElement("div");
            addCart.className = 'addCart';
@@ -314,6 +340,7 @@ function createMenuPretty(items){
            document.getElementById(addCart.id).appendChild(pPrice);
 
          }
+         */
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   }
 

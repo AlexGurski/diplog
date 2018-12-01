@@ -211,7 +211,12 @@ async function getElementMenu(){
 
               const frontImage = document.createElement("div");
                   frontImage.className = 'frontImage';
-                  frontImage.style.backgroundImage = "url(public/image/menuPhoto/"+items[i]._id+".jpg)";
+                  if (items[i].discription!==undefined){
+                    frontImage.style.backgroundImage = "url(public/image/menuPhoto/"+items[i]._id+".jpg)";
+                  } else{
+                      frontImage.style.backgroundImage = "url(public/image/menuPhoto/"+items[i].kind+".jpg)";
+                  }
+
                   document.getElementById(orderCenter.id).appendChild(frontImage);
 
           const textCenter = document.createElement("div");
@@ -237,7 +242,16 @@ async function getElementMenu(){
 
                    const  kindOrder = document.createElement("div");
                           kindOrder.className = 'kindOrder';
-                          kindOrder.innerHTML =items[i].discription;
+                  if (items[i].discription!==undefined){
+                    kindOrder.innerHTML =items[i].discription;}
+                    else{
+                      if (items[i].other!==undefined){
+                        kindOrder.innerHTML =items[i].other;
+                      } else{
+                        kindOrder.innerHTML =items[i].name;
+                      }
+                    }
+                          
                           document.getElementById(textCenter1.id).appendChild(kindOrder);
 
               const priceOrder = document.createElement("div");
