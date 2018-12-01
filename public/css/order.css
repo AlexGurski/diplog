@@ -24,7 +24,7 @@
 .orderCenter{
   border: 1px dashed red;
   min-height: 180px;
-	width: 100%;
+	width: 98%;
 	margin-bottom:  10px;
 	background-color: black;
   display: flex;
@@ -133,7 +133,6 @@ img{
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-
   flex-grow: 1;
 }
 .inputBox{
@@ -175,10 +174,36 @@ margin-top: 2em;
   color:black;
   padding: 1em;
   text-align: center;
-  cursor: pointer;
+  cursor: pointer;ss
 }
 #buttonOrder:hover{
   border: 2px dotted yellow;
   background-color: black;
   color:  yellow;
+}
+
+@media screen and (orientation:portrait) {
+  .textCenter2{
+    max-width: 250px;
+    min-width: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 0;
+  }
+  .workSpace{
+    flex-direction: column;
+  }
+  .AllItems{
+    width: 99%;
+    height: 70%;
+  }
+.extraItems{
+  width: 94%;
+  height: 30%;
+}
+.frontImage{
+  display: none;
+}
 }

@@ -108,7 +108,6 @@ function addWithout() {
     })
 };
 
-
 function add () {
       itemsAfterPromise.then((value)=>{
     //    console.log(this.id);
