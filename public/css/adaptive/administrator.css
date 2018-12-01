@@ -1,0 +1,26 @@
+.galeryAdd{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  border:2px solid red;
+  flex-wrap: wrap;
+}
+.forma {
+  width: 50%;
+}
+.addImages{
+    display: flex;
+  border:1px solid gold;
+  width: 100%;
+}
+.folberName{
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+.folberName:hover{
+  background-color: grey;
+}

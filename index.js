@@ -2,8 +2,12 @@ const monthNames = ["Январь", "Февраль", "Март", "Апрель"
   "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
 ];
 let Data = new Date();
+const multer  = require('multer')
+const fs = require('fs');
+const rimraf = require('rimraf');
 const express = require('express');
 const bodyParser = require( 'body-parser' );
+const galery = './public/image/galery/';
 const app = express();
 app.use( bodyParser.urlencoded( {extended:true} ) );
 app.use( bodyParser.json() )
@@ -15,27 +19,46 @@ const dbName = 'heroku_4b2prwdg';
 var massivZaskazov = {};
 let service= require("./public/json/serviceJSON.js");
 const rez =   require("./public/modules/searchJS");
-/*
-let desert= require("./public/json/desert.js");
-let menuPizza = require("./public/json/menuPizza.js");
-let menuHot = require("./public/json/menuHot.js");
-let menuCold = require("./public/json/menuCold.js");
-let menuGarnirs= require("./public/json/garnirs.js");
-let cocktail= require("./public/json/cocktail.js");
-let pivo= require("./public/json/pivo.js");
-let vodka= require("./public/json/vodka.js");
-let tea= require("./public/json/tea.js");
-let sokmorozh= require("./public/json/sokmorozh.js");
-let supzavtrak= require("./public/json/supzavtrak.js");
-let sandwblinch= require("./public/json/sandwblinch.js");
-let salat= require("./public/json/salat.js");
 
-let allMenuWith = menuPizza.concat(salat, sandwblinch, supzavtrak, menuHot,menuCold, menuGarnirs,cocktail,desert);
-let allMenuWithout = pivo.concat(vodka,tea,sokmorozh);
-*/
+
+app.post('/createDir',function(req,res,next){
+  fs.mkdirSync(galery+req.body.text);
+  res.redirect('/administrator')
+})
+
+app.post('/deleteDir',function(req,res,next){
+    rimraf(galery+req.body.text, function () {
+    res.redirect('/administrator')});
+})
+
+app.post('/profile', multer().array('photo', 100), function (req, res, next) {
+  //  console.log(req.files);
+    for (let i=0;i<req.files.length;i++){
+      let wstream = fs.createWriteStream(galery+req.body.text+'/'+req.files[i].originalname);
+        wstream.write(req.files[i].buffer);
+        wstream.end();
+    }
+      res.redirect('/administrator')
+})
+
+app.get('/galeryFolber',(req, res) => {
+    fs.readdir(galery, (err, files) => {
+    res.send(files);
+    })
+})
+
+app.post("/getFilesInFolber", (req,res) => {
+    fs.readdir(galery+req.body.name, (err, files) => {
+    res.send(files);
+  })
+});
+
+app.get('/administrator', (req,res) =>{
+      res.render('administrator.ejs');
+})
+
 
 MongoClient.connect(url, (err, client) => {
-
 assert.equal(null, err);
 const db = client.db(dbName);
 const collection =db.collection('order');
@@ -247,7 +270,17 @@ const collection =db.collection('order');
                 });
                })
 
- app.listen(process.env.PORT || 3000, () => {
+  fs.readFile( './sitemap.xml', function(err, data) {
+    app.get('/sitemap.xml', function(req, res) {
+    res.send(data);
+    });
+  });
 
+    app.get('/robots.txt', function(req, res) {
+        res.send( fs.readFileSync("robots.txt", "utf8"));
+    });
+
+
+ app.listen(process.env.PORT || 3001, () => {
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;

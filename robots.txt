@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://www.parkaveniu.by/sitemap.xml
+Host: www.parkaveniu.by

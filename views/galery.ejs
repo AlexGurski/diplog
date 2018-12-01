@@ -1,9 +1,13 @@
 <!doctype html>
 <html>
+<title>Галерея кафе "Парк Авеню"</title>
 <head>
 <meta charset="utf-8">
 <link rel="shortcut icon" href="../public/image/logo.png" type="image/x-icon">
-
+<meta name="robots" content="index, follow" />
+<meta name="yandex" content="index, follow" />
+<meta name="author" content="Александр Гурский" />
+<!-- Yandex.Metrika counter -->
 
 </head>
 <body>
@@ -11,57 +15,16 @@
   <div class='black'>
   </div>
   <div class = 'workSpace'>
-      <div class = 'AllItems'>
-
-      <input type="checkbox" id="pic-1"/>
-      <label for="pic-1" class="lightbox"><img src="./public/image/about/atmosphere1.jpg"/></label>
-      <input type="checkbox" id="pic-2"/>
-      <label for="pic-2" class="lightbox"><img src="./public/image/about/atmosphere2.jpg"/></label>
-      <input type="checkbox" id="pic-3"/>
-      <label for="pic-3" class="lightbox"><img src="./public/image/about/atmosphere3.jpg"/></label>
-      <input type="checkbox" id="pic-4"/>
-      <label for="pic-4" class="lightbox"><img src="./public/image/about/atmosphere4.jpg"/></label>
-      <input type="checkbox" id="pic-5"/>
-      <label for="pic-5" class="lightbox"><img src="./public/image/about/atmosphere5.jpg"/></label>
-      <input type="checkbox" id="pic-6"/>
-      <label for="pic-6" class="lightbox"><img src="./public/image/about/party1.jpg"/></label>
-      <input type="checkbox" id="pic-7"/>
-      <label for="pic-7" class="lightbox"><img src="./public/image/about/party2.jpg"/></label>
-      <input type="checkbox" id="pic-8"/>
-      <label for="pic-8" class="lightbox"><img src="./public/image/about/party3.jpg"/></label>
-      <input type="checkbox" id="pic-9"/>
-      <label for="pic-9" class="lightbox"><img src="./public/image/about/party4.jpg"/></label>
-      <input type="checkbox" id="pic-10"/>
-      <label for="pic-10" class="lightbox"><img src="./public/image/about/party5.jpg"/></label>
-      <input type="checkbox" id="pic-11"/>
-      <label for="pic-11" class="lightbox"><img src="./public/image/about/party6.jpg"/></label>
-      <input type="checkbox" id="pic-12"/>
-      <label for="pic-12" class="lightbox"><img src="./public/image/about/menu3.jpg"/></label>
-
-
-      <div class="grid">
-       <label for="pic-1" class="grid-item"><img src="./public/image/about/atmosphere1.jpg"/></label>
-       <label for="pic-2" class="grid-item"><img src="./public/image/about/atmosphere2.jpg"/></label>
-       <label for="pic-3" class="grid-item"><img src="./public/image/about/atmosphere3.jpg"/></label>
-       <label for="pic-4" class="grid-item"><img src="./public/image/about/atmosphere4.jpg"/></label>
-       <label for="pic-5" class="grid-item"><img src="./public/image/about/atmosphere5.jpg"/></label>
-       <label for="pic-6" class="grid-item"><img src="./public/image/about/party1.jpg"/></label>
-       <label for="pic-7" class="grid-item"><img src="./public/image/about/party2.jpg"/></label>
-       <label for="pic-8" class="grid-item"><img src="./public/image/about/party3.jpg"/></label>
-       <label for="pic-9" class="grid-item"><img src="./public/image/about/party4.jpg"/></label>
-       <label for="pic-10" class="grid-item"><img src="./public/image/about/party5.jpg"/></label>
-       <label for="pic-11" class="grid-item"><img src="./public/image/about/party6.jpg"/></label>
-       <label for="pic-12" class="grid-item"><img src="./public/image/about/menu3.jpg"/></label>
+      <div class = 'AllItems' id ='AllItems'>
+        <div id="gallery" class="photo-grid">
       </div>
-
       </div>
       <div class='extraItems'>
-        <div class = 'serviceBlock'>
-        </div>
+
       </div>
           <% include blocks/allMainBorder.ejs %>
   </div>
-
+  <script src="../public/js/galery.js " ></script>
 <link rel="stylesheet" type="text/css" href="../public/css/galery.css">
   <% include blocks/indexAdaptive.ejs %>
 </body>

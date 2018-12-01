@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<title>adminka</title>
+<head>
+<link rel="shortcut icon" href="../public/image/logo.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../public/css/adaptive/administrator.css">
+
+</head>
+<body>
+<div class = 'galeryAdd'>
+
+        <div class = 'addImages'>
+          <div class = 'galeryList'>
+          </div>
+          <div class = 'forma'>
+          <form action="/profile" method="post" enctype="multipart/form-data">
+              <input type="file" name="photo" multiple="multiple"/><br>
+              <input type="text" name="text"  id='folberText' value="" readonly><br>
+              <input type='submit' value='ДОБАВИТЬ ФАЙЛ В ПАПКУ'>
+          </form>
+        </div>
+      </div>
+
+  <div class = 'addImages deleteOrCreateFolber'>
+
+            <div class = 'forma'>
+            <h2>  Cоздать папку    </h2>
+            <form action="/createDir" method="post" enctype="application/x-www-form-urlencoded">
+                <input type="text" name="text"  value="" ><br>
+                <input type='submit' value='СОЗДАТЬ ПАПКУ С ДАННЫМ ИМЕНЕМ'>
+            </form>
+          </div>
+
+
+          <div class = 'forma'>
+            <h2>   Удалить папку из списка </h2>
+            <div class = 'galeryList'>
+            </div>
+
+          <form action="/deleteDir" method="post" enctype="application/x-www-form-urlencoded">
+              <input type="text" name="text" id='deleteTextInput' value="" readonly><br>
+              <input type='submit' value='УДАЛИТЬ ВЫБРАННУЮ ПАПКУ'>
+          </form>
+          </div>
+  </div>
+
+</div>
+  <script src="../public/js/administrator.js " ></script>
+</body>
+</html>
