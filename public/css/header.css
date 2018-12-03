@@ -142,18 +142,17 @@ display: flex;
   display: none;
 }
 @media screen and (orientation:portrait) {
-#nav-trigger{
-  display: block;
+    #nav-trigger{
+      display: block;
+    }
+    .header{
+      display: none;
+    }
+    .adaptive{
+      display: block;
+    }
 }
-.header{
-  display: none;
-}
-.adaptive{
-  display: block;
-}
-}
-@media only screen
-and (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   #nav-trigger{
     display: block;
   }

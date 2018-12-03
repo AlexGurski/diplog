@@ -246,11 +246,11 @@ app.get('/admin', (req,res) => {
     MongoClient.connect(url, (err, client) => {
                 assert.equal(null, err);
                 const db = client.db(dbName);
-                const collection =db.collection('menu');
+                const collection =db.collection('menuWith');
                   app.post("/admin", (req,res) => {
                         console.log(req.body)
                            collection.update(
-                               {_id: String(req.body.name) },
+                               {_id: req.body._id },
                                {name: req.body.name,
                                 discription:req.body.discription,
                                 kind:req.body.kind,
@@ -264,7 +264,6 @@ app.get('/admin', (req,res) => {
 
                            );
                             res.redirect('/admin')
-
                        }) ;
                      })
 

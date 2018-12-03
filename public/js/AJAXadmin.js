@@ -36,18 +36,16 @@ function OrderAdminMenu(){
 
 
                                           document.getElementsByClassName("menuStatus")[i].onclick = () =>{
-
                                                       for (let j=0;j<findItem.length;j++){
-                                                        if (findItem[j]._id===document.getElementsByClassName("menuStatus")[i].id.substr(0,14)) {
+                                                        if (findItem[j]._id===document.getElementsByClassName("menuStatus")[i].id.replace('00','')) {
                                                           console.log(findItem[j]);
 
                                                             document.getElementById('_id').value = findItem[j]._id;
                                                             document.getElementById('title').value = findItem[j].name;
-                                                            document.getElementById('img').value = findItem[j].img;
                                                             document.getElementById('content').value = findItem[j].discription;
                                                             document.getElementById('kind').value = findItem[j].kind;
                                                             document.getElementById('price').value = findItem[j].price;
-                                                            document.getElementById('weight').value = findItem[j].weight;
+                                                            document.getElementById('weight').value = findItem[j].gram;
                                                         }
                                                       }
                                        }
@@ -118,7 +116,7 @@ function OrderAdmin() {
 
                     if (orders[i].status ==='Принят'){
                               document.getElementsByClassName('divStatus')[orders.length - i -1].style.backgroundColor = 'red';
-                              
+
                         }
 
                         if (orders[i].status ==='Доставлен'){
