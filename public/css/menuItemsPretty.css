@@ -12,25 +12,6 @@
 	 background-position: center;
 	 background-size: 100% 100%;
 }
-.addCart:hover{
-	background-color: white;
-}
-
-.poppupAdd{
-  opacity: 0;
-  top:-1005px;
-  left: -1005px;
-  position: fixed;
-  display: inline-block;
-  padding:  30px;
-  border: 3px dotted yellow;
-  background-color: black;
-  font-size: 150%;
-  color: gold;
-  z-index: 999;
- transition: opacity 1s;
-  border-radius: 25px;
-}
 
 .knopka {
 	opacity: 0;
@@ -211,7 +192,9 @@ display: flex;
 	        backface-visibility: hidden;
 	text-align: center;
 	min-height: 100%;
-	height: auto;
+	height: 100%;
+	width: 100%;
+	min-width: 100%;
 	border-radius: 25px 25px 0px 0px;
 	color: black;
 	font-size: 1.5rem;

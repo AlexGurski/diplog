@@ -280,11 +280,18 @@ function createMenuPretty(items){
         conteiner.id = items[i]._id + i;
         document.getElementById(img.id).appendChild(conteiner);
 
-          const front = document.createElement("div");
-          front.className = 'front';
-          front.id = '123'+ items[i]._id;
-          front.style.backgroundImage = "url(public/image/menuPhoto/"+items[i]._id+".jpg)";
-          document.getElementById(conteiner.id).appendChild(front);
+
+                  const front = document.createElement("img");
+                  front.className = 'front';
+                  front.id = '123'+ items[i]._id;
+                  front.style.background = 'white';
+
+                  front.onerror = function(){
+                  front.src = "./public/image/menuPhoto/UPDATE.png";
+
+                       }
+                  front.src = "./public/image/menuPhoto/"+items[i]._id+".jpg";
+                  document.getElementById(conteiner.id).appendChild(front);
 
 
 
