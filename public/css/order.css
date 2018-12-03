@@ -142,7 +142,7 @@ img{
 border: 1px solid #fcb800;
 border-radius: 5px;
 padding: 5px;
-width: 56%;
+width: 70%;
 margin-right: 3%;
 font-family: 'left', serif;
 font-size:20px;
@@ -185,31 +185,62 @@ margin-top: 2em;
 }
 
 @media screen and (orientation:portrait) {
-  .textCenter2{
-    max-width: 250px;
-    min-width: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    flex-grow: 0;
-  }
-  .workSpace{
-  display: block;
-  }
-  .AllItems{
-    width: 99%;
-     display: flex;
+        .textCenter2{
+          max-width: 250px;
+          min-width: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: column;
+          flex-grow: 0;
+        }
+        .workSpace{
+        display: block;
+        }
+        .AllItems{
+          width: 99%;
+           display: flex;
 
-position: relative;
+      position: relative;
 
-  }
-.extraItems{
-  position: relative;
-  width: 94%;
-  height: auto;
+        }
+      .extraItems{
+        position: relative;
+        width: 94%;
+        height: auto;
+      }
+      .frontImage{
+        display: none;
+      }
 }
-.frontImage{
-  display: none;
-}
+
+@media only screen
+and (max-width: 720px) {
+      .textCenter2{
+        max-width: 250px;
+        min-width: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-grow: 0;
+      }
+      .workSpace{
+      display: block;
+      }
+      .AllItems{
+        width: 99%;
+         display: flex;
+
+    position: relative;
+
+      }
+    .extraItems{
+      position: relative;
+      width: 94%;
+      height: auto;
+    }
+    .frontImage{
+      display: none;
+    }
 }

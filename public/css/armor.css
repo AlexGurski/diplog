@@ -31,3 +31,12 @@ p{
     width: 99%;
   }
 }
+@media only screen
+and (max-width: 720px) {
+  .extraItems{
+    display: none;
+  }
+  .AllItems{
+    width: 99%;
+  }
+}

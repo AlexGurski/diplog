@@ -51,7 +51,7 @@ async function getElementMenu(){
                  orderCost.innerHTML = 'Стоимость заказа: ' + finalPrice.toFixed(2) + ' р.';
                   colCounter[i].innerHTML = itemOrder[i].counter;
 
-                                  if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'la Villa') ) {
+                                  if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ) {
 
                                     dostavkaPrice = 0;
                                     postPrice = dostavkaPrice + finalPrice;
@@ -85,7 +85,7 @@ async function getElementMenu(){
                       orderCost.innerHTML = 'Стоимость заказа: ' + finalPrice.toFixed(2) + ' р.';
                         colCounter[i].innerHTML = itemOrder[i].counter;
 
-                        if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'la Villa') ){
+                        if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ){
                           dostavkaPrice = 0;
                           postPrice = dostavkaPrice + finalPrice;
                           document.getElementById('deliveryCost').innerHTML = 'Стоимость доставки: ' +  dostavkaPrice+ ' р.' ;
@@ -157,7 +157,8 @@ async function getElementMenu(){
         chbox=document.getElementById('one');
             if (chbox.checked) {
               //  alert('Выбран');
-              document.getElementById('adressOrder').value = 'la Villa'
+              document.getElementById('adressOrder').value = 'Кафе "Парк Авеню"';
+               document.getElementById('adressOrder').setAttribute("readonly", true);
                   dostavkaPrice = 0;
                 postPrice = dostavkaPrice + finalPrice;
                 document.getElementById('deliveryCost').innerHTML = 'Стоимость доставки: ' +  dostavkaPrice+ ' р.' ;
@@ -167,6 +168,7 @@ async function getElementMenu(){
 
             }
             else {
+               document.getElementById('adressOrder').readOnly = false;
               document.getElementById('adressOrder').value='';
                       if (  finalPrice < 10 ) {
                     dostavkaPrice = 5;
@@ -187,7 +189,7 @@ async function getElementMenu(){
               finalPrice += items[i].price * items[i].counter;
               orderCost.innerHTML ='Стоимость заказа: '+ finalPrice.toFixed(2) + ' р.';
 
-              if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'la Villa') ) {
+              if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ) {
 
                 dostavkaPrice = 0;
                 postPrice = dostavkaPrice + finalPrice;
@@ -251,7 +253,7 @@ async function getElementMenu(){
                         kindOrder.innerHTML =items[i].name;
                       }
                     }
-                          
+
                           document.getElementById(textCenter1.id).appendChild(kindOrder);
 
               const priceOrder = document.createElement("div");
