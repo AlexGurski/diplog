@@ -152,3 +152,15 @@ display: flex;
   display: block;
 }
 }
+@media only screen
+and (max-width: 720px) {
+  #nav-trigger{
+    display: block;
+  }
+  .header{
+    display: none;
+  }
+  .adaptive{
+    display: block;
+  }
+}
