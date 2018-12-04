@@ -139,7 +139,7 @@ display: -moz-box;
 display: -ms-flexbox;
 display: -webkit-flex;
 display: flex;
-    height: 100px;
+    height: 90px;
     -webkit-box-pack: flex-start;
     -ms-flex-pack: flex-start;
   justify-content: flex-start;
