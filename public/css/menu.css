@@ -117,13 +117,18 @@ margin-bottom: 10px;
     background-color: black;
 }
 @media screen and (orientation:portrait) {
+
+ p {font-size: 10px;}
+
+
 .ItemsCenter{
-/  width: 38vw;
-/  height: 60vw;
+  width: 42vw;
+  height: 60vw;
 }
   .workSpace{
     flex-direction: column-reverse;
   }
+
   .centerMainHeader{
     display: -webkit-box;
 display: -moz-box;

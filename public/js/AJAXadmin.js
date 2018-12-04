@@ -33,8 +33,6 @@ function OrderAdminMenu(){
                                 menuStatus.innerText = findItem[i].name;
                               document.getElementsByClassName("findestMenuItems")[0].appendChild(menuStatus);
 
-
-
                                           document.getElementsByClassName("menuStatus")[i].onclick = () =>{
                                                       for (let j=0;j<findItem.length;j++){
                                                         if (findItem[j]._id===document.getElementsByClassName("menuStatus")[i].id.replace('00','')) {

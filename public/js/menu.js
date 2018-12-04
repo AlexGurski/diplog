@@ -145,7 +145,7 @@ function add () {
     })
 };
 
-/*
+
 async function searchMenu(){
   let discriptionForSearch = [];
   let responseMenu =  await fetch('/menuWith');
@@ -159,7 +159,7 @@ async function searchMenu(){
 
  filterOne(discriptionForSearch);
 }
-/*
+
 function filterOne(item){
         console.log(item);
         for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
@@ -172,9 +172,6 @@ function filterOne(item){
          document.getElementById('00'+item[i]._id).style.display='block';
        }
 }
-*/
-
-
 
 
 function create(items){
