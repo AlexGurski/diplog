@@ -118,12 +118,17 @@ margin-bottom: 10px;
 }
 @media screen and (orientation:portrait) {
 
- p {font-size: 10px;}
+p {font-size: 3.5vw;
+}
 
+ .pPrice, .weight, .pName{
+font-size: 4vw;
+
+ }
 
 .ItemsCenter{
-  width: 42vw;
-  height: 60vw;
+  width: 37vw;
+  height: 62vw;
 }
   .workSpace{
     flex-direction: column-reverse;
