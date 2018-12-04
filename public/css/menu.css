@@ -123,7 +123,6 @@ p {font-size: 3.5vw;
 
  .pPrice, .weight, .pName{
 font-size: 4vw;
-
  }
 
 .ItemsCenter{
@@ -155,13 +154,9 @@ display: flex;
   height:150px;
   margin: 0;
 }
+
 .headerItemMenu{
-height: 67px;
-width: 67px;
-}
-.headerItemMenuImage{
-  height: 67px;
-  width:  67px;
+transform:scale(0.7);
 }
 .headerItemMenuDiscription{
   font-size: 0.9em;
