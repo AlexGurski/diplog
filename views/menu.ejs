@@ -5,6 +5,7 @@
 <link rel="shortcut icon" href="../public/image/logo.png" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="../public/css/menuItemsPretty.css">
 <link rel="stylesheet" type="text/css" href="../public/css/menuPrettyWithout.css">
+<link rel="stylesheet" type="text/css" href="../public/css/menuSearch.css">
 </head>
 <body>
   <div class = 'poppupAdd' id  = 'poppupAdd'>
@@ -16,9 +17,12 @@
   </div>
   <script src="../public/js/menu.js " ></script>
 
-
         <div class = 'workSpace'>
             <div class = 'AllItems'>
+              <div class="container1">
+              <input type="text" placeholder="Наименование блюда..." id='searchName' onkeydown='searchMenu()'>
+              <div class="search"></div>
+              </div>
               <div id='enterKind'>
               МЕНЮ
               </div>
@@ -26,7 +30,7 @@
                 </div>
             </div>
             <div class='extraItems'>
-          
+
               <div class = 'centerMainHeader' id ='centerMainHeader'>
               </div>
             </div>

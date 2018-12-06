@@ -3,7 +3,7 @@ async function getElementMenu(){
     let responseMenu = await fetch('/allMenu')
     let products = await responseMenu.json();
     await   create(products);
-    console.log(products)
+//    console.log(products)
     for (let i = 0; i < document.getElementsByClassName('headerItemMenu').length;i++ ){
         document.getElementsByClassName('headerItemMenu')[i].onclick = ()=>{
         let idClassName = document.getElementsByClassName('headerItemMenu')[i].id
@@ -52,7 +52,7 @@ async function getMenuWith(){
     let products = await responseMenu.json();
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
-var addCartWithout = await document.getElementsByClassName('  menuItemWithDiscriptionText');
+var addCartWithout = await document.getElementsByClassName('menuItemWithDiscriptionText');
   for(var i=0; i < addCartWithout.length; i++){
     addCartWithout[i].onclick =  addWithout
   }
@@ -142,24 +142,22 @@ function add () {
 };
 
 
-async function searchMenu(inputBox){
-  console.log(inputBox.value)
+async function searchMenu(){
   let discriptionForSearch = [];
   let responseMenu =  await fetch('/menuWith');
   let items = await  responseMenu.json();
 //console.log(items);
   for (let i=0;i < items.length; i++){
-    if((items[i].discription!==undefined) && (items[i].discription.includes(inputBox.value)))
+    if((items[i].discription!==undefined) && (items[i].name.toUpperCase().includes(document.getElementById('searchName').value.toUpperCase())))
    {
       discriptionForSearch.push(items[i]);
     }
 }
  filterOne(discriptionForSearch);
-
 }
 
 function filterOne(item){
-        console.log(item);
+    //    console.log(item);
         for (let i = 0; i < document.getElementsByClassName('ItemsCenter').length;i++ ){
           document.getElementsByClassName('ItemsCenter')[i].style.display='none';
         }
@@ -173,7 +171,7 @@ function filterOne(item){
 
 
 function create(items){
-  console.log(items);
+//  console.log(items);
     for (var i=0; i<items.length; i++){
             const  div = document.createElement("div");
              div.className = 'headerItemMenu';
