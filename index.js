@@ -47,6 +47,7 @@ app.get('/galeryFolber',(req, res) => {
     })
 })
 
+
 app.post("/getFilesInFolber", (req,res) => {
     fs.readdir(galery+req.body.name, (err, files) => {
     res.send(files);
@@ -169,6 +170,8 @@ app.get('/order',(req, res) => {
 app.get('/about',(req, res) => {
   res.render('about.ejs');
 })
+
+
 
 app.get('/service',(req, res) => {
   res.render('service.ejs');

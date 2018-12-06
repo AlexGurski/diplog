@@ -1,13 +1,13 @@
 
 .ItemsCenter{
-	height: 480px;
+	height: 430px;
 	width: 290px;
 	margin: 10px;
-	 border-radius: 25px;
+	 border-radius:25px;
 	 position: relative;
 /	 background-color:black;
 	background-image:url("../image/table.jpg");
-	 border: 5px dotted #f5f5dc;
+	/border: 2px dotted #f5f5dc;
 	 background-repeat: no-repeat;
 	 background-position: center;
 	 background-size: 100% 100%;

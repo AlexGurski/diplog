@@ -35,7 +35,6 @@ function filter (name,kind){
                },300)
             }
     }
-
     else {  for (let i = 0; i < document.getElementsByClassName(name).length;i++ ){
      document.getElementById('centerMain').style.opacity=0;
      setTimeout(()=>{
@@ -54,7 +53,6 @@ async function getMenuWith(){
     await   createMenuPretty(products);
     await   createMenuPrettyWithout(productsWithout);
 var addCartWithout = await document.getElementsByClassName('  menuItemWithDiscriptionText');
-
   for(var i=0; i < addCartWithout.length; i++){
     addCartWithout[i].onclick =  addWithout
   }
@@ -71,8 +69,6 @@ var itemsAfterPromise = Promise.resolve(getMenuWith());
 
 function addWithout() {
     itemsAfterPromise.then((value)=>{
-  //  console.log(this.id.replace('discriptionText', ''));
-  //  console.log(value[0]._id)
         for (let i=0;i < value.length;i++){
             if (this.id.replace('discriptionText', '') === value[i]._id){
             // console.log(value[i])
@@ -146,18 +142,20 @@ function add () {
 };
 
 
-async function searchMenu(){
+async function searchMenu(inputBox){
+  console.log(inputBox.value)
   let discriptionForSearch = [];
   let responseMenu =  await fetch('/menuWith');
   let items = await  responseMenu.json();
+//console.log(items);
   for (let i=0;i < items.length; i++){
-    if((items[i].discription!==undefined) && (items[i].discription.includes(document.getElementById('searchTextMenu').value)))
+    if((items[i].discription!==undefined) && (items[i].discription.includes(inputBox.value)))
    {
       discriptionForSearch.push(items[i]);
     }
 }
-
  filterOne(discriptionForSearch);
+
 }
 
 function filterOne(item){
@@ -199,8 +197,8 @@ function arrayUnique(massivKind){
 };
 
 function createMenuPrettyWithout(items){
-
 let massivKind = [];
+
 for (let i=0;i<items.length;i++){
   massivKind[i] =  items[i].kind;
 }
