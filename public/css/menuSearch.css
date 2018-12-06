@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +50,7 @@ html, body {
   height: 2px;
   background: white;
   transform: rotate(45deg);
-  transition: all .5s;
+  transition: all .2s;
 }
 .container1 .search::after {
   content: "";
@@ -64,7 +64,7 @@ html, body {
   height: 15px;
   border-radius: 50%;
   border: 2px solid white;
-  transition: all .5s;
+  transition: all .2s;
 }
 .container1 input {
   font-family: 'Inconsolata', monospace;
@@ -84,7 +84,7 @@ html, body {
   padding: 0 80px 0 20px;
   border-radius: 30px;
   box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-  transition: all 1s;
+  transition: linear 0.7s;
   opacity: 0;
   z-index: 5;
   font-weight: bolder;
