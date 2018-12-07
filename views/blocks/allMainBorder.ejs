@@ -22,9 +22,6 @@
             <a href="/menu">Меню</a>
             </li>
             <li>
-            <a href="/service">Услуги</a>
-            </li>
-            <li>
               <a href="/galery">Галерея</a>
             </li>
             <li>
@@ -32,6 +29,9 @@
             </li>
             <li>
               <a href="/armor">Бронирование</a>
+            </li>
+            <li>
+            <a href="/user">Личный кабинет</a>
             </li>
             <li>
               <a href="/order">Заказ</a>
@@ -93,7 +93,7 @@
                 else {
                   console.log( document.cookie );
                   document.cookie = "name="+ navigator.platform +" " + navigator.appCodeName +" " +json.ip;
-              
+
                   ip.innerHTML =   getCookie('name');
                 }
           }

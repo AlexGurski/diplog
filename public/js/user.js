@@ -30,7 +30,7 @@ function updateMouthEyes() {
  pupilLeft.setAttribute("cx", 113 + movePos);
 }
 
-var email = document.querySelector("#email");
+var email = document.querySelector("#phone");
 email.addEventListener("focus", updateMouthEyes);
 email.addEventListener("input", updateMouthEyes);
 email.addEventListener("blur", function () {

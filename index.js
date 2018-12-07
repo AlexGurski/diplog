@@ -1,6 +1,5 @@
 const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-  "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
-];
+  "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 let Data = new Date();
 const multer  = require('multer')
 const fs = require('fs');
@@ -17,17 +16,84 @@ const assert = require('assert');
 const url = 'mongodb://alex:panik1993@ds239873.mlab.com:39873/heroku_4b2prwdg';
 const dbName = 'heroku_4b2prwdg';
 var massivZaskazov = {};
-let service= require("./public/json/serviceJSON.js");
-const rez =   require("./public/modules/searchJS");
+let service = require("./public/json/serviceJSON.js");
+const rez = require("./public/modules/searchJS");
+require("pidcrypt/seedrandom")
 
-app.post('/user',function(req,res,next){
+var pidCrypt = require("pidcrypt")
+require("pidcrypt/aes_cbc")
+
+var aes = new pidCrypt.AES.CBC();
+var pw =  "alexGurski";
+
+app.get('/userList', (req,res) => {
+rez('usersList', {})
+.then((items) =>{
+   res.send(items);})
+   .catch((errorMessage)=>{
+     console.log(errorMessage);
+   });
+  })
+
+MongoClient.connect(url, (err, client) => {
+            assert.equal(null, err);
+            const db = client.db(dbName);
+            const collection =db.collection('usersList');
+
+app.post("/user", (req,res) => {
   console.log(req.body)
-    res.send(null);
+      rez('usersList', {})
+      .then((item) =>{
+        var countList=false;
+          for (let i=0;i<item.length;i++){
+              if (item[i].phone === req.body.phone){
+                return false;
+              }
+          }
+          return true;
+      }) .then((counter) => {
+          console.log(counter)
+          if (counter){  collection.update(
+                            {_id: req.body.phone },
+                            {phone: req.body.phone,
+                             password:req.body.password
+                            }
+                            ,{ upsert: true },
+                            function(err, result){
+                              console.log(err);
+                            }
+                       );
+                       res.send('ACCEPT');
+                     } else {
+                       res.send(false);
+                     }
+      })
+  });
 })
 
+/*
+app.post('/user',function(req,res,next){
+  console.log(req.body);
+
+//////
+var encrypted = aes.encryptText(req.body.phone, pw);
+console.log("Зашифрованный номер телефона: '%s'", encrypted);
+var decrypted = aes.decryptText(encrypted, pw);
+console.log("Оригинальный номер телефона: '%s'", decrypted);
+var encrypted = aes.encryptText(req.body.password, pw);
+console.log("Зашифрованный пароль: '%s'", encrypted);
+var decrypted = aes.decryptText(encrypted, pw);
+console.log("Оригинальный пароль: '%s'", decrypted);
+
+/////
+  res.send(null);
+})
+*/
 app.get('/user',(req, res) => {
   res.render('user.ejs');
 })
+
+
 
 app.post('/createDir',function(req,res,next){
   fs.mkdirSync(galery+req.body.text);
@@ -54,7 +120,6 @@ app.get('/galeryFolber',(req, res) => {
     res.send(files);
     })
 })
-
 
 app.post("/getFilesInFolber", (req,res) => {
     fs.readdir(galery+req.body.name, (err, files) => {
@@ -103,7 +168,6 @@ app.post("/submitMenu", (req,res) => {
     console.log(req.body.ip)
     massivZaskazov[req.body.ip] = massiv;
     massiv = [];
-
   res.send("ACCEPT");
 });
 
@@ -178,8 +242,6 @@ app.get('/order',(req, res) => {
 app.get('/about',(req, res) => {
   res.render('about.ejs');
 })
-
-
 
 app.get('/service',(req, res) => {
   res.render('service.ejs');

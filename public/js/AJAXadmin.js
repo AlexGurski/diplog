@@ -7,7 +7,6 @@ setInterval(() => {
 function OrderAdminMenu(){
   fetch('/menuWith')
                   .then(function(response) {
-
                     return response.json();
                    })
                    .then(menu => {

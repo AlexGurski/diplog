@@ -14,11 +14,11 @@
       <div class='registerForm'>
     <div class='authoriz'>
               <div class="wrapper">
-          
-              <input type="checkbox" id="checkbox" onchange="auth()"/>
+
+              <input type="checkbox" id="checkbox" onchange="auth()" checked='true'/>
               <label for="checkbox"></label>
               </div>
-              <form method="post" action="#">
+              <form method="post" >
           <svg width="200px" height="200px" viewBox="0 0 200 200" aria-labelledby="svg-title svg-desc">
             <style type="text/css">
               @keyframes float {
@@ -47,7 +47,7 @@
           <fieldset id="email-field" class="with-placeholder">
             <legend>Номер телефона</legend>
             <div>
-              <input type="text" name="email" id="email"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required />
+              <input type="text" name="phone" id="phone"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required />
               <div class="placeholder">например: 375298209524</div>
             </div>
           </fieldset>
@@ -59,9 +59,7 @@
           </fieldset>
           <fieldset id="submit-field">
             <legend></legend>
-            <div>
-              <input type="submit" name="submit" id="submit" value="Авторизация"/>
-            </div>
+            <div id="submit1">Регистрация</div>
           </fieldset>
         </form>
     </div>

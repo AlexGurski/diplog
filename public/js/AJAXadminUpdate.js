@@ -9,7 +9,7 @@ function updateStatus(status){
   xhr.send(body);
 }
 function changeStatus() {
-  console.log('sfsd')
+
     var eID = document.getElementById("comboBox");
     var colorVal = eID.options[eID.selectedIndex].value;
     var colortxt = eID.options[eID.selectedIndex].text;
