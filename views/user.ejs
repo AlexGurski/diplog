@@ -14,7 +14,8 @@
       <div class='registerForm'>
     <div class='authoriz'>
               <div class="wrapper">
-              <input type="checkbox" id="checkbox" />
+          
+              <input type="checkbox" id="checkbox" onchange="auth()"/>
               <label for="checkbox"></label>
               </div>
               <form method="post" action="#">
@@ -59,7 +60,7 @@
           <fieldset id="submit-field">
             <legend></legend>
             <div>
-              <input type="submit" name="submit" id="submit" value="Login"/>
+              <input type="submit" name="submit" id="submit" value="Авторизация"/>
             </div>
           </fieldset>
         </form>
@@ -75,6 +76,7 @@
         <% include blocks/allMainBorder.ejs %>
         </div>
           <script src="../public/js/user.js"></script>
+              <script src="../public/js/userAutorization.js"></script>
   <link rel="stylesheet" type="text/css" href="../public/css/user.css">
 </body>
 

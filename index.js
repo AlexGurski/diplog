@@ -20,6 +20,10 @@ var massivZaskazov = {};
 let service= require("./public/json/serviceJSON.js");
 const rez =   require("./public/modules/searchJS");
 
+app.post('/user',function(req,res,next){
+  console.log(req.body)
+    res.send(null);
+})
 
 app.get('/user',(req, res) => {
   res.render('user.ejs');
