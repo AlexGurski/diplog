@@ -77,24 +77,28 @@
       ip.id = 'ip'
       document.getElementsByClassName('black')[0].appendChild(ip);
 
-
-      function getCookie(name) {
-        var matches = document.cookie.match(new RegExp(
-          "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-        ));
-        return matches ? decodeURIComponent(matches[1]) : undefined;
-      }
-
+      function setCookie(name, value) {
+       document.cookie = name + "=" + value;
+     }
+     function getCookie(name) {
+       var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+       if (r) return r[2];
+       else return "";
+     }
+     function deleteCookie(name) {
+       var date = new Date(); // Берём текущую дату
+       date.setTime(date.getTime() - 1); // Возвращаемся в "прошлое"
+       document.cookie = name += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
+     }
         function getIP(json) {
           if (document.cookie !=''){
-            console.log( document.cookie );
-            ip.innerHTML = getCookie('name');
+            ip.innerHTML = getCookie('name')
+            console.log(document.cookie);
             }
                 else {
                   console.log( document.cookie );
-                  document.cookie = "name="+ navigator.platform +" " + navigator.appCodeName +" " +json.ip;
-
-                  ip.innerHTML =   getCookie('name');
+                   document.cookie = "name="+navigator.platform +" " + navigator.appCodeName +" " +json.ip;
+                  ip.innerHTML = getCookie('name');
                 }
           }
 

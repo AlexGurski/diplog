@@ -40,14 +40,15 @@ submit1.onclick = function(){
                         console.log(rez);
                         for (let i=0;i<rez.length;i++){
                           if ((rez[i].phone === document.getElementById('phone').value) && (rez[i].password === document.getElementById('password').value)){
+                            document.cookie = "phone="+document.getElementById('phone').value +" password=" + document.getElementById('password').value;
                             return true
                           }
                         }
                           return false;
                       }).then((resp)=>{
                         console.log(resp)
-                        if (resp){
-                          document.getElementsByClassName('registerForm')[0].style.display='none';
+                        if (resp){                          document.getElementsByClassName('registerForm')[0].style.display='none';
+
                         } else{
                           alert('Введены не верные данные!')
                         }
