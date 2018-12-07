@@ -29,7 +29,6 @@ async function getElementMenu(){
     for (let i=0; i<deleteItem.length;i++){
 
                          deleteItem[i].onclick = function(){
-
                            if (this.id.replace('delete','') === itemOrder[i]._id){
                                var xhr = new XMLHttpRequest();
                                xhr.open("POST", '/submitMenuDelete', true);
@@ -143,15 +142,13 @@ async function getElementMenu(){
                     var cookie = cookies[i];
                     var eqPos = cookie.indexOf("=");
                     var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-                    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
 }
               window.location.reload();
           }
     return   products;
 }
       getElementMenu()
-
-
         function fun1() {
         var chbox;
         chbox=document.getElementById('one');
@@ -254,7 +251,7 @@ async function getElementMenu(){
                       }
                     }
 
-                          document.getElementById(textCenter1.id).appendChild(kindOrder);
+            document.getElementById(textCenter1.id).appendChild(kindOrder);
 
               const priceOrder = document.createElement("div");
                    priceOrder.className = 'priceOrder';

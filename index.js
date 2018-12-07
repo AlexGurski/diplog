@@ -21,6 +21,10 @@ let service= require("./public/json/serviceJSON.js");
 const rez =   require("./public/modules/searchJS");
 
 
+app.get('/user',(req, res) => {
+  res.render('user.ejs');
+})
+
 app.post('/createDir',function(req,res,next){
   fs.mkdirSync(galery+req.body.text);
   res.redirect('/administrator')
@@ -293,6 +297,7 @@ app.get('/admin', (req,res) => {
 app.get('/galery',(req, res) => {
   res.render('galery.ejs');
 })
+
 
 MongoClient.connect(url, (err, client) => {
 assert.equal(null, err);

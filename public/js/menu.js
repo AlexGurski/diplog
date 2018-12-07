@@ -286,8 +286,6 @@ function createMenuPretty(items){
                   front.src = "./public/image/menuPhoto/"+items[i]._id+".jpg";
                   document.getElementById(conteiner.id).appendChild(front);
 
-
-
           const back = document.createElement("div");
           back.className = 'back';
           back.id = i + items[i]._id + i;

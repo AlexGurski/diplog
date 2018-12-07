@@ -77,19 +77,27 @@
       ip.id = 'ip'
       document.getElementsByClassName('black')[0].appendChild(ip);
 
-        function getIP(json) {
 
+      function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+          "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+      }
+
+        function getIP(json) {
           if (document.cookie !=''){
-          //  alert( document.cookie );
-            ip.innerHTML = document.cookie;
+            console.log( document.cookie );
+            ip.innerHTML = getCookie('name');
             }
                 else {
+                  console.log( document.cookie );
                   document.cookie = "name="+ navigator.platform +" " + navigator.appCodeName +" " +json.ip;
-                  ip.innerHTML = document.cookie;
+              
+                  ip.innerHTML =   getCookie('name');
                 }
           }
 
       </script>
-
       <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 </body>
