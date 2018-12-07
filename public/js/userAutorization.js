@@ -2,6 +2,68 @@ let chbox=document.getElementById('checkbox');
 let submit1 = document.getElementById('submit1');
 submit1.style.background='#FC6666'
 
+function setCookie(name, value) {
+ document.cookie = name + "=" + value;
+}
+function getCookie(name) {
+  var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+  if (r) return r[2];
+  else return "";
+}
+
+function deleteCookie(name) {
+  var date = new Date(); // Берём текущую дату
+  date.setTime(date.getTime() - 1); // Возвращаемся в "прошлое"
+  document.cookie = name += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
+}
+
+////////////////////////////////////////////////
+function loadForm(){
+  document.getElementsByClassName('registerForm')[0].style.display='none';
+  document.getElementById('nomer').value = getCookie('phone');
+  document.getElementById('parol').value = getCookie('password');
+  document.getElementById('FIO').value = getCookie('FIO');
+  document.getElementById('adres').value = getCookie('adress');
+}
+
+document.getElementById('knopochka').onclick = function(){
+  let body = {
+    "phone":document.getElementById('nomer').value ,
+    "password":  document.getElementById('parol').value,
+    "FIO":document.getElementById('FIO').value,
+    "adress":document.getElementById('adres').value
+  }
+    console.log(body);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", '/userUpdate', false);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(body));
+  if (xhr.responseText === 'YES'){
+      document.cookie ='phone=' + document.getElementById('nomer').value;
+      document.cookie ='password=' +   document.getElementById('parol').value ;
+      document.cookie ='FIO=' +  document.getElementById('FIO').value ;
+      document.cookie ='adress=' +  document.getElementById('adres').value ;
+
+      document.getElementById('nomer').value = '';
+      document.getElementById('parol').value= '';
+      document.getElementById('FIO').value= '';
+      document.getElementById('adres').value = '';
+  }
+}
+document.getElementsByClassName('clearCookies')[0].onclick =()=>{
+  deleteCookie('phone');
+  deleteCookie('password');
+  deleteCookie('FIO');
+  deleteCookie('adress');
+  deleteCookie('status');
+}
+window.addEventListener('load', function() {
+
+  if ((getCookie('phone'))!=='' && (getCookie('password')!=='')){
+    loadForm();
+  }
+});
+
 function auth(){
   if (chbox.checked) {
   		submit1.innerHTML='Регистрация';
@@ -12,6 +74,7 @@ function auth(){
         submit1.style.background='#00CCFF'
   	}
 }
+
 submit1.onclick = function(){
     if (submit1.innerHTML === 'Регистрация'){
       let ret = {
@@ -25,13 +88,16 @@ submit1.onclick = function(){
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(ret));
         if(xhr.responseText==='ACCEPT'){
-          console.log(xhr.responseText)
-            document.getElementById('phone').value = '';
-            document.getElementById('password').value = '';
+          console.log(xhr.responseText);
+          document.cookie = "phone="+document.getElementById('phone').value ;
+          document.cookie = "password=" + document.getElementById('password').value;
+          document.getElementById('phone').value = '';
+          document.getElementById('password').value = '';
+          loadForm()
         } else {
           alert('Данный телефон уже зарегистрирован в системе!')
         }
-    }else{
+    } else{
       console.log('autentification');
       fetch('/userList')
                       .then(function(response) {
@@ -40,15 +106,17 @@ submit1.onclick = function(){
                         console.log(rez);
                         for (let i=0;i<rez.length;i++){
                           if ((rez[i].phone === document.getElementById('phone').value) && (rez[i].password === document.getElementById('password').value)){
-                            document.cookie = "phone="+document.getElementById('phone').value +" password=" + document.getElementById('password').value;
+                            document.cookie = "phone="+document.getElementById('phone').value ;
+                            document.cookie = "password=" + document.getElementById('password').value;
+                            document.cookie = "status="+rez[i].status;
                             return true
                           }
                         }
                           return false;
                       }).then((resp)=>{
                         console.log(resp)
-                        if (resp){                          document.getElementsByClassName('registerForm')[0].style.display='none';
-
+                        if (resp){
+                          loadForm();
                         } else{
                           alert('Введены не верные данные!')
                         }

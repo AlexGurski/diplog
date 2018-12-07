@@ -1,17 +1,12 @@
-const image = () =>{
-  return (()=>{
-    return '1488'
-  })()
+function getCookie(name) {
+  var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+  if (r) return r[2];
+  else return "";
 }
 
 window.onload = () => {
-  let password = prompt('Enter password');
-  if ( password === image() ){
-    document.getElementsByClassName('all')[0].style.opacity=1;
-  } else {
-    alert('НЕ ВЕРНЫЙ ПАРОЛЬ!')
-    window.close();
-  }
+if (getCookie('status')==='admin'){
+   document.getElementsByClassName('all')[0].style.opacity=1;}
 }
 
 let arrayArmor = [];

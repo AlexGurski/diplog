@@ -35,6 +35,30 @@ rez('usersList', {})
    });
   })
 
+  MongoClient.connect(url, (err, client) => {
+              assert.equal(null, err);
+              const db = client.db(dbName);
+              const collection =db.collection('usersList');
+                app.post("/userUpdate", (req,res) => {
+                      console.log(req.body)
+                         collection.update(
+                             {_id: req.body.phone },
+                             {name: req.body.FIO,
+                              phone: req.body.phone,
+                              password:req.body.password,
+                              adress:req.body.adress
+                             }
+                             ,{ upsert: true },
+                             function(err, result){
+                               console.log(err);
+                             }
+                         );
+                          res.send('YES')
+                     }) ;
+                   })
+
+
+
 MongoClient.connect(url, (err, client) => {
             assert.equal(null, err);
             const db = client.db(dbName);

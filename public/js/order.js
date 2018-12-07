@@ -1,6 +1,16 @@
 const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
   "Июль", "Август", "Сентябрь", "Октябрь", "Ноявбрь", "Декабрь"
 ];
+function getCookie(name) {
+  var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+  if (r) return r[2];
+  else return "";
+}
+
+document.getElementById('nameOrder').value = getCookie('FIO');
+document.getElementById('telephoneOrder').value = getCookie('phone');
+document.getElementById('adressOrder').value = getCookie('adress');
+
 var post = [];
 var itemOrder = [];
 let finalPrice = 0;
