@@ -7,7 +7,7 @@ function getCookie(name) {
   else return "";
 }
 
-document.getElementById('nameOrder').value = getCookie('FIO');
+document.getElementById('nameOrder').value = getCookie('imia');
 document.getElementById('telephoneOrder').value = getCookie('phone');
 document.getElementById('adressOrder').value = getCookie('adress');
 

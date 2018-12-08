@@ -43,7 +43,7 @@ rez('usersList', {})
                       console.log(req.body)
                          collection.update(
                              {_id: req.body.phone },
-                             {name: req.body.FIO,
+                             {imia: req.body.imia,
                               phone: req.body.phone,
                               password:req.body.password,
                               adress:req.body.adress

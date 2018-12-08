@@ -22,7 +22,7 @@ function loadForm(){
   document.getElementsByClassName('registerForm')[0].style.display='none';
   document.getElementById('nomer').value = getCookie('phone');
   document.getElementById('parol').value = getCookie('password');
-  document.getElementById('FIO').value = getCookie('FIO');
+  document.getElementById('imia').value = getCookie('imia');
   document.getElementById('adres').value = getCookie('adress');
 }
 
@@ -30,7 +30,7 @@ document.getElementById('knopochka').onclick = function(){
   let body = {
     "phone":document.getElementById('nomer').value ,
     "password":  document.getElementById('parol').value,
-    "FIO":document.getElementById('FIO').value,
+    "imia":document.getElementById('imia').value,
     "adress":document.getElementById('adres').value
   }
     console.log(body);
@@ -41,24 +41,24 @@ document.getElementById('knopochka').onclick = function(){
   if (xhr.responseText === 'YES'){
       document.cookie ='phone=' + document.getElementById('nomer').value;
       document.cookie ='password=' +   document.getElementById('parol').value ;
-      document.cookie ='FIO=' +  document.getElementById('FIO').value ;
+      document.cookie ='imia=' +  document.getElementById('imia').value ;
       document.cookie ='adress=' +  document.getElementById('adres').value ;
 
       document.getElementById('nomer').value = '';
       document.getElementById('parol').value= '';
-      document.getElementById('FIO').value= '';
+      document.getElementById('imia').value= '';
       document.getElementById('adres').value = '';
   }
 }
 document.getElementsByClassName('clearCookies')[0].onclick =()=>{
   deleteCookie('phone');
   deleteCookie('password');
-  deleteCookie('FIO');
+  deleteCookie('imia');
   deleteCookie('adress');
   deleteCookie('status');
 }
-window.addEventListener('load', function() {
 
+window.addEventListener('load', function() {
   if ((getCookie('phone'))!=='' && (getCookie('password')!=='')){
     loadForm();
   }
@@ -106,8 +106,10 @@ submit1.onclick = function(){
                         console.log(rez);
                         for (let i=0;i<rez.length;i++){
                           if ((rez[i].phone === document.getElementById('phone').value) && (rez[i].password === document.getElementById('password').value)){
-                            document.cookie = "phone="+document.getElementById('phone').value ;
-                            document.cookie = "password=" + document.getElementById('password').value;
+                            document.cookie = "phone="+rez[i].phone ;
+                            document.cookie = "password=" + rez[i].password;
+                            document.cookie = "imia=" + rez[i].imia;
+                              document.cookie = "adress=" + rez[i].adress;
                             document.cookie = "status="+rez[i].status;
                             return true
                           }
@@ -117,6 +119,7 @@ submit1.onclick = function(){
                         console.log(resp)
                         if (resp){
                           loadForm();
+                          OrderAdmin()
                         } else{
                           alert('Введены не верные данные!')
                         }

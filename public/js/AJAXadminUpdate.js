@@ -1,3 +1,14 @@
+function getCookie(name) {
+  var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+  if (r) return r[2];
+  else return "";
+}
+
+if (getCookie('status')!=='admin'){
+  document.getElementById("comboBox").style.display='none';
+}else{
+    document.getElementById("comboBox").style.display='block';
+}
 
 function updateStatus(status){
   var xhr = new XMLHttpRequest();
@@ -8,8 +19,8 @@ function updateStatus(status){
   console.log(body)
   xhr.send(body);
 }
-function changeStatus() {
 
+function changeStatus() {
     var eID = document.getElementById("comboBox");
     var colorVal = eID.options[eID.selectedIndex].value;
     var colortxt = eID.options[eID.selectedIndex].text;
