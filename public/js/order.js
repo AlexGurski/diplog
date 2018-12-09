@@ -32,11 +32,18 @@ async function getElementMenu(){
     products = products[document.getElementById('ip').innerHTML];
 
             if ( getCookie('skidka')>0){
-            for (let i=0;i<products.length;i++){              
-          products[i].price = (products[i].price * getCookie('skidka')).toFixed(2);}
-
-      }
+            for (let i=0;i<products.length;i++){
+             products[i].price = (products[i].price * getCookie('skidka')).toFixed(2);
+            }
+           }
     console.log(products);
+    if(products!==undefined ){
+        console.log(document.getElementsByClassName('extraItems')[0]);
+      document.getElementsByClassName('extraItems')[0].style.opacity = 1;
+    }else{
+
+      document.getElementsByClassName('extraItems')[0].style.opacity = 0;
+    }
     await renderOrder(products);
     var itemOrder = products;
 

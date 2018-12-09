@@ -9,7 +9,9 @@ a{
   width:100%;
   font-size: 1em;
 }
-
+ul li  a{
+  color:white;
+}
   .editCookies{
     display: none;
   }

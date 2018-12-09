@@ -25,7 +25,7 @@
 
 .orderCenter{
   border: 1px dashed red;
-  min-height: 180px;
+
 	width: 98%;
 	margin-bottom:  10px;
 	background-color: black;
@@ -51,7 +51,6 @@ flex-grow:6;
   padding: 5px;
 }
 .nameMenuOrder, .priceOrder, .kindOrder,  .deleteOrder, .weightOrder{
-
 color:yellow;
 }
 .nameMenuOrder{
@@ -65,7 +64,8 @@ color:yellow;
 }
 .kindOrder{
   margin-top: 20px;
-  flex-grow: 1;
+  flex-grow: 2;
+  height: 2em;
   font-size: 130%;
 }
 .priceOrder{
@@ -121,7 +121,7 @@ img{
 .textCenter1{
   margin-left: 1em;
   flex-grow: 5;
-  flex-basis:0px;
+  flex-basis:1px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -200,7 +200,7 @@ margin-top: 2em;
         .AllItems{
           width: 99%;
            display: flex;
-
+           font-size: 3vw;
       position: relative;
 
         }
@@ -208,8 +208,12 @@ margin-top: 2em;
         position: relative;
         width: 94%;
         height: auto;
+
       }
       .frontImage{
+        display: none;
+      }
+      .weightOrder{
         display: none;
       }
 }
@@ -225,13 +229,16 @@ and (max-width: 720px) {
         flex-direction: column;
         flex-grow: 0;
       }
+      .weightOrder{
+        display: none;
+      }
       .workSpace{
       display: block;
       }
       .AllItems{
         width: 99%;
          display: flex;
-
+         font-size: 3vw;
     position: relative;
 
       }
