@@ -6,7 +6,7 @@ function getCookie(name) {
   if (r) return r[2];
   else return "";
 }
-
+console.log(getCookie('skidka'))
 document.getElementById('nameOrder').value = getCookie('imia');
 document.getElementById('telephoneOrder').value = getCookie('phone');
 document.getElementById('adressOrder').value = getCookie('adress');
@@ -30,7 +30,13 @@ async function getElementMenu(){
     console.log(document.getElementById('ip').innerHTML)
     await new Promise((resolve, reject) => setTimeout(resolve, 0));
     products = products[document.getElementById('ip').innerHTML];
-    console.log(products)
+
+            if ( getCookie('skidka')>0){
+            for (let i=0;i<products.length;i++){              
+          products[i].price = (products[i].price * getCookie('skidka')).toFixed(2);}
+
+      }
+    console.log(products);
     await renderOrder(products);
     var itemOrder = products;
 

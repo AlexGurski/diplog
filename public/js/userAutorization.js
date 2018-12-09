@@ -24,6 +24,15 @@ function loadForm(){
   document.getElementById('parol').value = getCookie('password');
   document.getElementById('imia').value = getCookie('imia');
   document.getElementById('adres').value = getCookie('adress');
+
+ if (getCookie('status')!=='admin'){
+      document.getElementsByClassName('admin')[1].style.display='none';
+      document.getElementsByClassName('admin')[0].style.display='none';
+  } else{
+    document.getElementsByClassName('admin')[1].style.display='block';
+    document.getElementsByClassName('admin')[0].style.display='block';
+  }
+      OrderAdmin();
 }
 
 document.getElementById('knopochka').onclick = function(){
@@ -44,10 +53,6 @@ document.getElementById('knopochka').onclick = function(){
       document.cookie ='imia=' +  document.getElementById('imia').value ;
       document.cookie ='adress=' +  document.getElementById('adres').value ;
 
-      document.getElementById('nomer').value = '';
-      document.getElementById('parol').value= '';
-      document.getElementById('imia').value= '';
-      document.getElementById('adres').value = '';
   }
 }
 document.getElementsByClassName('clearCookies')[0].onclick =()=>{
@@ -56,6 +61,7 @@ document.getElementsByClassName('clearCookies')[0].onclick =()=>{
   deleteCookie('imia');
   deleteCookie('adress');
   deleteCookie('status');
+  deleteCookie('skidka');
 }
 
 window.addEventListener('load', function() {
@@ -119,7 +125,7 @@ submit1.onclick = function(){
                         console.log(resp)
                         if (resp){
                           loadForm();
-                          OrderAdmin()
+
                         } else{
                           alert('Введены не верные данные!')
                         }

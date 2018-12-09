@@ -136,9 +136,9 @@ function OrderAdmin() {
                         p1.innerHTML = "Время заказа: " + orders[i].timeOrder
                         divStatus.appendChild(p1);
 
-                        var p2 = document.createElement('p');
-                          p2.innerHTML = "Клиент: " + orders[i].guest;
-                          divStatus.appendChild(p2);
+                        var p4 = document.createElement('p');
+                          p4.innerHTML = "Клиент: " + orders[i].guest + " : +"+orders[i].guestNumber ;
+                          divStatus.appendChild(p4);
 
                           var p3 = document.createElement('p');
                             p2.innerHTML = "ID: " + orders[i]._id;

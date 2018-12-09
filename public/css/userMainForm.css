@@ -2,7 +2,46 @@
   padding: 10px;
   border:1px solid red;
   text-align: center;
+  cursor: pointer;
 }
 a{
-  color:black
+  color:black;
+  width:100%;
 }
+  .editCookies{
+    display: none;
+  }
+  .adminOrder{
+    display: none;
+  }
+  button {
+    border: 0;
+    background: linear-gradient(
+      to bottom,
+      #444,
+      #111
+    );
+    border-radius: 10px;
+
+    outline: 0;
+    display: inline-block;
+    width:100%;
+
+    transform:  translateY(20px);
+  }
+  button:hover, button:active {
+    background: black;
+  }
+  button svg {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  button span {
+    font-size: 22px;
+    position: relative;
+    top: 4px;
+    color: white;
+  }

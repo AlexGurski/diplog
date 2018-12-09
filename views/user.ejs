@@ -14,21 +14,45 @@
     <% include blocks/registerForm.ejs %>
         <div class = 'workSpace'>
             <div class = 'AllItems'>
-                  <div class='editCookies'>
-                    Номер телефона
-                    <input type='text' id='nomer'><br>
-                    Пароль
+                <div class='editCookies'>
+                    Номер телефона<br>
+                    <input type='text' id='nomer' disabled="disabled"><br>
+                    Пароль<br>
                     <input type='text' id='parol'><br>
-                    ФИО
+                    ФИО<br>
                     <input type='text' id='imia'><br>
-                    Адрес
+                    Адрес<br>
                     <input type='text' id='adres'><br>
                     <div class='knopochka' id='knopochka'>
-                    Обновить информацию
+                      <button id="button">
+
+      <svg viewBox="0 0 194.6 185.1">
+
+        <polygon fill="#FFD41D" points="97.3,0 127.4,60.9 194.6,70.7 145.9,118.1 157.4,185.1 97.3,153.5 37.2,185.1 48.6,118.1 0,70.7
+        67.2,60.9">
+
+          <animate id="animation-to-check" begin="indefinite" fill="freeze" attributeName="points" dur="500ms" to="110,58.2 147.3,0 192.1,29 141.7,105.1 118.7,139.8 88.8,185.1 46.1,156.5 0,125 23.5,86.6
+        71.1,116.7"/>
+
+          <animate id="animation-to-green" begin="indefinite" fill="freeze" attributeName="fill" dur="500ms" to="#53B848"></animate>
+
+          <animate id="animation-to-star" begin="indefinite" fill="freeze" attributeName="points" dur="500ms" to="97.3,0 127.4,60.9 194.6,70.7 145.9,118.1 157.4,185.1 97.3,153.5 37.2,185.1 48.6,118.1 0,70.7
+        67.2,60.9"/>
+
+          <animate id="animation-to-yellow" begin="indefinite" fill="freeze" attributeName="fill" dur="500ms" to="#FFD41D"></animate>
+
+        </polygon>
+
+      </svg>
+
+      <span id="button-text">Изменить данные</span>
+
+    </button>
                     </div>
+                </div>
 <div class = 'adminOrder'>
 </div>
-                  </div>
+
             </div>
       <div class='extraItems'>
         <div class='clearCookies'>
@@ -42,6 +66,9 @@
         </div>
         <div class='cookie Zakaz'>
            Просмотр заказов
+        </div>
+        <div class='cookie setting'>
+           Изменение профиля
         </div>
       </div>
         <% include blocks/allMainBorder.ejs %>
