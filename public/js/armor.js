@@ -1,10 +1,16 @@
-window.onload = () => {
-
+function getCookie(name) {
+  var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+  if (r) return r[2];
+  else return "";
+}
 document.getElementById('newId').value = makeId();
+document
+document.getElementById("title").value = getCookie('imia')
+document.getElementById("telephone").value ="+"+ getCookie('phone')
   let mydate=window.document.getElementById("mydate");
   let free=window.document.getElementById("free");
   let olddate=mydate.value;
-  var y = new Date().getFullYear()
+/*  var y = new Date().getFullYear()
 var m = new Date().getMonth() + 1;
 var d = new Date().getDate();
 m=m<10?'0'+m:m;
@@ -22,7 +28,7 @@ let a = y+'-'+m+'-'+d;
    m=m>12?'01':m;
    a = y+'-'+m+'-'+d;
 
-  mydate.max = a;
+  mydate.max = a;*/
 
   let isChanged = function(){
     if(mydate.value!== olddate){
@@ -43,7 +49,6 @@ let a = y+'-'+m+'-'+d;
               return;
             }
               var rez = JSON.parse(xhr.responseText);
-                console.log(rez);
                 let rezultCount = 0;
                         for (let i=0;i<rez.length;i++){
                           if (rez[i].date === mydate.value )
@@ -60,7 +65,7 @@ let a = y+'-'+m+'-'+d;
             }
         xhr.send(null);
         });
-}
+
 
 function makeId() {
   var text = "";

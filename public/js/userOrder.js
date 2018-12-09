@@ -57,7 +57,7 @@ function OrderAdmin() {
           var rice = document.createElement("div");
               rice.className = 'rice';
                rice.id = 'rice';
-               rice.innerHTML ="Ваша скидка: "+ skidOn(skidka);
+               rice.innerHTML ="Ваша скидка: "+ skidOn(skidka)+"%";
           document.getElementsByClassName("adminOrder")[0].appendChild(rice);
             ////////////не лезь в код, хз как работает!
               console.log(rezult);

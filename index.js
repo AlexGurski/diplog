@@ -330,6 +330,7 @@ app.get('/admin', (req,res) => {
               const db = client.db(dbName);
               const collection =db.collection('armor');
                 app.post("/armor", (req,res) => {
+                  console.log(req.body)
                           collection.insertOne(req.body,(err,result)=>{
                                     if(err){
                                       console.log(err);
