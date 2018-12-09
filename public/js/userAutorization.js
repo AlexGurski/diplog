@@ -25,6 +25,7 @@ function loadForm(){
   document.getElementById('imia').value = getCookie('imia');
   document.getElementById('adres').value = getCookie('adress');
 
+
  if (getCookie('status')!=='admin'){
       document.getElementsByClassName('admin')[1].style.display='none';
       document.getElementsByClassName('admin')[0].style.display='none';

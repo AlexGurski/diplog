@@ -22,6 +22,12 @@
 opacity: 0;
 font-size: 1px;
 }
+.ipname{
+  height: 100%;
+  color:gold;
+  margin: 0;
+  font-size: 19px;
+}
 .black{
   position: absolute;
   top: 0;

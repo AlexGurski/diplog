@@ -72,6 +72,16 @@
     </div>
     <script type="application/javascript">
 
+      const  name = document.createElement("p");
+      name.className = 'ipname';
+      name.id = 'ipname';
+      if (getCookie('imia')!==''){
+              name.innerHTML= getCookie('imia')+" : +" +getCookie('phone');
+      }
+
+      document.getElementsByClassName('black')[0].appendChild(name);
+
+
       const  ip = document.createElement("p");
       ip.className = 'ip';
       ip.id = 'ip'

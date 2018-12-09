@@ -64,8 +64,8 @@ color:yellow;
 }
 .kindOrder{
   margin-top: 20px;
-  flex-grow: 2;
-  height: 2em;
+  flex-grow: 1;
+
   font-size: 130%;
 }
 .priceOrder{
@@ -131,6 +131,7 @@ img{
 .textCenter2{
   max-width: 250px;
   min-width: 250px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
