@@ -418,7 +418,18 @@ const collection =db.collection('order');
         res.send( fs.readFileSync("robots.txt", "utf8"));
     });
 
+    app.get('/robots.txt', function(req, res) {
+       res.send( fs.readFileSync("robots.txt", "utf8"));
+     });
+     
+     fs.readFile( './sitemap.xml', function(err, data) {
+app.get('/sitemap.xml', function(req, res) {
+  res.setHeader('content-type', 'text/xml; charset=utf-8');
+  res.setHeader('content-disposition', 'inline');
+      res.send(data);
+    });
+ });
 
- app.listen(process.env.PORT || 3000, () => {
+ app.listen(process.env.PORT || 80, () => {
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;
