@@ -85,7 +85,7 @@ function OrderAdmin() {
               divStatus.appendChild(h3);
 
                   var a = document.createElement('a');
-                  console.log(orders[i]["orderDish"].replace('name','Наименование'));
+              //    console.log(orders[i]["orderDish"].replace('name','Наименование'));
                   var linkText = document.createTextNode(orders[i]["orderDish"].replace(/"name"/g,'Наименование').replace(/price/g,'Стоимость').replace(/count/g,'Количество').replace('[','').replace(']',''));
                   a.target = '_blank';
                   a.appendChild(linkText);

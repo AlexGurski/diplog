@@ -25,7 +25,6 @@ function loadForm(){
   document.getElementById('imia').value = getCookie('imia');
   document.getElementById('adres').value = getCookie('adress');
 
-
  if (getCookie('status')!=='admin'){
       document.getElementsByClassName('admin')[1].style.display='none';
       document.getElementsByClassName('admin')[0].style.display='none';
@@ -110,7 +109,7 @@ submit1.onclick = function(){
                       .then(function(response) {
                         return response.json();
                       }).then((rez) => {
-                        console.log(rez);
+                //        console.log(rez);
                         for (let i=0;i<rez.length;i++){
                           if ((rez[i].phone === document.getElementById('phone').value) && (rez[i].password === document.getElementById('password').value)){
                             document.cookie = "phone="+rez[i].phone ;

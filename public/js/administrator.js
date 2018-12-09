@@ -1,3 +1,15 @@
+function getCookie(name) {
+  var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+  if (r) return r[2];
+  else return "";
+}
+
+if (getCookie('status')!=='admin'){
+  document.getElementsByClassName("galeryAdd")[0].style.display='none';
+}else{
+    document.getElementsByClassName("galeryAdd")[0].style.display='block';
+}
+
 (async function getGaleryFolber(){
     let responseMenu = await fetch('/galeryFolber')
     let products = await responseMenu.json();
