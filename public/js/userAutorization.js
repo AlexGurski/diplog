@@ -72,12 +72,20 @@ window.addEventListener('load', function() {
 
 function auth(){
   if (chbox.checked) {
+      document.getElementsByClassName('modal')[0].style.display='none';
+      document.getElementsByClassName('modal')[1].style.display='none';
   		submit1.innerHTML='Регистрация';
-      submit1.style.background='#FC6666'
+      submit1.style.background='#FC6666';
+      document.getElementById('phone').value='';
+      document.getElementById('password').value='';
   	}
   	else {
+      document.getElementsByClassName('modal')[0].style.display='none';
+      document.getElementsByClassName('modal')[1].style.display='none';
   			submit1.innerHTML='Авторизация';
         submit1.style.background='#00CCFF'
+        document.getElementById('phone').value='';
+        document.getElementById('password').value='';
   	}
 }
 
@@ -101,7 +109,7 @@ submit1.onclick = function(){
           document.getElementById('password').value = '';
           loadForm()
         } else {
-          alert('Данный телефон уже зарегистрирован в системе!')
+          document.getElementsByClassName('regex')[0].style.display='block';
         }
     } else{
       console.log('autentification');
@@ -125,9 +133,8 @@ submit1.onclick = function(){
                         console.log(resp)
                         if (resp){
                           loadForm();
-
                         } else{
-                          alert('Введены не верные данные!')
+                          document.getElementsByClassName('authen')[0].style.display='block';
                         }
                       })
      }

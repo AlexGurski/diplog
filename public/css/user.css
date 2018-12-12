@@ -3,6 +3,11 @@
   text-align: center;
   cursor: pointer;
 }
+.modal{
+  color:red;
+  display: none;
+  text-align: center;
+}
 .registerForm{
   position: absolute;
   width: 100%;
@@ -37,10 +42,10 @@ form {
   display: inline-block;
   background: #f5f5f5;
   padding: 1.5rem;
-  border: 3px solid var(--dark-main-color);
+
   position: relative;
-  width: 98%;
-  height: calc(99% - 40px);
+  width: 100%;
+  height: calc(100% - 40px);
   box-sizing: border-box;
   border-radius: 4px;
 }
