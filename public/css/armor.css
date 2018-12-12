@@ -31,8 +31,7 @@ p{
     width: 99%;
   }
 }
-@media only screen
-and (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   .extraItems{
     display: none;
   }

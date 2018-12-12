@@ -31,12 +31,6 @@ async function getElementMenu(){
     await new Promise((resolve, reject) => setTimeout(resolve, 0));
     products = products[document.getElementById('ip').innerHTML];
 
-            if ( getCookie('skidka')>0){
-            for (let i=0;i<products.length;i++){
-             products[i].price = (products[i].price * getCookie('skidka')).toFixed(2);
-            }
-           }
-    console.log(products);
     if(products!==undefined ){
         console.log(document.getElementsByClassName('extraItems')[0]);
       document.getElementsByClassName('extraItems')[0].style.opacity = 1;
@@ -44,6 +38,14 @@ async function getElementMenu(){
 
       document.getElementsByClassName('extraItems')[0].style.opacity = 0;
     }
+
+            if ( getCookie('skidka')>0){
+            for (let i=0;i<products.length;i++){
+             products[i].price = (products[i].price * getCookie('skidka')).toFixed(2);
+            }
+           }
+    console.log(products);
+
     await renderOrder(products);
     var itemOrder = products;
 
@@ -166,7 +168,8 @@ async function getElementMenu(){
                     var eqPos = cookie.indexOf("=");
                     var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
 
-}
+
+}  
               window.location.reload();
           }
     return   products;

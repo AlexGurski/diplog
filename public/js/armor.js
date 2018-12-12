@@ -66,8 +66,11 @@ let a = y+'-'+m+'-'+d;
         xhr.send(null);
         });
 
-
+document.getElementById('button').onclick = ()=>{
+    alert('Столик заблокирован!');
+}
 function makeId() {
+
   var text = "";
   var possible = "0123456789";
   for (var i = 0; i < 7; i++)
@@ -76,4 +79,5 @@ function makeId() {
     for (var i = 0; i < 2; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
   return text;
+
   }
