@@ -49,10 +49,8 @@ ul li  a{
   }
 
   @media screen and (orientation:portrait) {
-
     a{font-size: 3.5vw}
-    p {font-size: 3vw;
-    }
+    p {font-size: 3vw;}
     .AllItems{
     width: 99%;
     }
