@@ -123,7 +123,10 @@ font-family: classic;
 }
 
 .mainScroll::-webkit-scrollbar {width:0px;}
-
+.map{
+  height:15vw;
+  width: 99%;
+}
 @media screen and (orientation:portrait) {
 
   .map{
