@@ -100,18 +100,25 @@
        date.setTime(date.getTime() - 1); // Возвращаемся в "прошлое"
        document.cookie = name += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
      }
-        function getIP(json) {
+        (function getIP() {
           if (document.cookie !=''){
             ip.innerHTML = getCookie('name')
             console.log(document.cookie);
             }
                 else {
                   console.log( document.cookie );
-                   document.cookie = "name="+navigator.platform +" " + navigator.appCodeName +" " +json.ip;
+                   document.cookie = "name="+navigator.platform +" " + navigator.appCodeName +" " +makeid();
                   ip.innerHTML = getCookie('name');
                 }
-          }
+          })()
 
+          function makeid() {
+            var text = "";
+            var possible = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            for (var i = 0; i < 14; i++)
+              text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return text;
+          }
       </script>
 
 </body>
