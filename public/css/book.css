@@ -1,0 +1,56 @@
+.post{
+
+}
+h3{
+    margin: 0;
+}
+.postEvery{
+  border:2px dashed black;
+  padding: 10px;
+  /background-color: red;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 1%;
+}
+.date{
+  font-size: 0.7em
+}
+
+@media screen and (orientation:portrait) {
+        .workSpace{
+        display: block;
+        }
+        .AllItems{
+          width: 99%;
+           display: flex;
+           font-size: 3vw;
+      position: relative;
+        }
+      .extraItems{
+        position: relative;
+        width: 94%;
+        height: auto;
+      }
+}
+
+@media only screen and (max-width: 720px) {
+  .workSpace{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  }
+  .AllItems{
+     width: 99%;
+     display: flex;
+     font-size: 3.5vw;
+     position: relative;
+     justify-content: center;
+  }
+.extraItems{
+  position: relative;
+  width: 94%;
+
+}
+}

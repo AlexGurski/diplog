@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link rel="shortcut icon" href="../public/image/logo.png" type="image/x-icon">
+
+
+</head>
+  <body>
+      <% include blocks/preloader.ejs %>
+        <% include blocks/indexAdaptive.ejs %>
+    <div class='black'>
+    </div>
+    <div class = 'workSpace'>
+        <div class = 'AllItems'>
+          <div class="post">
+              <% for (var i=mainCenter.length-1; i >= 0; i--) { %>
+                <div class = 'postEvery'>
+                    <h3>
+                    <%= mainCenter[i].name %>   </h3>
+                    <hr>
+
+        <div class = 'date'>
+                      <%= mainCenter[i].date  %>
+        </div>
+        <div class = 'comment'>
+                    <p><%= mainCenter[i].text  %></p>
+        </div>
+
+            </div>
+              <% } %>
+              </div>
+        </div>
+        <div class='extraItems'>
+          <div class="mainEvent">
+
+  <h1> Оставьте свой отзыв </h1>
+  <br>
+        <form action="/book" method="post">
+          <div class='form'>
+              <label for="date">Имя</label><br>
+        <input  type="text" name="name" id="title" ><br>
+        <label for="text">Отзыв</label><br>
+        <textarea name="text" id="content" cols="30" rows="10"></textarea><br>
+        <button>Оставить отзыв</button>
+      </div>
+      </form>
+        </div>
+        </div>
+            <% include blocks/allMainBorder.ejs %>
+
+    </div>
+    <script>
+
+    function getCookie(name) {
+      var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+      if (r) return r[2];
+      else return "";
+    }
+
+    document.getElementById('title').value=getCookie('imia')
+    </script>
+  </body>
+<link rel="stylesheet" type="text/css" href="../public/css/book.css">
+</html>

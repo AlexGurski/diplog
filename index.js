@@ -95,6 +95,26 @@ app.post("/user", (req,res) => {
   });
 })
 
+MongoClient.connect(url, (err, client) => {
+assert.equal(null, err);
+const db = client.db(dbName);
+//const collection = db.collection('event');
+  app.post("/book", (req,res) => {
+        const  event= { "date":Data.getHours() + ':' + Data.getMinutes() + ':' + Data.getSeconds() + '. ' + Data.getDate() + ' '
+          + monthNames[Data.getMonth()] +' '+ Data.getFullYear(),
+                        "name":String(req.body.name),
+                        "text":String(req.body.text)
+                      };
+            db.collection('event').insertOne(event,(err,result)=>{
+                      if(err){
+                        console.log(err);
+                        res.sendStatus(500);
+                      }
+                      res.redirect('/book')
+                  })
+      })
+});
+
 /*
 app.post('/user',function(req,res,next){
   console.log(req.body);
@@ -389,6 +409,16 @@ app.get('/galery',(req, res) => {
   res.render('galery.ejs');
 })
 
+app.get('/book', (req,res)=>{
+
+  rez('event', {})
+  .then((items) =>{
+     res.render ('book.ejs', {mainCenter:items});
+   })
+     .catch((errorMessage)=>{
+       console.log(errorMessage);
+     });
+})
 
 MongoClient.connect(url, (err, client) => {
 assert.equal(null, err);
