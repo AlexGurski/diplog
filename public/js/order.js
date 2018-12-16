@@ -33,9 +33,10 @@ async function getElementMenu(){
 
     if(products!==undefined ){
         console.log(document.getElementsByClassName('extraItems')[0]);
-      document.getElementsByClassName('extraItems')[0].style.opacity = 1;
+        document.getElementsByClassName('extraItems')[0].style.opacity = 1;
+          document.getElementById('notNull').style.display = 'none';
     }else{
-
+      document.getElementById('notNull').style.display = 'block';
       document.getElementsByClassName('extraItems')[0].style.opacity = 0;
     }
 
@@ -162,18 +163,24 @@ async function getElementMenu(){
                 xhr.send(JSON.stringify(postOrder));
                 alert('ЗАКАЗ ПРИНЯТ!')
 
-                var cookies = document.cookie.split(";");
+              /*  var cookies = document.cookie.split(";");
                 for (var i = 0; i < cookies.length; i++) {
                     var cookie = cookies[i];
                     var eqPos = cookie.indexOf("=");
                     var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-
-
-}  
+                    }
+*/
+deleteCookie('name')
               window.location.reload();
           }
     return   products;
 }
+function deleteCookie(name) {
+  var date = new Date(); // Берём текущую дату
+  date.setTime(date.getTime() - 1); // Возвращаемся в "прошлое"
+  document.cookie = name += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
+}
+
       getElementMenu()
         function fun1() {
         var chbox;

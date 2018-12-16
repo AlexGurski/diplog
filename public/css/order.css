@@ -1,6 +1,13 @@
 .AllItems{
   height: auto;
 }
+#notNull{
+
+  display: block;
+  font-size: 5vw;
+  text-align: center;
+  width: 100%;
+}
 .centerPostOrder{
   display: flex;
   flex-direction: column;
