@@ -56,6 +56,7 @@ ul li  a{
     }
       .workSpace{
         flex-direction: column-reverse;
+          height: auto;
       }
     .extraItems{
       width: 99%;
@@ -72,11 +73,12 @@ ul li  a{
     width: 99%;
     }
       .workSpace{
+          height: auto;
         flex-direction: column-reverse;
       }
     .extraItems{
       width: 99%;
-      height:150px;
+      height: auto;
       margin: 0;
     }
 
