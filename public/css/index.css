@@ -37,14 +37,11 @@ display: flex;
 -webkit-align-items: center;
 -ms-flex-align: center;
 align-items: center;
-
   margin: 10px;
   width: 23vw;
-  height: 30vw;
+  height: auto;
   border-bottom: 1px dotted grey;
-
   flex-direction: column;
-
   text-align: center;
 }
 .extraName{
@@ -59,8 +56,8 @@ align-items: center;
   margin-top: 1em;
 }
 .extraPhoto{
-  width: 21vw;
-  height: 21vw;
+  width: 17vw;
+  height: 17vw;
 /  border:1px solid blue;
   transition: all 0.7s linear;
   background-image: url("../image/indexPhoto.jpg");

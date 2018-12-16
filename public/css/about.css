@@ -128,7 +128,6 @@ font-family: classic;
   width: 99%;
 }
 @media screen and (orientation:portrait) {
-
   .map{
     height:60vw;
     width: 99%;
