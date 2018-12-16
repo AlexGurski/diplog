@@ -12,8 +12,12 @@ a{
 ul li  a{
   color:white;
 }
+.workSpace{
+
+}
   .editCookies{
     display: none;
+    height: 100vw;
   }
   .adminOrder{
     display: none;
@@ -56,8 +60,9 @@ ul li  a{
     }
       .workSpace{
         flex-direction: column-reverse;
-          height: auto;
+          height: 100%;
       }
+
     .extraItems{
       width: 99%;
       height:150px;
