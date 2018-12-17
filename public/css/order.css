@@ -1,12 +1,15 @@
 .AllItems{
   height: auto;
+  display: flex;
+  align-items: center;
+  justify-content:center;
 }
 #notNull{
-
   display: block;
   font-size: 5vw;
   text-align: center;
   width: 100%;
+
 }
 .centerPostOrder{
   display: flex;
@@ -209,7 +212,7 @@ margin-top: 2em;
           width: 99%;
            display: flex;
            font-size: 3vw;
-      position: relative;
+           position: relative;
 
         }
       .extraItems{

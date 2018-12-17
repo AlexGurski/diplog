@@ -85,12 +85,12 @@ function addWithout() {
         xhr.open("POST", '/submitMenu', false);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(rezult));
+        document.getElementById('poppupAdd').innerText = rezult.name;
         return xhr.responseText;
-
     }).then((response)=>{
       console.log(response);
       if (response === 'ACCEPT'){
-        document.getElementById('poppupAdd').innerText = " добавлен(а) в заказ"
+        document.getElementById('poppupAdd').innerText = document.getElementById('poppupAdd').innerText +  " добавлен(а) в заказ"
         document.getElementById('poppupAdd').style.opacity = '0.9'
         document.getElementById('poppupAdd').style.top = event.clientY - document.getElementById('poppupAdd').offsetHeight/2 +'px';
         document.getElementById('poppupAdd').style.left = event.clientX - document.getElementById('poppupAdd').offsetWidth/2 +'px';
@@ -110,7 +110,7 @@ function add () {
       //  console.log(value[0]._id)
         for (let i=0;i < value.length;i++){
             if (this.id===value[i]._id){
-            //  console.log(value[i])
+            // console.log(value[i])
               return value[i];
             }
         }
@@ -122,12 +122,13 @@ function add () {
         xhr.open("POST", '/submitMenu', false);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(rezult));
+        console.log(rezult.name)
+        document.getElementById('poppupAdd').innerText = rezult.name;
         return xhr.responseText;
-
     }).then((response)=>{
       console.log(response);
       if (response === 'ACCEPT'){
-        document.getElementById('poppupAdd').innerText = " добавлен(а) в заказ"
+        document.getElementById('poppupAdd').innerText = document.getElementById('poppupAdd').innerText +  " добавлен(а) в заказ"
         document.getElementById('poppupAdd').style.opacity = '0.9'
         document.getElementById('poppupAdd').style.top = event.clientY - document.getElementById('poppupAdd').offsetHeight/2 +'px';
         document.getElementById('poppupAdd').style.left = event.clientX - document.getElementById('poppupAdd').offsetWidth/2 +'px';
