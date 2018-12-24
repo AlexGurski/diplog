@@ -6,6 +6,11 @@ function getCookie(name) {
   if (r) return r[2];
   else return "";
 }
+function deleteCookie(name) {
+  var date = new Date(); // Берём текущую дату
+  date.setTime(date.getTime() - 1); // Возвращаемся в "прошлое"
+  document.cookie = name += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
+}
 console.log(getCookie('skidka'))
 document.getElementById('nameOrder').value = getCookie('imia');
 document.getElementById('telephoneOrder').value = getCookie('phone');
@@ -170,16 +175,12 @@ async function getElementMenu(){
                     var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
                     }
 */
-deleteCookie('name')
+deleteCookie('name');
               window.location.reload();
           }
     return   products;
 }
-function deleteCookie(name) {
-  var date = new Date(); // Берём текущую дату
-  date.setTime(date.getTime() - 1); // Возвращаемся в "прошлое"
-  document.cookie = name += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
-}
+
 
       getElementMenu()
         function fun1() {

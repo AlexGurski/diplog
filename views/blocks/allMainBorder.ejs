@@ -111,7 +111,7 @@
             }
                 else {
                   console.log( document.cookie );
-                   document.cookie = "name="+navigator.platform +" " + navigator.appCodeName +" " +makeid();
+                   document.cookie = "name="+makeid();
                   ip.innerHTML = getCookie('name');
                 }
           })()
