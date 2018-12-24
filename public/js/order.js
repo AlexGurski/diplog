@@ -2,14 +2,14 @@ const monthNames = ["Январь", "Февраль", "Март", "Апрель"
   "Июль", "Август", "Сентябрь", "Октябрь", "Ноявбрь", "Декабрь"
 ];
 function getCookie(name) {
-  var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+  var r = document.cookie.match("(^|;) ?" + name1 + "=([^;]*)(;|$)");
   if (r) return r[2];
   else return "";
 }
 function deleteCookie(name) {
   var date = new Date(); // Берём текущую дату
   date.setTime(date.getTime() - 1); // Возвращаемся в "прошлое"
-  document.cookie = name += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
+  document.cookie = name1 += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
 }
 console.log(getCookie('skidka'))
 document.getElementById('nameOrder').value = getCookie('imia');
@@ -175,7 +175,7 @@ async function getElementMenu(){
                     var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
                     }
 */
-deleteCookie('name');
+deleteCookie('name1');
               window.location.reload();
           }
     return   products;
