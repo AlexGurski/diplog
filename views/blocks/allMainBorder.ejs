@@ -90,11 +90,11 @@
       document.getElementsByClassName('black')[0].appendChild(ip);
 
       function setCookie(name, value) {
-       document.cookie = name1 + "=" + value;
+       document.cookie = name + "=" + value;
      }
 
      function getCookie(name) {
-       var r = document.cookie.match("(^|;) ?" + name1 + "=([^;]*)(;|$)");
+       var r = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
        if (r) return r[2];
        else return "";
      }
@@ -102,17 +102,17 @@
      function deleteCookie(name) {
        var date = new Date(); // Берём текущую дату
        date.setTime(date.getTime() - 1); // Возвращаемся в "прошлое"
-       document.cookie = name1 += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
+       document.cookie = name += "=; expires=" + date.toGMTString(); // Устанавливаем cookie пустое значение и срок действия до прошедшего уже времени
      }
         (function getIP() {
           if (document.cookie !=''){
-            ip.innerHTML = getCookie('name')
+            ip.innerHTML = getCookie('name1')
             console.log(document.cookie);
             }
                 else {
                   console.log( document.cookie );
-                   document.cookie = "name="+makeid();
-                  ip.innerHTML = getCookie('name');
+                   document.cookie = "name1="+makeid();
+                  ip.innerHTML = getCookie('name1');
                 }
           })()
 
