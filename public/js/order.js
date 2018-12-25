@@ -176,6 +176,7 @@ async function getElementMenu(){
                     }
 */
 deleteCookie('name1');
+
               window.location.reload();
           }
     return   products;
