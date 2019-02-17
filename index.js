@@ -437,12 +437,6 @@ const collection =db.collection('order');
        }) ;
      })
 
-  fs.readFile( './sitemap.xml', function(err, data) {
-    app.get('/sitemap.xml', function(req, res) {
-    res.send(data);
-    });
-  });
-
     app.get('/robots.txt', function(req, res) {
         res.send( fs.readFileSync("robots.txt", "utf8"));
     });
@@ -459,6 +453,6 @@ app.get('/sitemap.xml', function(req, res) {
     });
  });
 
- app.listen(process.env.PORT ||80, () => {
+ app.listen(process.env.PORT || 80, () => {
       console.log('--// PARK AVENJU start 3000 --//');
   })﻿;

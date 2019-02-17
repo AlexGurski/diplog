@@ -81,7 +81,7 @@ async function getElementMenu(){
                  orderCost.innerHTML = 'Стоимость заказа: ' + finalPrice.toFixed(2) + ' р.';
                   colCounter[i].innerHTML = itemOrder[i].counter;
 
-                                  if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ) {
+                                  if ( ( finalPrice >= 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ) {
 
                                     dostavkaPrice = 0;
                                     postPrice = dostavkaPrice + finalPrice;
@@ -115,7 +115,7 @@ async function getElementMenu(){
                       orderCost.innerHTML = 'Стоимость заказа: ' + finalPrice.toFixed(2) + ' р.';
                         colCounter[i].innerHTML = itemOrder[i].counter;
 
-                        if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ){
+                        if ( ( finalPrice >= 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ){
                           dostavkaPrice = 0;
                           postPrice = dostavkaPrice + finalPrice;
                           document.getElementById('deliveryCost').innerHTML = 'Стоимость доставки: ' +  dostavkaPrice+ ' р.' ;
@@ -175,8 +175,6 @@ async function getElementMenu(){
                     var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
                     }
 */
-deleteCookie('name1');
-
               window.location.reload();
           }
     return   products;
@@ -196,8 +194,6 @@ deleteCookie('name1');
                 document.getElementById('deliveryCost').innerHTML = 'Стоимость доставки: ' +  dostavkaPrice+ ' р.' ;
                 document.getElementById('deliveryCost').style.color = 'yellow';
                 document.getElementById('finalCost').innerHTML = 'Итого к оплате: '+ postPrice.toFixed(2) + ' р.';
-
-
             }
             else {
                document.getElementById('adressOrder').readOnly = false;
@@ -221,7 +217,7 @@ deleteCookie('name1');
               finalPrice += items[i].price * items[i].counter;
               orderCost.innerHTML ='Стоимость заказа: '+ finalPrice.toFixed(2) + ' р.';
 
-              if ( ( finalPrice > 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ) {
+              if ( ( finalPrice >= 10 ) || (document.getElementById('adressOrder').value === 'Кафе "Парк Авеню"') ) {
 
                 dostavkaPrice = 0;
                 postPrice = dostavkaPrice + finalPrice;
